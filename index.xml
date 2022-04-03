@@ -6,64 +6,86 @@
         <description>Recent content on 9Bon&#39;s_Docs</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko-kr</language>
-        <lastBuildDate>Tue, 01 Mar 2022 23:17:11 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 25 Mar 2022 11:21:02 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>리눅스 하드디스크 백업</title>
+        <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</link>
+        <pubDate>Fri, 25 Mar 2022 11:21:02 +0900</pubDate>
+        
+        <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</guid>
+        <description>&lt;img src="https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/thum.png" alt="Featured image of post 리눅스 하드디스크 백업" /&gt;&lt;h2 id=&#34;백업&#34;&gt;백업&lt;/h2&gt;
+&lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;백업/복원은 말 그대로 나중에 되돌릴 수 있게 사본을 복사하여 저장하는 기능입니다.&lt;br&gt;
+과거에도 OS 자체에서 지원하는 소프트웨어가 있었지만, 그럼에도 저 같은 경우에는&lt;br&gt;
+CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습니다.&lt;/p&gt;
+&lt;p&gt;그 이유와 관련하여 방식의 종류를 살펴보도록 하겠습니다.&lt;/p&gt;
+&lt;h3 id=&#34;백업의-종류&#34;&gt;백업의 종류&lt;/h3&gt;
+&lt;p&gt;디스크를 통째로, 디스크의 일부 파티션만, 파일만 백업, 이것을 떠나서 백업은 세 가지의 방식이 존재합니다.&lt;br&gt;
+1일 2일 3일, 총 삼일 동안 파일이 써지고 있는 동일한 시스템을 백업했다고 가정하고 예를 들어보겠습니다.&lt;/p&gt;
+&lt;p&gt;전체 백업(Full)&lt;br&gt;
+1일 ////&lt;br&gt;
+2일 //// ////&lt;br&gt;
+3일 //// //// ////&lt;/p&gt;
+&lt;p&gt;차등 백업(Differential)&lt;br&gt;
+1일 ////&lt;br&gt;
+2일      ////&lt;br&gt;
+3일      //// ////&lt;/p&gt;
+&lt;p&gt;증분 백업(Incremental)&lt;br&gt;
+1일 ////&lt;br&gt;
+2일      ////&lt;br&gt;
+3일           ////&lt;/p&gt;
+&lt;p&gt;간단히 전체는 그 말대로 모든 내용을, 차등은 첫 백업 이후의 내용들을,&lt;br&gt;
+증분백업은 각 백업시의 변화 내용을 기록하는 것입니다. 이렇게 보면 증분백업이 가장 좋아보이지만&lt;br&gt;
+복원시에 오랜 시간이 소모되고 백업 파일이 하나라도 손실되면 복원이 불가능한 특징을 가지고 있습니다.&lt;/p&gt;
+&lt;p&gt;요즘엔 고스트가 윈도우에 설치되어 증분백업까지 지원을 하지만&lt;br&gt;
+과거의, 특히 컴퓨터 수리를 업으로 하는 입장에서는 각기 다른 시스템을 접해야 했기 때문에 전체 백업이&lt;br&gt;
+좋은 선택지였다고 생각합니다.&lt;/p&gt;
+&lt;p&gt;참고로 맥의 타임머신도 기본은 증분백업이며, 타임머신을 포함한 대부분 요즘 소프트웨어는&lt;br&gt;
+세 가지 백업 방식을 모두 지원하고 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;명령&#34;&gt;명령&lt;/h2&gt;
+&lt;h3 id=&#34;tar&#34;&gt;tar&lt;/h3&gt;
+&lt;p&gt;tar은 백업보다 압축이 주 목적인 명령어입니다.&lt;/p&gt;
+&lt;p&gt;파일 전체백업&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar cvfp home.tar /file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;파일 증분백업&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar cvfp home.tar /file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;백업 위치지정&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar zcf /dev/sdb1 /file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;``&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;현재 디렉토리에 압축 해제
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;```&lt;/span&gt;bash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar zcf /dev/sdb1 /now
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dump&#34;&gt;dump&lt;/h3&gt;
+&lt;p&gt;파일 전체백업&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dump -0f /dev/sdb1 /file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;파티션 백업(sda1), 경로지정, 정보 기록(-u:/etc/dumpdates로)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dump -0u -f /dev/sdb1 /dev/sda1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;증분 백업(-2:2레벨의 백업)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dump -2u -f /dev/sdb1 /dev/sda1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;복원(-r:전체:단 파일시스템 마운트 동일해야함, -i:대화식)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;restore -rf /dev/sdb1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dd&#34;&gt;dd&lt;/h3&gt;
+&lt;p&gt;디스크 전체, 특정 파티션 모두 가능합니다. 해당 명령어는 백업뿐만 아니라 여러곳에서 쓰입니다.&lt;/p&gt;
+&lt;p&gt;전체 백업(bs:블럭 사이즈, 디스크 형편에 맞출 것)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sda &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdb1 &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;256k
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>리눅스 하드디스크 문제</title>
         <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</link>
-        <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+        <pubDate>Sat, 12 Mar 2022 03:43:58 +0900</pubDate>
         
         <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/thum.png" alt="Featured image of post 리눅스 하드디스크 문제" /&gt;&lt;h2 id=&#34;partion&#34;&gt;Partion&lt;/h2&gt;
+        <description>&lt;img src="https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/thum.png" alt="Featured image of post 리눅스 하드디스크 문제" /&gt;&lt;h2 id=&#34;하드디스크의-문제&#34;&gt;하드디스크의 문제&lt;/h2&gt;
 &lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
-&lt;p&gt;기본적으로 리눅스의 Filesystem은 다음과 같은 과정을 통해 만들어집니다.&lt;br&gt;
-Partion &amp;raquo; Format &amp;raquo; Mount 의 과정을 거칩니다. 윈도우는 자동 마운트됩니다.&lt;/p&gt;
-&lt;p&gt;기본적으로 Partion은 하나의 보조기억장치를 여러 개의 Filesystem으로 만들고 싶을 때 사용합니다.&lt;br&gt;
-하지만 분할한다는 개념보다 하나의 칸을 만드는 개념이라고 보시는게 더 가깝습니다. 분할해서 사용하지 않더라도&lt;/p&gt;
-&lt;h2 id=&#34;mount&#34;&gt;Mount&lt;/h2&gt;
-&lt;h3 id=&#34;설명-1&#34;&gt;설명&lt;/h3&gt;
-&lt;p&gt;mount는 특정 저장장치를 디렉토리와 연결하는 행위입니다. 윈도우는 알아서 해주거나, 파일 관리자를 거쳐 해결할 수 있으며&lt;br&gt;
-요즘 리눅스들은 사용자 편의를 위해 알아서 데스크탑에 mount 하게 됩니다.&lt;/p&gt;
-&lt;p&gt;물론 mount를 하여 제대로 쓰기 위해선 fdisk와 같은 명령어로 포멧, 파일시스템 구축이 완료된 상태여야 합니다.&lt;/p&gt;
-&lt;h3 id=&#34;mount-상태-확인&#34;&gt;Mount 상태 확인&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;findmnt
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;mount -l&lt;/em&gt; 도 있지만 위의 명령어가 훨씬 보기 편리합니다.&lt;/p&gt;
-&lt;h3 id=&#34;mount-하기&#34;&gt;Mount 하기&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mount /dev/&amp;lt;장치명&amp;gt; &amp;lt;마운트 포인트&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;취소는&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /dev/&amp;lt;장치명&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 위의 명령어는 일시적이며 reboot 후 필요하다면 다시 입력해야 합니다.&lt;/p&gt;
-&lt;h3 id=&#34;fstab-파일시스템-테이블&#34;&gt;fstab-파일시스템 테이블&lt;/h3&gt;
-&lt;p&gt;부팅 시 자동으로 mount가 되기 위해선 해당 파일을 수정해야 합니다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /etc/fstab
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/1.png&#34;
-	width=&#34;751&#34;
-	height=&#34;200&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/1_hud4ab1e8f4f03947783069e1b30865973_25325_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/1_hud4ab1e8f4f03947783069e1b30865973_25325_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;fstab&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;375&#34;
-		data-flex-basis=&#34;901px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;기본적인 mount 는 하단에 &lt;em&gt;&amp;lt;장치명&amp;gt; &amp;lt;마운트 포인트&amp;gt; &amp;lt;파일 시스템 종류&amp;gt; &amp;lt;옵션&amp;gt;&lt;/em&gt; 을 추가하면
-reboot 후부터 적용됩니다.&lt;/p&gt;
-&lt;p&gt;주의해야 할 사항이 있는데&lt;br&gt;
-만약 현재 ssh등의 방법으로 remote중에 이것을 변경했다면 &lt;strong&gt;반드시 오탈자가 없는지 확인해야 합니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;만약 오타가 존재한다면 리눅스가 reboot 중에 SSH server를 포함한 프로세스를 실행하기 전 오류로 중단되므로&lt;br&gt;
-담당자가 remote를 하지 못하고 직접 가서 local상으로 부팅 설정을 해야 하는 상황이 발생합니다.&lt;/p&gt;
-&lt;h2 id=&#34;하드디스크의-문제&#34;&gt;하드디스크의 문제&lt;/h2&gt;
-&lt;h3 id=&#34;설명-2&#34;&gt;설명&lt;/h3&gt;
 &lt;p&gt;불량, 노후화, 최악에는 소프트웨어의 오류에도 하드디스크에 치명적인 문제가 발생할 수 있습니다.&lt;br&gt;
 제가 겪은 문제는 서버가 일종의 과부하를 받을 때 디렉토리 일부가 사라져 조회조차 하지 못하는 상황에&lt;br&gt;
 놓이는 것이였습니다.&lt;/p&gt;
 &lt;p&gt;놀라서 umount하거나 reboot해서 돌아와보면 디렉토리가 다시 보였지만&lt;br&gt;
 디렉토리를 포함한 파일의 일부가 열리지만 소실되었거나, 열리지도 않으며 청소가 필요하다는 경고가 나타났습니다.&lt;br&gt;
-흥미로웠던 사실은 최근에 생성된 것만 그런 상태였습니다. 추정해보면 EXT파일시스템의 특징이&lt;/p&gt;
-&lt;p&gt;여기서 보이는 것이 아닐까 생각했습니다.
-현재는 과거의 사태에 높은 확률을 따라, 하드디스크의 불량이라고 생각하고 있지만&lt;br&gt;
+흥미로웠던 사실은 최근에 생성된 것만 그런 상태였습니다. 추정해보면 EXT파일시스템의 특징이&lt;br&gt;
+여기서 보이는 것이 아닐까 생각했습니다.&lt;/p&gt;
+&lt;p&gt;현재는 과거의 사태에 높은 확률을 따라, 하드디스크의 불량이라고 생각하고 있지만&lt;br&gt;
 정확한 원인을 알기는 어려운 상황입니다. 이런일이 발생한다면 어떻게 대처하고 판단해야하는지&lt;br&gt;
 작성해 보겠습니다.&lt;/p&gt;
 &lt;h3 id=&#34;fsck&#34;&gt;fsck&lt;/h3&gt;
@@ -87,6 +109,126 @@ reboot 후부터 적용됩니다.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /dev/&amp;lt;장치명&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;smartctl -a /dev/&amp;lt;장치명&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;자세히는 -a, 간단히는 -H, 정보만은 -i 옵션을 사용하여 진행 가능합니다.&lt;/p&gt;
+&lt;h2 id=&#34;백업&#34;&gt;백업&lt;/h2&gt;
+&lt;h3 id=&#34;설명-1&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;백업/복원은 말 그대로 나중에 되돌릴 수 있게 사본을 복사하여 저장하는 기능입니다.&lt;br&gt;
+과거에도 OS 자체에서 지원하는 소프트웨어가 있었지만, 그럼에도 저 같은 경우에는&lt;br&gt;
+CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습니다.&lt;/p&gt;
+&lt;p&gt;그 이유와 관련하여 방식의 종류를 살펴보도록 하겠습니다.&lt;/p&gt;
+&lt;h3 id=&#34;백업의-종류&#34;&gt;백업의 종류&lt;/h3&gt;
+&lt;p&gt;디스크를 통째로, 디스크의 일부 파티션만, 파일만 백업, 이것을 떠나서 백업은 세 가지의 방식이 존재합니다.&lt;br&gt;
+1일 2일 3일, 총 삼일 동안 파일이 써지고 있는 동일한 시스템을 백업했다고 가정하고 예를 들어보겠습니다.&lt;/p&gt;
+&lt;p&gt;전체 백업(Full)&lt;br&gt;
+1일 ////&lt;br&gt;
+2일 //// ////&lt;br&gt;
+3일 //// //// ////&lt;/p&gt;
+&lt;p&gt;차등 백업(Differential)&lt;br&gt;
+1일 ////&lt;br&gt;
+2일      ////&lt;br&gt;
+3일      //// ////&lt;/p&gt;
+&lt;p&gt;증분 백업(Incremental)&lt;br&gt;
+1일 ////&lt;br&gt;
+2일      ////&lt;br&gt;
+3일           ////&lt;/p&gt;
+&lt;p&gt;간단히 전체는 그 말대로 모든 내용을, 차등은 첫 백업 이후의 내용들을,&lt;br&gt;
+증분백업은 각 백업시의 변화 내용을 기록하는 것입니다. 이렇게 보면 증분백업이 가장 좋아보이지만&lt;br&gt;
+복원시에 오랜 시간이 소모되고 백업 파일이 하나라도 손실되면 복원이 불가능한 특징을 가지고 있습니다.&lt;/p&gt;
+&lt;p&gt;요즘엔 고스트가 윈도우에 설치되어 증분백업까지 지원을 하지만&lt;br&gt;
+과거의, 특히 컴퓨터 수리를 업으로 하는 입장에서는 각기 다른 시스템을 접해야 했기 때문에 전체 백업이&lt;br&gt;
+좋은 선택지였다고 생각합니다.&lt;/p&gt;
+&lt;p&gt;참고로 맥의 타임머신도 기본은 증분백업이며, 타임머신을 포함한 대부분 요즘 소프트웨어는&lt;br&gt;
+세 가지 백업 방식을 모두 지원하고 있습니다.&lt;/p&gt;
+&lt;h3 id=&#34;tar&#34;&gt;tar&lt;/h3&gt;
+&lt;p&gt;tar은 백업보다 압축이 주 목적인 명령어입니다.&lt;/p&gt;
+&lt;p&gt;파일 전체백업&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar cvfp home.tar /file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;파일 증분백업&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar cvfp home.tar /file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;백업 위치지정&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar zcf /dev/sdb1 /file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;``&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### dump&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dump는 파일또는 파티션 하나를 백업할 수 있는 명령어입니다.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;파일 전체백업
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;```&lt;/span&gt;bash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dump -0f /dev/sdb1 /file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;파일 증분백업&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar cvfp home.tar /file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dd&#34;&gt;dd&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>리눅스 하드디스크 사용</title>
+        <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</link>
+        <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+        
+        <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</guid>
+        <description>&lt;img src="https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/thum.png" alt="Featured image of post 리눅스 하드디스크 사용" /&gt;&lt;h2 id=&#34;partion&#34;&gt;Partion&lt;/h2&gt;
+&lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;기본적으로 리눅스의 Filesystem은 다음과 같은 과정을 통해 만들어집니다.&lt;br&gt;
+Partion &amp;raquo; Format &amp;raquo; Mount 의 과정을 거칩니다. 윈도우는 자동 마운트됩니다.&lt;/p&gt;
+&lt;p&gt;기본적으로 Partion은 하나의 보조기억장치를 여러 개의 Filesystem으로 만들고 싶을 때 사용합니다.&lt;br&gt;
+분할해서 사용하지 않는다고 해도 칸 하나를 사용하겠다는 명시가 필요합니다.&lt;/p&gt;
+&lt;p&gt;추가로 리눅스에서는 여러개의 저장 장치를 하나로 합치는 LVM이라는 개념이 존재합니다. Partion의 반대 개념에 가까우며&lt;br&gt;
+최근에 윈도우에도 비슷한 기능이 추가되었습니다.&lt;/p&gt;
+&lt;h3 id=&#34;명령어&#34;&gt;명령어&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fdisk -l
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 정확한 장치를 찾아서&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fdisk /dev/&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;장치명&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;으로 파티션 모드에 진입할 수 있습니다. 명령어로 진행되는 것이 아니라,  마법사형식을 이용합니다.&lt;br&gt;
+n, p 등을 누르면서 안내하는 내용을 따르면 문제 없습니다.&lt;/p&gt;
+&lt;p&gt;윈도우와 다르게 고려되어야 할 사항은 주영역, 가상영역, 그리고 Swap입니다. 이것은 가상메모리의 역할을 합니다.&lt;/p&gt;
+&lt;h2 id=&#34;format&#34;&gt;Format&lt;/h2&gt;
+&lt;h3 id=&#34;설명-1&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;저장공간의 Format은 선택한 공간에 FileSystem을 구성시키는 것을 뜻합니다. 이 단어가 주로 초기화 작업을 뜻하는 이유는&lt;br&gt;
+FileSystem은 하나의 공간에 하나만 사용될 수 있으며 새롭게 FileSystem 을 구성시킬때 본래있던 저장장치의 파일을 가르키는 맵핑, 테이블&lt;br&gt;
+정보가 덮어씌워지면서 사실상 정보가 삭제된 것처럼 되기 때문입니다.&lt;/p&gt;
+&lt;p&gt;리눅스에서 자주 사용되는 FileSystem은Ext4, XFS등이 있습니다. 자세한 내용은 다음에 다루겠습니다.&lt;/p&gt;
+&lt;h3 id=&#34;명령어-1&#34;&gt;명령어&lt;/h3&gt;
+&lt;p&gt;혹시 쓰던 저장장치를 포맷할 계획이라면 당연히 unmount된 상태여야 합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkfs.&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;파일 시스템 타입&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /dev/&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;장치&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;마찬가지로 마법사 형식입니다. y를 누르며 진행할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;mount&#34;&gt;Mount&lt;/h2&gt;
+&lt;h3 id=&#34;설명-2&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;mount는 특정 저장장치를 디렉토리와 연결하는 행위입니다. 윈도우는 알아서 해주거나, 파일 관리자를 거쳐 해결할 수 있으며&lt;br&gt;
+요즘 리눅스들은 사용자 편의를 위해 알아서 데스크탑에 mount 하게 됩니다.&lt;/p&gt;
+&lt;p&gt;물론 mount를 하여 제대로 쓰기 위해선 fdisk와 같은 명령어로 포멧, 파일시스템 구축이 완료된 상태여야 합니다.&lt;/p&gt;
+&lt;h3 id=&#34;mount-상태-확인&#34;&gt;Mount 상태 확인&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;findmnt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;fdisk -l 또는 mount -l&lt;/em&gt; 도 있지만 해당 경우에는 위의 명령어가 훨씬 보기 편리했습니다.&lt;/p&gt;
+&lt;h3 id=&#34;mount-하기&#34;&gt;Mount 하기&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mount /dev/&amp;lt;장치명&amp;gt; &amp;lt;마운트 포인트&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;취소는&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /dev/&amp;lt;장치명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 위의 명령어는 일시적이며 reboot 후 필요하다면 다시 입력해야 합니다.&lt;/p&gt;
+&lt;h3 id=&#34;fstab-파일시스템-테이블&#34;&gt;fstab-파일시스템 테이블&lt;/h3&gt;
+&lt;p&gt;부팅 시 자동으로 mount가 되기 위해선 해당 파일을 수정해야 합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /etc/fstab
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1.png&#34;
+	width=&#34;751&#34;
+	height=&#34;200&#34;
+	srcset=&#34;https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;fstab&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;375&#34;
+		data-flex-basis=&#34;901px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;기본적인 mount 는 하단에 &lt;em&gt;&amp;lt;장치명&amp;gt; &amp;lt;마운트 포인트&amp;gt; &amp;lt;파일 시스템 종류&amp;gt; &amp;lt;옵션&amp;gt;&lt;/em&gt; 을 추가하면
+reboot 후부터 적용됩니다.&lt;/p&gt;
+&lt;p&gt;주의해야 할 사항이 있는데&lt;br&gt;
+만약 현재 ssh등의 방법으로 remote중에 이것을 변경했다면 &lt;strong&gt;반드시 오탈자가 없는지 확인해야 합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;만약 오타가 존재한다면 리눅스가 reboot 중에 SSH server를 포함한 프로세스를 실행하기 전 오류로 중단되므로&lt;br&gt;
+담당자가 remote를 하지 못하고 직접 가서 local상으로 부팅 설정을 해야 하는 상황이 발생합니다.&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -746,7 +888,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
         <pubDate>Wed, 01 Sep 2021 14:21:27 +1023</pubDate>
         
         <guid>https://bonhyeon.github.io/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/thum.png" alt="Featured image of post 휴고 서버에 직접 구동시키기" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+        <description>&lt;img src="https://bonhyeon.github.io/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/thum.png" alt="Featured image of post 휴고 서버에 직접 구동시키기" /&gt;&lt;h2 id=&#34;주의사항&#34;&gt;주의사항&lt;/h2&gt;
+&lt;h3 id=&#34;20220320&#34;&gt;2022.03.20&lt;/h3&gt;
+&lt;p&gt;하드디스크가 문제가 생겼었고, 교환 받은 디스크도 종종 긁히는 소리가 갑자기 생기는데 Hugo를 직접 호스팅 하기 전까지 이런적은 없었습니다.&lt;br&gt;
+hugo server 로 24시간 작동시키는것이 다른 문제가 있는지 의심하는 중입니다. 주의하시길 바랍니다.&lt;/p&gt;
+&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
 &lt;p&gt;학습했던 것들을 정리하기 위해 정적 페이지를 알아보다 HUGO와 Github page를 사용한 대중적인 게시글들을 확인할 수 있었습니다.
 Github page를 사용하면 관리하기 편리할 것 같지만 호스팅 경험을 위하여 예전부터 동작 중인 개인 서버를 통해 가동해 보겠습니다.&lt;/p&gt;
 &lt;h2 id=&#34;homebrew-설치&#34;&gt;Homebrew 설치&lt;/h2&gt;

@@ -6,20 +6,47 @@
     <description>Recent content in Tags on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 01 Mar 2022 23:17:11 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Mar 2022 11:21:02 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>backup</title>
+      <link>https://bonhyeon.github.io/tags/backup/</link>
+      <pubDate>Fri, 25 Mar 2022 11:21:02 +0900</pubDate>
+      
+      <guid>https://bonhyeon.github.io/tags/backup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dd</title>
+      <link>https://bonhyeon.github.io/tags/dd/</link>
+      <pubDate>Fri, 25 Mar 2022 11:21:02 +0900</pubDate>
+      
+      <guid>https://bonhyeon.github.io/tags/dd/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>dump</title>
       <link>https://bonhyeon.github.io/tags/dump/</link>
-      <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+      <pubDate>Fri, 25 Mar 2022 11:21:02 +0900</pubDate>
       
       <guid>https://bonhyeon.github.io/tags/dump/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>tar</title>
+      <link>https://bonhyeon.github.io/tags/tar/</link>
+      <pubDate>Fri, 25 Mar 2022 11:21:02 +0900</pubDate>
+      
+      <guid>https://bonhyeon.github.io/tags/tar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>fsck</title>
       <link>https://bonhyeon.github.io/tags/fsck/</link>
-      <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+      <pubDate>Sat, 12 Mar 2022 03:43:58 +0900</pubDate>
       
       <guid>https://bonhyeon.github.io/tags/fsck/</guid>
       <description></description>
@@ -28,9 +55,27 @@
     <item>
       <title>fstab</title>
       <link>https://bonhyeon.github.io/tags/fstab/</link>
-      <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+      <pubDate>Sat, 12 Mar 2022 03:43:58 +0900</pubDate>
       
       <guid>https://bonhyeon.github.io/tags/fstab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fdisk</title>
+      <link>https://bonhyeon.github.io/tags/fdisk/</link>
+      <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+      
+      <guid>https://bonhyeon.github.io/tags/fdisk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>format</title>
+      <link>https://bonhyeon.github.io/tags/format/</link>
+      <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+      
+      <guid>https://bonhyeon.github.io/tags/format/</guid>
       <description></description>
     </item>
     
@@ -40,6 +85,15 @@
       <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
       
       <guid>https://bonhyeon.github.io/tags/mount/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>partion</title>
+      <link>https://bonhyeon.github.io/tags/partion/</link>
+      <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+      
+      <guid>https://bonhyeon.github.io/tags/partion/</guid>
       <description></description>
     </item>
     

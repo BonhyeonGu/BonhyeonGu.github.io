@@ -6,19 +6,21 @@
     <description>Recent content in fstab on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 01 Mar 2022 23:17:11 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/tags/fstab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Mar 2022 03:43:58 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/tags/fstab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>리눅스 하드디스크 문제</title>
       <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</link>
-      <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+      <pubDate>Sat, 12 Mar 2022 03:43:58 +0900</pubDate>
       
       <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</guid>
-      <description>Partion 설명 기본적으로 리눅스의 Filesystem은 다음과 같은 과정을 통해 만들어집니다.
-Partion &amp;raquo; Format &amp;raquo; Mount 의 과정을 거칩니다. 윈도우는 자동 마운트됩니다.
-기본적으로 Partion은 하나의 보조기억장치를 여러 개의 Filesystem으로 만들고 싶을 때 사용합니다.
-하지만 분할한다는 개념보다 하나의 칸을 만드는 개념이라고 보시는게 더 가깝습니다. 분할해서 사용하지 않더라도
-Mount 설명 mount는 특정 저장장치를 디렉토리와 연결하는 행위입니다. 윈도우는 알아서 해주거나, 파일 관리자를 거쳐 해결할 수 있으며
-요즘 리눅스들은 사용자 편의를 위해 알아서 데스크탑에 mount 하게 됩니다.</description>
+      <description>하드디스크의 문제 설명 불량, 노후화, 최악에는 소프트웨어의 오류에도 하드디스크에 치명적인 문제가 발생할 수 있습니다.
+제가 겪은 문제는 서버가 일종의 과부하를 받을 때 디렉토리 일부가 사라져 조회조차 하지 못하는 상황에
+놓이는 것이였습니다.
+놀라서 umount하거나 reboot해서 돌아와보면 디렉토리가 다시 보였지만
+디렉토리를 포함한 파일의 일부가 열리지만 소실되었거나, 열리지도 않으며 청소가 필요하다는 경고가 나타났습니다.
+흥미로웠던 사실은 최근에 생성된 것만 그런 상태였습니다. 추정해보면 EXT파일시스템의 특징이
+여기서 보이는 것이 아닐까 생각했습니다.
+현재는 과거의 사태에 높은 확률을 따라, 하드디스크의 불량이라고 생각하고 있지만</description>
     </item>
     
   </channel>
