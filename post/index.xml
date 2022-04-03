@@ -8,11 +8,11 @@
     <language>ko-kr</language>
     <lastBuildDate>Fri, 25 Mar 2022 11:21:02 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>리눅스 하드디스크 백업</title>
-      <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</link>
+      <title>리눅스 디스크 백업</title>
+      <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</link>
       <pubDate>Fri, 25 Mar 2022 11:21:02 +0900</pubDate>
       
-      <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</guid>
+      <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</guid>
       <description>백업 설명 백업/복원은 말 그대로 나중에 되돌릴 수 있게 사본을 복사하여 저장하는 기능입니다.
 과거에도 OS 자체에서 지원하는 소프트웨어가 있었지만, 그럼에도 저 같은 경우에는
 CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습니다.
@@ -22,27 +22,26 @@ CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습
     </item>
     
     <item>
-      <title>리눅스 하드디스크 문제</title>
-      <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</link>
+      <title>리눅스 디스크 문제</title>
+      <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</link>
       <pubDate>Sat, 12 Mar 2022 03:43:58 +0900</pubDate>
       
-      <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</guid>
-      <description>하드디스크의 문제 설명 불량, 노후화, 최악에는 소프트웨어의 오류에도 하드디스크에 치명적인 문제가 발생할 수 있습니다.
+      <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</guid>
+      <description>하드디스크의 문제 증상 저장, 삭제시 에러문구 : &amp;ldquo;Structure needs cleaning&amp;rdquo;, &amp;ldquo;구조에 청소가 필요합니다&amp;rdquo; ls 시 : ??? ?? ???? 로 표시
+설명 불량, 노후화, 최악에는 소프트웨어의 오류에도 하드디스크에 치명적인 문제가 발생할 수 있습니다.
 제가 겪은 문제는 서버가 일종의 과부하를 받을 때 디렉토리 일부가 사라져 조회조차 하지 못하는 상황에
 놓이는 것이였습니다.
 놀라서 umount하거나 reboot해서 돌아와보면 디렉토리가 다시 보였지만
 디렉토리를 포함한 파일의 일부가 열리지만 소실되었거나, 열리지도 않으며 청소가 필요하다는 경고가 나타났습니다.
-흥미로웠던 사실은 최근에 생성된 것만 그런 상태였습니다. 추정해보면 EXT파일시스템의 특징이
-여기서 보이는 것이 아닐까 생각했습니다.
-현재는 과거의 사태에 높은 확률을 따라, 하드디스크의 불량이라고 생각하고 있지만</description>
+흥미로웠던 사실은 비교적 최근에 생성된 것만 그런 상태였습니다.</description>
     </item>
     
     <item>
-      <title>리눅스 하드디스크 사용</title>
-      <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</link>
+      <title>리눅스 디스크 사용</title>
+      <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</link>
       <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
       
-      <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</guid>
+      <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</guid>
       <description>Partion 설명 기본적으로 리눅스의 Filesystem은 다음과 같은 과정을 통해 만들어집니다.
 Partion &amp;raquo; Format &amp;raquo; Mount 의 과정을 거칩니다. 윈도우는 자동 마운트됩니다.
 기본적으로 Partion은 하나의 보조기억장치를 여러 개의 Filesystem으로 만들고 싶을 때 사용합니다.
@@ -61,7 +60,8 @@ fdisk /dev/[장치명] 으로 파티션 모드에 진입할 수 있습니다.</d
       <guid>https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</guid>
       <description>윈도우 윈도우에서의 도커 도커의 기본 환경은 리눅스에 맞춰져 있습니다. 따라서 윈도우에서 도커를 사용하려면 다른 방법을 선택할 필요가 있으며
 각 방법은 장단점이 존재했습니다. 대부분 가상머신을 이용한 방법입니다.
-가상 머신 가상머신은 기존의 운영체제(Host OS)에 가상의 운영체제(Guest OS)를 올릴 수 있게 해주는 소프트웨어 입니다.
+가상 머신 출처
+가상머신은 기존의 운영체제(Host OS)에 가상의 운영체제(Guest OS)를 올릴 수 있게 해주는 소프트웨어 입니다.
 도커도 가상머신과 흡사하지만 GuestOS를 모두 올리는 것이 아니라. 필요한 쉘과 커널등만 올린다는 차이점이 있습니다.
 즉 도커는 가상머신 만큼 자유롭지는 못하나. 환경을 만들고 사용하는 부분에서 가볍게 진행 가능합니다.
 정리해보면 윈도우에서 우분투 컨테이너를 사용하려면</description>
