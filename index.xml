@@ -14,33 +14,31 @@
         <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</guid>
         <description>&lt;img src="https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/thum.png" alt="Featured image of post 리눅스 디스크 백업" /&gt;&lt;h2 id=&#34;백업&#34;&gt;백업&lt;/h2&gt;
 &lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
-&lt;p&gt;백업/복원은 말 그대로 나중에 되돌릴 수 있게 사본을 복사하여 저장하는 기능입니다.&lt;br&gt;
-과거에도 OS 자체에서 지원하는 소프트웨어가 있었지만, 그럼에도 저 같은 경우에는&lt;br&gt;
-CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습니다.&lt;/p&gt;
+&lt;p&gt;백업/복원은 말 그대로 나중에 되돌릴 수 있게 사본을 복사하여 저장하는 기능입니다. 과거에도 OS에서 지원하는&lt;br&gt;
+소프트웨어가 있었지만, 그럼에도 저 같은 경우에는 CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습니다.&lt;/p&gt;
 &lt;p&gt;그 이유와 관련하여 방식의 종류를 살펴보도록 하겠습니다.&lt;/p&gt;
 &lt;h3 id=&#34;백업의-종류&#34;&gt;백업의 종류&lt;/h3&gt;
 &lt;p&gt;디스크를 통째로, 디스크의 일부 파티션만, 파일만 백업, 이것을 떠나서 백업은 세 가지의 방식이 존재합니다.&lt;br&gt;
 1일 2일 3일, 총 삼일 동안 파일이 써지고 있는 동일한 시스템을 백업했다고 가정하고 예를 들어보겠습니다.&lt;/p&gt;
 &lt;p&gt;전체 백업(Full)&lt;br&gt;
-1일 //// ____ ____&lt;br&gt;
-2일 //// //// ____&lt;br&gt;
+1일 //// __ __&lt;br&gt;
+2일 //// //// __&lt;br&gt;
 3일 //// //// ////&lt;/p&gt;
 &lt;p&gt;차등 백업(Differential)&lt;br&gt;
-1일 //// ____ ____&lt;br&gt;
-2일 ____ //// ____&lt;br&gt;
-3일 ____ //// ////&lt;/p&gt;
+1일 //// __ __&lt;br&gt;
+2일 __ //// __&lt;br&gt;
+3일 __ //// ////&lt;/p&gt;
 &lt;p&gt;증분 백업(Incremental)&lt;br&gt;
-1일 //// ____ ____&lt;br&gt;
-2일 ____ //// ____&lt;br&gt;
-3일 ____ ____ ////&lt;/p&gt;
-&lt;p&gt;간단히 전체는 그 말대로 모든 내용을, 차등은 첫 백업 이후의 내용들을,&lt;br&gt;
-증분백업은 각 백업시의 변화 내용을 기록하는 것입니다. 이렇게 보면 증분백업이 가장 좋아보이지만&lt;br&gt;
-복원시에 오랜 시간이 소모되고 백업 파일이 하나라도 손실되면 복원이 불가능한 특징을 가지고 있습니다.&lt;/p&gt;
-&lt;p&gt;요즘엔 고스트가 윈도우에 설치되어 증분백업까지 지원을 하지만&lt;br&gt;
-과거의, 특히 컴퓨터 수리를 업으로 하는 입장에서는 각기 다른 시스템을 접해야 했기 때문에 전체 백업이&lt;br&gt;
-좋은 선택지였다고 생각합니다.&lt;/p&gt;
-&lt;p&gt;참고로 맥의 타임머신도 기본은 증분백업이며, 타임머신을 포함한 대부분 요즘 소프트웨어는&lt;br&gt;
-세 가지 백업 방식을 모두 지원하고 있습니다.&lt;/p&gt;
+1일 //// __ __&lt;br&gt;
+2일 __ //// __&lt;br&gt;
+3일 __ __ ////&lt;/p&gt;
+&lt;p&gt;간단히 전체는 그 말대로 모든 내용을, 차등은 첫 백업 이후의 내용들을, 증분백업은 각 백업시의 변화 내용을&lt;br&gt;
+기록하는 것입니다. 이렇게 보면 증분백업이 가장 좋아보이지만 복원시 오랜 시간이 소모되고 백업 파일이&lt;br&gt;
+하나라도 손실되면 복원이 불가능한 특징을 가지고 있습니다.&lt;/p&gt;
+&lt;p&gt;요즘엔 고스트가 윈도우에 설치되어 증분백업까지 지원을 하지만 과거의, 특히 컴퓨터 수리를 업으로 하는 입장에서는&lt;br&gt;
+각기 다른 시스템을 접해야 했기 때문에 전체 백업이 좋은 선택지였다고 생각합니다.&lt;/p&gt;
+&lt;p&gt;참고로 맥의 타임머신도 기본은 증분백업이며, 타임머신을 포함한 대부분 요즘 소프트웨어는 세 가지 백업 방식을&lt;br&gt;
+모두 지원하고 있습니다.&lt;/p&gt;
 &lt;h2 id=&#34;명령&#34;&gt;명령&lt;/h2&gt;
 &lt;h3 id=&#34;tar&#34;&gt;tar&lt;/h3&gt;
 &lt;p&gt;tar은 백업보다 압축이 주 목적인 명령어입니다.&lt;/p&gt;
@@ -67,7 +65,7 @@ CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dd&#34;&gt;dd&lt;/h3&gt;
 &lt;p&gt;디스크 전체, 특정 파티션 모두 가능합니다. 해당 명령어는 백업뿐만 아니라 여러곳에서 쓰입니다.&lt;/p&gt;
 &lt;p&gt;전체 백업(bs:블럭 사이즈, 디스크 형편에 맞출 것)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sda &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdb1 &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;256k
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sda &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdb &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;256k
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>
@@ -78,7 +76,7 @@ CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습
         <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</guid>
         <description>&lt;img src="https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/thum.png" alt="Featured image of post 리눅스 디스크 문제" /&gt;&lt;h2 id=&#34;하드디스크의-문제&#34;&gt;하드디스크의 문제&lt;/h2&gt;
 &lt;h3 id=&#34;증상&#34;&gt;증상&lt;/h3&gt;
-&lt;p&gt;저장, 삭제시 에러문구 : &amp;ldquo;Structure needs cleaning&amp;rdquo;, &amp;ldquo;구조에 청소가 필요합니다&amp;rdquo;
+&lt;p&gt;저장, 삭제시 에러문구 : &amp;ldquo;Structure needs cleaning&amp;rdquo;, &amp;ldquo;구조에 청소가 필요합니다&amp;rdquo;&lt;br&gt;
 ls 시 : ??? ?? ???? 로 표시&lt;/p&gt;
 &lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
 &lt;p&gt;불량, 노후화, 최악에는 소프트웨어의 오류에도 하드디스크에 치명적인 문제가 발생할 수 있습니다.&lt;br&gt;
