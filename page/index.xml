@@ -27,9 +27,9 @@
       <pubDate>Sun, 03 Oct 2021 23:21:22 +0900</pubDate>
       
       <guid>https://bonhyeon.github.io/serverlog/</guid>
-      <description>v01 (2017~2020.11) 사진 제원    총 금액 ~60,000원     기종 라즈베리파이3   OS 라즈비안   CPU 4Core 1.2GHz   RAM 1GB   HDD 외장-1TB    ARM 아키텍처 환경은 많은 단점이 있었습니다.
-지원하지 않는것이 많았으며 높은 레벨의 루틴을 시도하기 어려웠습니다.
-서비스    최종 가동 서비스 데몬     WEB + CLOUD APACHE + PYDIO   FTP VSFTPD   DB MYSQL   SHARE DIRECTORY SAMBA    웹 클라우드 또한 PYDIO와 OwnCloud 등 여러가지 오픈소스를 사용 했었습니다.</description>
+      <description>v01 (2017~2020.11) 사진 사양    총 금액 ~60,000원     기종 라즈베리파이3   OS 라즈비안   CPU 4Core 1.2GHz   RAM 1GB   HDD 외장-1TB    ARM 아키텍처 환경은 많은 단점이 있었습니다.
+지원하지 않는것이 많았으며 복잡한 루틴이 어려웠습니다.
+사양    최종 가동 서비스 데몬     WEB + CLOUD APACHE + PYDIO   FTP VSFTPD   DB MYSQL   SHARE DIRECTORY SAMBA    웹 클라우드 또한 PYDIO와 OwnCloud 등 여러가지 오픈소스를 사용 했었습니다.</description>
     </item>
     
     <item>
