@@ -6,20 +6,7 @@
     <description>Recent content in 서버 on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 01 Apr 2022 08:30:11 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/categories/%EC%84%9C%EB%B2%84/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>VMWare 서버 공부환경 만들기</title>
-      <link>https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
-      <pubDate>Fri, 01 Apr 2022 08:30:11 +0900</pubDate>
-      
-      <guid>https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
-      <description>서버/클라이언트의 재현 설명 서버 실습을 위해 실제 환경을 구축하는 것은 어려운 일입니다. 네트워크 망을 시뮬레이션으로 구현하는 시스코 패킷
-트레이서를 이용하여 라우팅, 스위칭을 접해볼 수 있으나. 이것 또한 서버구축을 구현할 수 없습니다.
-실제로 서버가 동작하고, 클라이언트에서 접속을 하는 모습을 테스트 해보기 위해선 GuestOS를 여러개 띄울 수 있는
-가상 머신이 효과적이라고 생각합니다. VMWare 기준으로 내부망을 설정하여 서버를 다루는 것을 해보겠습니다.
-개요 이번 시간엔 내부 네트워크를 설정하고 그 곳에 리눅스 서버, 윈도우 클라이언트를 배치해서 통신이 가능한 형태를</description>
-    </item>
-    
+    <lastBuildDate>Fri, 01 Oct 2021 18:41:21 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/categories/%EC%84%9C%EB%B2%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>아파치 SSL 적용, Let&#39;s Encrypt</title>
       <link>https://bonhyeon.github.io/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</link>
