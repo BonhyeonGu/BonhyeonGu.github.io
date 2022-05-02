@@ -17,20 +17,7 @@
 인터넷이 아닌 공부 목적의, 내부 네트워크의 환경을 사용하는 일도 있을 것입니다. 이 두가지를 쉽게 오가면서 사용할 수 있도록&lt;br&gt;
 미리 준비 해놓으면 굉장히 편리합니다.&lt;/p&gt;
 &lt;p&gt;우리의 목표는 아래의 토폴로지와 같은 매우 간단한 형태의 네트워크망입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01.png&#34;
-	width=&#34;829&#34;
-	height=&#34;514&#34;
-	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01_hu078c8a65e899595cbaffd1547d116d51_67192_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01_hu078c8a65e899595cbaffd1547d116d51_67192_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;간단한 토폴로지&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;161&#34;
-		data-flex-basis=&#34;387px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;01.png&#34; alt=&#34;간단한 토폴로지&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;vmnet&#34;&gt;VMNet&lt;/h2&gt;
 &lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
 &lt;p&gt;VMNet은 VMWare Workstation에서 지원하는 가상 인터페이스, 네트워크입니다. 이것을 통하여 내부 네트워크망을 구현할 수 있습니다.&lt;br&gt;
@@ -62,95 +49,30 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;우리는 Add Network로 Vmnet10 을 추가하면 됩니다. 설정하면 다음과 같습니다.
-&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02.png&#34;
-	width=&#34;603&#34;
-	height=&#34;529&#34;
-	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02_hu3aaf4cd514939851847ff6017d4bb4a6_27810_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02_hu3aaf4cd514939851847ff6017d4bb4a6_27810_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;완료된 모습&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;113&#34;
-		data-flex-basis=&#34;273px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;img src=&#34;02.png&#34; alt=&#34;완료된 모습&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;linuxdebian계열&#34;&gt;Linux(Debian계열)&lt;/h2&gt;
 &lt;h3 id=&#34;설명-1&#34;&gt;설명&lt;/h3&gt;
 &lt;p&gt;인터넷망과 내부망의 연결을 오갈수 있다고 끝난 이야기가 아닙니다. 그때 마다 올바른 아이피주소를 사용해야 할 것입니다.&lt;br&gt;
 기존은 DHCP로 되어있을 것이니 Static설정을 추가하고 경우에 따라 주석처리, 주석해제를 반복하며 사용하면 편리합니다.&lt;/p&gt;
 &lt;h3 id=&#34;설정&#34;&gt;설정&lt;/h3&gt;
 &lt;p&gt;위쪽(1)의 버튼을 눌러 잠깐 GuestOS에서 빠져나올 수 있습니다. 그 다음(2)을 누르면 바로 인터페이스 설정에 들어갈 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03.png&#34;
-	width=&#34;1936&#34;
-	height=&#34;734&#34;
-	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03_hu1f4a05cf610854b13ed5eebdde3f01db_139681_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03_hu1f4a05cf610854b13ed5eebdde3f01db_139681_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;버튼 안내&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;263&#34;
-		data-flex-basis=&#34;633px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;03.png&#34; alt=&#34;버튼 안내&#34;&gt;&lt;/p&gt;
 &lt;p&gt;이곳에서 앞에서 설정했던 VMNet을 선택해주겠습니다. 만약 GuestOS가 실제 Host였다면 인터페이스에서 나온 선이 인터넷이&lt;br&gt;
 아닌  내부망의 허브에 물린 셈입니다.&lt;/p&gt;
 &lt;p&gt;다시 Debian으로 복귀해 본격적인 설정하기 앞서 ifconfig으로 인터페이스 이름을 확인해 보겠습니다. 당연히 명령어를 사용하실 때는 권한에 유의하셔야 합니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ifconfig
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04.png&#34;
-	width=&#34;633&#34;
-	height=&#34;166&#34;
-	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04_hua977036e3b138b5513d7081816a9dd27_8399_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04_hua977036e3b138b5513d7081816a9dd27_8399_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;ifconfig&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;381&#34;
-		data-flex-basis=&#34;915px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;04.png&#34; alt=&#34;ifconfig&#34;&gt;&lt;/p&gt;
 &lt;p&gt;저같은 경우는 &lt;strong&gt;ens33&lt;/strong&gt;입니다. 사진처럼 외부 아이피주소가 할당된 인터페이스를 찾으면 됩니다.&lt;/p&gt;
 &lt;p&gt;이제 이름을 기억하고 아래처럼 인터페이스 설정파일에 접근하겠습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /etc/network/interfaces
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;여기서 부터는 오타에 주의해야합니다. 오타가 발생하면 인터페이스 갱신이 불가능 해지며 이것은 연결이 불가능함을 뜻합니다.&lt;/p&gt;
 &lt;p&gt;여기서는 각 인터페이스의 address, subnet, netmask, broadcast, gateway 등을 설정할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;기존의 DHCP 설정은 주석처리하고 아래와 같이 적어보겠습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05.png&#34;
-	width=&#34;853&#34;
-	height=&#34;355&#34;
-	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05_hu4c74e0fb8f0d954402e2a66f261951a2_9922_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05_hu4c74e0fb8f0d954402e2a66f261951a2_9922_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;interfaces&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;240&#34;
-		data-flex-basis=&#34;576px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;05.png&#34; alt=&#34;interfaces&#34;&gt;&lt;/p&gt;
 &lt;p&gt;이후엔 오타를 다시 확인해보고 갱신 명령을 실행시키면 완료됩니다. 설정이 제대로 변경되었는지 확인해봅시다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service networking reload
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ifconfig
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06.png&#34;
-	width=&#34;689&#34;
-	height=&#34;381&#34;
-	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06_hua40824f8825bd75f26e421cbe720e24d_16361_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06_hua40824f8825bd75f26e421cbe720e24d_16361_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;interfaces&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;180&#34;
-		data-flex-basis=&#34;434px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;06.png&#34; alt=&#34;interfaces&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;windows&#34;&gt;Windows&lt;/h2&gt;
 &lt;h3 id=&#34;설명-2&#34;&gt;설명&lt;/h3&gt;
 &lt;p&gt;Windows는 Linux보다 더 편리하게 설정할 수 있습니다. 먼저 위와 동일하게 해당 GuestOS의 인터페이스 VMNet은 변경해야 합니다.&lt;br&gt;
@@ -158,20 +80,7 @@
 나와있으니 쉽게 하실수 있습니다만 윈도우 방화벽 정책에 ICMP와 같은 여러 프로토콜이 막혀있기 때문에 &lt;strong&gt;방화벽을 설정하거나 해제해야 합니다.&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;마무리&#34;&gt;마무리&lt;/h2&gt;
 &lt;p&gt;서로 ping명령어를 사용하여 연결이 제대로 되어있는지 확인할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07.png&#34;
-	width=&#34;530&#34;
-	height=&#34;146&#34;
-	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07_hu43046406ca2e829d90ec60d6027fb892_6838_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07_hu43046406ca2e829d90ec60d6027fb892_6838_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;ping&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;363&#34;
-		data-flex-basis=&#34;871px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;07.png&#34; alt=&#34;ping&#34;&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -328,20 +237,7 @@ FileSystem은 하나의 공간에 하나만 사용될 수 있으며 새롭게 Fi
 &lt;h3 id=&#34;fstab-파일시스템-테이블&#34;&gt;fstab-파일시스템 테이블&lt;/h3&gt;
 &lt;p&gt;부팅 시 자동으로 mount가 되기 위해선 해당 파일을 수정해야 합니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /etc/fstab
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1.png&#34;
-	width=&#34;751&#34;
-	height=&#34;200&#34;
-	srcset=&#34;https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;fstab&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;375&#34;
-		data-flex-basis=&#34;901px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;1.png&#34; alt=&#34;fstab&#34;&gt;&lt;/p&gt;
 &lt;p&gt;기본적인 mount 는 하단에 &lt;em&gt;&amp;lt;장치명&amp;gt; &amp;lt;마운트 포인트&amp;gt; &amp;lt;파일 시스템 종류&amp;gt; &amp;lt;옵션&amp;gt;&lt;/em&gt; 을 추가하면
 reboot 후부터 적용됩니다.&lt;/p&gt;
 &lt;p&gt;주의해야 할 사항이 있는데&lt;br&gt;
@@ -361,22 +257,8 @@ reboot 후부터 적용됩니다.&lt;/p&gt;
 &lt;p&gt;도커의 기본 환경은 리눅스에 맞춰져 있습니다. 따라서 윈도우에서 도커를 사용하려면 다른 방법을 선택할 필요가 있으며&lt;br&gt;
 각 방법은 장단점이 존재했습니다.  대부분 가상머신을 이용한 방법입니다.&lt;/p&gt;
 &lt;h3 id=&#34;가상-머신&#34;&gt;가상 머신&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1.jpg&#34;
-	width=&#34;1787&#34;
-	height=&#34;1131&#34;
-	srcset=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_huf9a7205103b4dcec72fcfbc1fadcd1aa_209651_480x0_resize_q75_box.jpg 480w, https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_huf9a7205103b4dcec72fcfbc1fadcd1aa_209651_1024x0_resize_q75_box.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;가상머신과 도커&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;158&#34;
-		data-flex-basis=&#34;379px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://commons.wikimedia.org/wiki/File:Dockervsvm.jpg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;출처&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;1.jpg&#34; alt=&#34;가상머신과 도커&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://commons.wikimedia.org/wiki/File:Dockervsvm.jpg&#34;&gt;출처&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;가상머신은 기존의 운영체제(Host OS)에 가상의 운영체제(Guest OS)를 올릴 수 있게 해주는 소프트웨어 입니다.&lt;br&gt;
 도커도 가상머신과 흡사하지만 GuestOS를 모두 올리는 것이 아니라. 필요한 쉘과 커널등만 올린다는 차이점이 있습니다.&lt;br&gt;
 즉 도커는 가상머신 만큼 자유롭지는 못하나. 환경을 만들고 사용하는 부분에서 가볍게 진행 가능합니다.&lt;/p&gt;
@@ -385,8 +267,7 @@ reboot 후부터 적용됩니다.&lt;/p&gt;
 의 관계를 거쳐야 합니다. 그렇게 최적화된 방법은 아닐 것입니다.&lt;/p&gt;
 &lt;h2 id=&#34;윈도우에서-사용하는-방법들&#34;&gt;윈도우에서 사용하는 방법들&lt;/h2&gt;
 &lt;h3 id=&#34;docker-toolbox&#34;&gt;Docker Toolbox&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/docker-archive/toolbox/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;공식 Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/docker-archive/toolbox/releases&#34;&gt;공식 Github&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;과거에는 Docker Toolbox를 주로 사용했습니다.  이것은 Virtualbox로 도커를 쉽게 설치/연결 시켜주는 가상머신 파일입니다.&lt;br&gt;
 그 시절 때 상대적으로 가벼웠던 Virtualbox는 도커를 쓰기 위해 잠깐 사용 할 가상머신으로 적합했습니다.&lt;br&gt;
 그러나 가상머신 특징상 HostOS와 GuestOS가 분리되어 IDE로 Remote하지 않는 이상 환경 공유에 불편함이 따랐습니다.&lt;/p&gt;
@@ -401,20 +282,7 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
 &lt;p&gt;위에서 나오는 모든 방법들은 컨테이너를 사용하기 위해 가상 머신을 사용해야 한다는 공통점을 가지고 있습니다. 이것은 번거로운 일입니다.&lt;/p&gt;
 &lt;p&gt;Docker Desktop은 이와 다르게, 설치되어있는 WSL2을 이용하여 HostOS에서 Docker를 사용할 수 있도록 도와줍니다.&lt;br&gt;
 그렇기 때문에 사용하기 위해선 Hyper-V과 WSL2가 설치되어 있어야 합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2.png&#34;
-	width=&#34;724&#34;
-	height=&#34;536&#34;
-	srcset=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;도커 데스크탑 원리&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;135&#34;
-		data-flex-basis=&#34;324px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;2.png&#34; alt=&#34;도커 데스크탑 원리&#34;&gt;&lt;/p&gt;
 &lt;p&gt;예전에는 ARM 아키텍처를 이용하는 맥OS 계열에서도 이것을 사용했으나&lt;br&gt;
 최근 Docker는 ARM아키텍처를 지원하게 되었기 때문에 해당 선택지를 고를 필요는 없습니다.&lt;/p&gt;
 &lt;p&gt;이것은 편리하지만 심각한 메모리의 사용률과 상업적 이용의 유료화 때문에 상위호환의 선택지가 될 수 없습니다.&lt;/p&gt;
@@ -624,8 +492,7 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
 &lt;p&gt;zsh를 설정할 수 있는 편리한 콘피그들을 제공해주는 프레임워크입니다.&lt;/p&gt;
 &lt;h3 id=&#34;설치-1&#34;&gt;설치&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;해당 설치법은 &lt;a class=&#34;link&#34; href=&#34;http://ohmyz.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;http://ohmyz.sh/&lt;/a&gt; 에서 제공하는 방법입니다. 문제가 생길경우 이곳에서 편집되었는지 확인할 수 있습니다.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;해당 설치법은 &lt;a href=&#34;http://ohmyz.sh/&#34;&gt;http://ohmyz.sh/&lt;/a&gt; 에서 제공하는 방법입니다. 문제가 생길경우 이곳에서 편집되었는지 확인할 수 있습니다.&lt;/p&gt;
 &lt;h3 id=&#34;설정&#34;&gt;설정&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.zshrc
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;에서 제가 주로 사용하는 것은&lt;/p&gt;
@@ -639,8 +506,7 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;또는 apt 패키지 관리자로 설치 가능합니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install fonts-powerline
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;만약 wsl2와 같은 윈도우 환경이라면 수동으로 설치해야합니다.
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/powerline/fonts.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/powerline/fonts.git&lt;/a&gt; 의 릴리즈에 들어가 압축파일을 받은 뒤
+&lt;a href=&#34;https://github.com/powerline/fonts.git&#34;&gt;https://github.com/powerline/fonts.git&lt;/a&gt; 의 릴리즈에 들어가 압축파일을 받은 뒤
 수동 설치를 진행하고 터미널-&amp;gt;속성에서 글꼴을 변경할 수 있습니다.&lt;/p&gt;
 &lt;h2 id=&#34;기타&#34;&gt;기타&lt;/h2&gt;
 &lt;h3 id=&#34;업데이트-충돌-오류&#34;&gt;업데이트 충돌 오류&lt;/h3&gt;
@@ -841,20 +707,7 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 위의 일반 인증서 발급과 다르게 추가 인증이 필요하다는 메세지를 볼 수 있습니다. 몇가지 제시를 해주는데&lt;br&gt;
 도메인이 본인의 것이 맞다면 도메인 인증이 가장 편리한 것 같습니다.&lt;/p&gt;
 &lt;p&gt;저는 구글 도메인 서비스를 이용 중이기 때문에 아래의 화면에서 설정 가능합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google.png&#34;
-	width=&#34;1005&#34;
-	height=&#34;376&#34;
-	srcset=&#34;https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google_hu4f2bd7349f00618c3a33491322cfc093_18650_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google_hu4f2bd7349f00618c3a33491322cfc093_18650_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image1&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;267&#34;
-		data-flex-basis=&#34;641px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;002-google.png&#34; alt=&#34;image1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;타입은 텍스트로 한 후 호스트이름과 데이터에 요구조건대로 적용하면 완료됩니다.&lt;br&gt;
 단 도메인 정보가 전파되는데 시간이 걸릴 수 있으니 조금 기다렸다가 nslookup등으로 확인 한 후 다음 버튼을 누르시는걸 권장합니다.&lt;/p&gt;
 &lt;h3 id=&#34;인증서-취소&#34;&gt;인증서 취소&lt;/h3&gt;
@@ -979,8 +832,7 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;요약하면 80번 포트로 연결되는 가상 호스트이며 도메인이 a.com일때 /var/www/a.com의 내용을 보여라는 뜻입니다.
-그대로  &lt;a class=&#34;link&#34; href=&#34;https://www.a.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;www.a.com&lt;/a&gt;또한 작성하면 됩니다.&lt;/p&gt;
+그대로  &lt;a href=&#34;https://www.a.com&#34;&gt;www.a.com&lt;/a&gt;또한 작성하면 됩니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano www.a.com
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ApacheConf&#34; data-lang=&#34;ApacheConf&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;*:80&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;ServerName&lt;/span&gt;  www.a.com
@@ -1059,8 +911,7 @@ Github page를 사용하면 관리하기 편리할 것 같지만 호스팅 경�
 기본으로 생기는 설정파일이 config.toml인것에 반해 제작자 가이드는 config.yaml에 맞추어져 있습니다. 편의상인 것으로 추측됩니다.
 원래 있는 config.toml을 치우고 config.yaml을 만들어주면 yaml타입으로 설정할 수 있습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; .. / mv ./config.toml ./__config.toml 나노 config.yaml
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이후에 설정파일은 테마 제작자 깃허브 &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/CaiJimmy/hugo-theme-stack&lt;/a&gt; 를 참고하여 작성 했습니다.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이후에 설정파일은 테마 제작자 깃허브 &lt;a href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;&gt;https://github.com/CaiJimmy/hugo-theme-stack&lt;/a&gt; 를 참고하여 작성 했습니다.&lt;/p&gt;
 &lt;p&gt;작성이 완료되었다면 해당 명령어로 로컬 서버를 동작시켜 사이트 테스트를 할 수 있습니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 /tmp/hugo_cache/ 쪽에서 권한 문제가 생겼다는 에러를 확인할 수 있었습니다.
