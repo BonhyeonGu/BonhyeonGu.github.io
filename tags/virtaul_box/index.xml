@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>virtaul_box on 9Bon&#39;s_Docs</title>
-    <link>https://bonhyeon.github.io/tags/virtaul_box/</link>
+    <link>https://docs.9bon.org/tags/virtaul_box/</link>
     <description>Recent content in virtaul_box on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 20 Feb 2022 16:54:39 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/tags/virtaul_box/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Feb 2022 16:54:39 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/tags/virtaul_box/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>도커와 윈도우</title>
-      <link>https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</link>
+      <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</link>
       <pubDate>Sun, 20 Feb 2022 16:54:39 +0900</pubDate>
       
-      <guid>https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</guid>
+      <guid>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</guid>
       <description>윈도우 윈도우에서의 도커 도커의 기본 환경은 리눅스에 맞춰져 있습니다. 따라서 윈도우에서 도커를 사용하려면 다른 방법을 선택할 필요가 있으며
 각 방법은 장단점이 존재했습니다. 대부분 가상머신을 이용한 방법입니다.
 가상 머신 출처

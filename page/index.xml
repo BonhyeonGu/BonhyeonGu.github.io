@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on 9Bon&#39;s_Docs</title>
-    <link>https://bonhyeon.github.io/page/</link>
+    <link>https://docs.9bon.org/page/</link>
     <description>Recent content in Pages on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 04 Oct 2021 20:11:31 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Oct 2021 20:11:31 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Photograph</title>
-      <link>https://bonhyeon.github.io/photograph/</link>
+      <link>https://docs.9bon.org/photograph/</link>
       <pubDate>Mon, 04 Oct 2021 20:11:31 +0900</pubDate>
       
-      <guid>https://bonhyeon.github.io/photograph/</guid>
+      <guid>https://docs.9bon.org/photograph/</guid>
       <description>2021 창업교육센터, 창업동아리팀 Pandemic
 2020 네트워크 중급자 스터디 진행
 2017 네트워크 스터디, 리눅스 스터디 진행
@@ -23,10 +23,10 @@
     
     <item>
       <title>ServerLog</title>
-      <link>https://bonhyeon.github.io/serverlog/</link>
+      <link>https://docs.9bon.org/serverlog/</link>
       <pubDate>Sun, 03 Oct 2021 23:21:22 +0900</pubDate>
       
-      <guid>https://bonhyeon.github.io/serverlog/</guid>
+      <guid>https://docs.9bon.org/serverlog/</guid>
       <description>v01 (2017~2020.11) 사진 사양    총 금액 ~60,000원     기종 라즈베리파이3   OS 라즈비안   CPU 4Core 1.2GHz   RAM 1GB   HDD 외장-1TB    ARM 아키텍처 환경은 많은 단점이 있었습니다.
 지원하지 않는것이 많았으며 복잡한 루틴이 어려웠습니다.
 사양    최종 가동 서비스 데몬     WEB + CLOUD APACHE + PYDIO   FTP VSFTPD   DB MYSQL   SHARE DIRECTORY SAMBA    웹 클라우드 또한 PYDIO와 OwnCloud 등 여러가지 오픈소스를 사용 했었습니다.</description>
@@ -34,19 +34,19 @@
     
     <item>
       <title>Archives</title>
-      <link>https://bonhyeon.github.io/archives/</link>
+      <link>https://docs.9bon.org/archives/</link>
       <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://bonhyeon.github.io/archives/</guid>
+      <guid>https://docs.9bon.org/archives/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://bonhyeon.github.io/about/</link>
+      <link>https://docs.9bon.org/about/</link>
       <pubDate>Tue, 31 Aug 2021 19:09:40 +0900</pubDate>
       
-      <guid>https://bonhyeon.github.io/about/</guid>
+      <guid>https://docs.9bon.org/about/</guid>
       <description>Contact 🙋
 tayasriel@gmail.com
 Introduce 🧑‍💼
@@ -59,10 +59,10 @@ https://docs.9bon.org/serverlog/</description>
     
     <item>
       <title>Search</title>
-      <link>https://bonhyeon.github.io/search/</link>
+      <link>https://docs.9bon.org/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://bonhyeon.github.io/search/</guid>
+      <guid>https://docs.9bon.org/search/</guid>
       <description></description>
     </item>
     

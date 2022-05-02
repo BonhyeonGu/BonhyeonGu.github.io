@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>9Bon&#39;s_Docs</title>
-        <link>https://bonhyeon.github.io/</link>
+        <link>https://docs.9bon.org/</link>
         <description>Recent content on 9Bon&#39;s_Docs</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko-kr</language>
-        <lastBuildDate>Fri, 01 Apr 2022 08:30:11 +0900</lastBuildDate><atom:link href="https://bonhyeon.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 01 Apr 2022 08:30:11 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>VMWare 서버 공부환경 만들기</title>
-        <link>https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+        <link>https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
         <pubDate>Fri, 01 Apr 2022 08:30:11 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/thum.png" alt="Featured image of post VMWare 서버 공부환경 만들기" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/thum.png" alt="Featured image of post VMWare 서버 공부환경 만들기" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
 &lt;p&gt;GuestOS에서 무언가를 설치하기 위해 인터넷과 연결하여 사용할 때가 있을 것이며&lt;br&gt;
 인터넷이 아닌 공부 목적의, 내부 네트워크의 환경을 사용하는 일도 있을 것입니다. 이 두가지를 쉽게 오가면서 사용할 수 있도록&lt;br&gt;
 미리 준비 해놓으면 굉장히 편리합니다.&lt;/p&gt;
 &lt;p&gt;우리의 목표는 아래의 토폴로지와 같은 매우 간단한 형태의 네트워크망입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01.png&#34;
 	width=&#34;829&#34;
 	height=&#34;514&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01_hu078c8a65e899595cbaffd1547d116d51_67192_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01_hu078c8a65e899595cbaffd1547d116d51_67192_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01_hu078c8a65e899595cbaffd1547d116d51_67192_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01_hu078c8a65e899595cbaffd1547d116d51_67192_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;간단한 토폴로지&#34;
@@ -62,10 +62,10 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;우리는 Add Network로 Vmnet10 을 추가하면 됩니다. 설정하면 다음과 같습니다.
-&lt;img src=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02.png&#34;
+&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02.png&#34;
 	width=&#34;603&#34;
 	height=&#34;529&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02_hu3aaf4cd514939851847ff6017d4bb4a6_27810_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02_hu3aaf4cd514939851847ff6017d4bb4a6_27810_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02_hu3aaf4cd514939851847ff6017d4bb4a6_27810_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02_hu3aaf4cd514939851847ff6017d4bb4a6_27810_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;완료된 모습&#34;
@@ -82,10 +82,10 @@
 기존은 DHCP로 되어있을 것이니 Static설정을 추가하고 경우에 따라 주석처리, 주석해제를 반복하며 사용하면 편리합니다.&lt;/p&gt;
 &lt;h3 id=&#34;설정&#34;&gt;설정&lt;/h3&gt;
 &lt;p&gt;위쪽(1)의 버튼을 눌러 잠깐 GuestOS에서 빠져나올 수 있습니다. 그 다음(2)을 누르면 바로 인터페이스 설정에 들어갈 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03.png&#34;
 	width=&#34;1936&#34;
 	height=&#34;734&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03_hu1f4a05cf610854b13ed5eebdde3f01db_139681_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03_hu1f4a05cf610854b13ed5eebdde3f01db_139681_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03_hu1f4a05cf610854b13ed5eebdde3f01db_139681_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03_hu1f4a05cf610854b13ed5eebdde3f01db_139681_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;버튼 안내&#34;
@@ -100,10 +100,10 @@
 아닌  내부망의 허브에 물린 셈입니다.&lt;/p&gt;
 &lt;p&gt;다시 Debian으로 복귀해 본격적인 설정하기 앞서 ifconfig으로 인터페이스 이름을 확인해 보겠습니다. 당연히 명령어를 사용하실 때는 권한에 유의하셔야 합니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ifconfig
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04.png&#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04.png&#34;
 	width=&#34;633&#34;
 	height=&#34;166&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04_hua977036e3b138b5513d7081816a9dd27_8399_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04_hua977036e3b138b5513d7081816a9dd27_8399_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04_hua977036e3b138b5513d7081816a9dd27_8399_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04_hua977036e3b138b5513d7081816a9dd27_8399_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;ifconfig&#34;
@@ -120,10 +120,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;여기서 부터는 오타에 주의해야합니다. 오타가 발생하면 인터페이스 갱신이 불가능 해지며 이것은 연결이 불가능함을 뜻합니다.&lt;/p&gt;
 &lt;p&gt;여기서는 각 인터페이스의 address, subnet, netmask, broadcast, gateway 등을 설정할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;기존의 DHCP 설정은 주석처리하고 아래와 같이 적어보겠습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05.png&#34;
 	width=&#34;853&#34;
 	height=&#34;355&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05_hu4c74e0fb8f0d954402e2a66f261951a2_9922_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05_hu4c74e0fb8f0d954402e2a66f261951a2_9922_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05_hu4c74e0fb8f0d954402e2a66f261951a2_9922_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05_hu4c74e0fb8f0d954402e2a66f261951a2_9922_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;interfaces&#34;
@@ -137,10 +137,10 @@
 &lt;p&gt;이후엔 오타를 다시 확인해보고 갱신 명령을 실행시키면 완료됩니다. 설정이 제대로 변경되었는지 확인해봅시다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service networking reload
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ifconfig
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06.png&#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06.png&#34;
 	width=&#34;689&#34;
 	height=&#34;381&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06_hua40824f8825bd75f26e421cbe720e24d_16361_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06_hua40824f8825bd75f26e421cbe720e24d_16361_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06_hua40824f8825bd75f26e421cbe720e24d_16361_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06_hua40824f8825bd75f26e421cbe720e24d_16361_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;interfaces&#34;
@@ -158,10 +158,10 @@
 나와있으니 쉽게 하실수 있습니다만 윈도우 방화벽 정책에 ICMP와 같은 여러 프로토콜이 막혀있기 때문에 &lt;strong&gt;방화벽을 설정하거나 해제해야 합니다.&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;마무리&#34;&gt;마무리&lt;/h2&gt;
 &lt;p&gt;서로 ping명령어를 사용하여 연결이 제대로 되어있는지 확인할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07.png&#34;
 	width=&#34;530&#34;
 	height=&#34;146&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07_hu43046406ca2e829d90ec60d6027fb892_6838_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07_hu43046406ca2e829d90ec60d6027fb892_6838_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07_hu43046406ca2e829d90ec60d6027fb892_6838_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07_hu43046406ca2e829d90ec60d6027fb892_6838_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;ping&#34;
@@ -176,11 +176,11 @@
         </item>
         <item>
         <title>리눅스 디스크 백업</title>
-        <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</link>
+        <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</link>
         <pubDate>Fri, 25 Mar 2022 11:21:02 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/thum.png" alt="Featured image of post 리눅스 디스크 백업" /&gt;&lt;h2 id=&#34;백업&#34;&gt;백업&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/thum.png" alt="Featured image of post 리눅스 디스크 백업" /&gt;&lt;h2 id=&#34;백업&#34;&gt;백업&lt;/h2&gt;
 &lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
 &lt;p&gt;백업/복원은 말 그대로 나중에 되돌릴 수 있게 사본을 복사하여 저장하는 기능입니다. 과거에도 OS에서 지원하는&lt;br&gt;
 소프트웨어가 있었지만, 그럼에도 저 같은 경우에는 CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습니다.&lt;/p&gt;
@@ -238,11 +238,11 @@
         </item>
         <item>
         <title>리눅스 디스크 문제</title>
-        <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</link>
+        <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</link>
         <pubDate>Sat, 12 Mar 2022 03:43:58 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/thum.png" alt="Featured image of post 리눅스 디스크 문제" /&gt;&lt;h2 id=&#34;하드디스크의-문제&#34;&gt;하드디스크의 문제&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/thum.png" alt="Featured image of post 리눅스 디스크 문제" /&gt;&lt;h2 id=&#34;하드디스크의-문제&#34;&gt;하드디스크의 문제&lt;/h2&gt;
 &lt;h3 id=&#34;증상&#34;&gt;증상&lt;/h3&gt;
 &lt;p&gt;저장, 삭제시 에러문구 : &amp;ldquo;Structure needs cleaning&amp;rdquo;, &amp;ldquo;구조에 청소가 필요합니다&amp;rdquo;&lt;br&gt;
 ls 시 : ??? ?? ???? 로 표시&lt;/p&gt;
@@ -283,11 +283,11 @@ ls 시 : ??? ?? ???? 로 표시&lt;/p&gt;
         </item>
         <item>
         <title>리눅스 디스크 사용</title>
-        <link>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</link>
+        <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</link>
         <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/thum.png" alt="Featured image of post 리눅스 디스크 사용" /&gt;&lt;h2 id=&#34;partion&#34;&gt;Partion&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/thum.png" alt="Featured image of post 리눅스 디스크 사용" /&gt;&lt;h2 id=&#34;partion&#34;&gt;Partion&lt;/h2&gt;
 &lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
 &lt;p&gt;기본적으로 리눅스의 Filesystem은 다음과 같은 과정을 통해 만들어집니다. Partion &amp;gt; Format &amp;gt; Mount 의 과정을 거칩니다.&lt;br&gt;
 윈도우는 자동 마운트됩니다.&lt;/p&gt;
@@ -328,10 +328,10 @@ FileSystem은 하나의 공간에 하나만 사용될 수 있으며 새롭게 Fi
 &lt;h3 id=&#34;fstab-파일시스템-테이블&#34;&gt;fstab-파일시스템 테이블&lt;/h3&gt;
 &lt;p&gt;부팅 시 자동으로 mount가 되기 위해선 해당 파일을 수정해야 합니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /etc/fstab
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1.png&#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1.png&#34;
 	width=&#34;751&#34;
 	height=&#34;200&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;fstab&#34;
@@ -352,19 +352,19 @@ reboot 후부터 적용됩니다.&lt;/p&gt;
         </item>
         <item>
         <title>도커와 윈도우</title>
-        <link>https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</link>
+        <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</link>
         <pubDate>Sun, 20 Feb 2022 16:54:39 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum.png" alt="Featured image of post 도커와 윈도우" /&gt;&lt;h2 id=&#34;윈도우&#34;&gt;윈도우&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum.png" alt="Featured image of post 도커와 윈도우" /&gt;&lt;h2 id=&#34;윈도우&#34;&gt;윈도우&lt;/h2&gt;
 &lt;h3 id=&#34;윈도우에서의-도커&#34;&gt;윈도우에서의 도커&lt;/h3&gt;
 &lt;p&gt;도커의 기본 환경은 리눅스에 맞춰져 있습니다. 따라서 윈도우에서 도커를 사용하려면 다른 방법을 선택할 필요가 있으며&lt;br&gt;
 각 방법은 장단점이 존재했습니다.  대부분 가상머신을 이용한 방법입니다.&lt;/p&gt;
 &lt;h3 id=&#34;가상-머신&#34;&gt;가상 머신&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1.jpg&#34;
 	width=&#34;1787&#34;
 	height=&#34;1131&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_huf9a7205103b4dcec72fcfbc1fadcd1aa_209651_480x0_resize_q75_box.jpg 480w, https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_huf9a7205103b4dcec72fcfbc1fadcd1aa_209651_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_huf9a7205103b4dcec72fcfbc1fadcd1aa_209651_480x0_resize_q75_box.jpg 480w, https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_huf9a7205103b4dcec72fcfbc1fadcd1aa_209651_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;가상머신과 도커&#34;
@@ -401,10 +401,10 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
 &lt;p&gt;위에서 나오는 모든 방법들은 컨테이너를 사용하기 위해 가상 머신을 사용해야 한다는 공통점을 가지고 있습니다. 이것은 번거로운 일입니다.&lt;/p&gt;
 &lt;p&gt;Docker Desktop은 이와 다르게, 설치되어있는 WSL2을 이용하여 HostOS에서 Docker를 사용할 수 있도록 도와줍니다.&lt;br&gt;
 그렇기 때문에 사용하기 위해선 Hyper-V과 WSL2가 설치되어 있어야 합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2.png&#34;
 	width=&#34;724&#34;
 	height=&#34;536&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;도커 데스크탑 원리&#34;
@@ -422,11 +422,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
         </item>
         <item>
         <title>도커 파일</title>
-        <link>https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/</link>
+        <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/</link>
         <pubDate>Sun, 02 Jan 2022 02:21:44 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/thum.png" alt="Featured image of post 도커 파일" /&gt;&lt;h2 id=&#34;간단한-형식&#34;&gt;간단한 형식&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/thum.png" alt="Featured image of post 도커 파일" /&gt;&lt;h2 id=&#34;간단한-형식&#34;&gt;간단한 형식&lt;/h2&gt;
 &lt;h3 id=&#34;운영체제&#34;&gt;운영체제&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-docker&#34; data-lang=&#34;docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;#원본이 될 이미지, https://hub.docker.com/ 참고&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#버전을 기록하지 않으면 최신 버전을 사용하게 된다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
@@ -539,11 +539,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
         </item>
         <item>
         <title>RDP  문제</title>
-        <link>https://bonhyeon.github.io/p/rdp-%EB%AC%B8%EC%A0%9C/</link>
+        <link>https://docs.9bon.org/p/rdp-%EB%AC%B8%EC%A0%9C/</link>
         <pubDate>Fri, 31 Dec 2021 11:38:57 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/rdp-%EB%AC%B8%EC%A0%9C/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/rdp-%EB%AC%B8%EC%A0%9C/thum.png" alt="Featured image of post RDP  문제" /&gt;&lt;h2 id=&#34;설명&#34;&gt;설명&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/rdp-%EB%AC%B8%EC%A0%9C/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/rdp-%EB%AC%B8%EC%A0%9C/thum.png" alt="Featured image of post RDP  문제" /&gt;&lt;h2 id=&#34;설명&#34;&gt;설명&lt;/h2&gt;
 &lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
 &lt;p&gt;윈도우즈, 윈도우즈 서버 운영체제를 사용할 때 정책을 사용해야 하는 이유로&lt;br&gt;
 반드시 공식 지원하는 &amp;lsquo;RDP&amp;rsquo;를 사용해야 할 때가 있습니다.&lt;/p&gt;
@@ -604,11 +604,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
         </item>
         <item>
         <title>zsh, oh-my-zsh!</title>
-        <link>https://bonhyeon.github.io/p/zsh-oh-my-zsh/</link>
+        <link>https://docs.9bon.org/p/zsh-oh-my-zsh/</link>
         <pubDate>Fri, 24 Dec 2021 16:11:32 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/zsh-oh-my-zsh/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/zsh-oh-my-zsh/thum.png" alt="Featured image of post zsh, oh-my-zsh!" /&gt;&lt;h2 id=&#34;zsh&#34;&gt;zsh&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/zsh-oh-my-zsh/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/zsh-oh-my-zsh/thum.png" alt="Featured image of post zsh, oh-my-zsh!" /&gt;&lt;h2 id=&#34;zsh&#34;&gt;zsh&lt;/h2&gt;
 &lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
 &lt;p&gt;기능이 다양해서 유행중인 bash 쉘을 대체하는 쉘입니다.&lt;/p&gt;
 &lt;h3 id=&#34;설치&#34;&gt;설치&lt;/h3&gt;
@@ -657,11 +657,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
         </item>
         <item>
         <title>도커 명령어와 예제</title>
-        <link>https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/</link>
+        <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/</link>
         <pubDate>Sun, 03 Oct 2021 01:40:54 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/thum.png" alt="Featured image of post 도커 명령어와 예제" /&gt;&lt;h2 id=&#34;기본&#34;&gt;기본&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/thum.png" alt="Featured image of post 도커 명령어와 예제" /&gt;&lt;h2 id=&#34;기본&#34;&gt;기본&lt;/h2&gt;
 &lt;h3 id=&#34;컨테이너-조회&#34;&gt;컨테이너 조회&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Docker&#34; data-lang=&#34;Docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker ps -a&lt;span class=&#34;err&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
@@ -810,11 +810,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
         </item>
         <item>
         <title>아파치 SSL 적용, Let&#39;s Encrypt</title>
-        <link>https://bonhyeon.github.io/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</link>
+        <link>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</link>
         <pubDate>Fri, 01 Oct 2021 18:41:21 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/thum.png" alt="Featured image of post 아파치 SSL 적용, Let&#39;s Encrypt" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/thum.png" alt="Featured image of post 아파치 SSL 적용, Let&#39;s Encrypt" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
 &lt;p&gt;only HTTP 사용된 전달은 보호되지 않습니다. 우리가 입력할 아이디와 비밀번호는 평문으로 전달되게 될 것이며&lt;br&gt;
 이는 공격자가 쉽게 중간에서 가로챌 수 있습니다.&lt;br&gt;
 이를 방지하기 위해 지금은 TLS내지 SSL을 사용한 HTTPS가 사용되고 있습니다.&lt;br&gt;
@@ -841,10 +841,10 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 위의 일반 인증서 발급과 다르게 추가 인증이 필요하다는 메세지를 볼 수 있습니다. 몇가지 제시를 해주는데&lt;br&gt;
 도메인이 본인의 것이 맞다면 도메인 인증이 가장 편리한 것 같습니다.&lt;/p&gt;
 &lt;p&gt;저는 구글 도메인 서비스를 이용 중이기 때문에 아래의 화면에서 설정 가능합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bonhyeon.github.io/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google.png&#34;
 	width=&#34;1005&#34;
 	height=&#34;376&#34;
-	srcset=&#34;https://bonhyeon.github.io/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google_hu4f2bd7349f00618c3a33491322cfc093_18650_480x0_resize_box_3.png 480w, https://bonhyeon.github.io/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google_hu4f2bd7349f00618c3a33491322cfc093_18650_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google_hu4f2bd7349f00618c3a33491322cfc093_18650_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google_hu4f2bd7349f00618c3a33491322cfc093_18650_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image1&#34;
@@ -949,11 +949,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
         </item>
         <item>
         <title>아파치 가상호스트 설정</title>
-        <link>https://bonhyeon.github.io/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/</link>
+        <link>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/</link>
         <pubDate>Thu, 02 Sep 2021 19:32:24 +0900</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/thum.png" alt="Featured image of post 아파치 가상호스트 설정" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/thum.png" alt="Featured image of post 아파치 가상호스트 설정" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
 &lt;p&gt;웹 서버 데몬은 한 호스트를 여러 호스트처럼 쓸 수 있는 &lt;strong&gt;가상 호스트(VirtualHost)&lt;/strong&gt; 를 대부분 지원하고 있습니다. 포트번호, 서브도메인, 출발지 주소등의 규칙을 적용시킵니다.
 이번엔 Debian과 Apache로 서브 도메인에 따른 규칙으로 가상 호스트를 구현해 보도록 하겠습니다.
 마지막엔 cloud.9bon.org와 9bon.org가 똑같은 장치에 구성되어있음에 불구하고 서로 다른 내용을 보여주는 것이 목표입니다.&lt;/p&gt;
@@ -1005,11 +1005,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
         </item>
         <item>
         <title>휴고 서버에 직접 구동시키기</title>
-        <link>https://bonhyeon.github.io/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/</link>
+        <link>https://docs.9bon.org/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/</link>
         <pubDate>Wed, 01 Sep 2021 14:21:27 +1023</pubDate>
         
-        <guid>https://bonhyeon.github.io/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
-        <description>&lt;img src="https://bonhyeon.github.io/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/thum.png" alt="Featured image of post 휴고 서버에 직접 구동시키기" /&gt;&lt;h2 id=&#34;주의사항&#34;&gt;주의사항&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/thum.png" alt="Featured image of post 휴고 서버에 직접 구동시키기" /&gt;&lt;h2 id=&#34;주의사항&#34;&gt;주의사항&lt;/h2&gt;
 &lt;h3 id=&#34;20220320&#34;&gt;2022.03.20&lt;/h3&gt;
 &lt;p&gt;하드디스크가 문제가 생겼었고, 교환 받은 디스크도 종종 긁히는 소리가 갑자기 생기는데 Hugo를 직접 호스팅 하기 전까지 이런적은 없었습니다.&lt;br&gt;
 hugo server 로 24시간 작동시키는것이 다른 문제가 있는지 의심하는 중입니다. 주의하시길 바랍니다.&lt;/p&gt;
