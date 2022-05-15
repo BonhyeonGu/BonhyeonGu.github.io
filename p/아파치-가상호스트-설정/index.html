@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko-kr">
+<html lang="ko-kr" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='서브도메인으로 가상호스트 설정을 적용하는 방법입니다.'><title>아파치 가상호스트 설정</title>
 
 <link rel='canonical' href='https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/'>
 
-<link rel="stylesheet" href="/scss/style.min.9548733e003ddfd331209598b39909b6f8cb4f42ee5f551f2d9d10b27b5bfe39.css"><meta property='og:title' content='아파치 가상호스트 설정'>
+<link rel="stylesheet" href="/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css"><meta property='og:title' content='아파치 가상호스트 설정'>
 <meta property='og:description' content='서브도메인으로 가상호스트 설정을 적용하는 방법입니다.'>
 <meta property='og:url' content='https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/'>
 <meta property='og:site_name' content='9Bon&#39;s_Docs'>
@@ -45,8 +45,8 @@ if (!doNotTrack) {
 </script>
     </head>
     <body class="
-    article-page has-toc
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -69,25 +69,172 @@ if (!doNotTrack) {
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        extended
-    
-">
-    
-        <div id="article-toolbar">
-            <a href="/" class="back-home">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huaef87c9587ca1f1e28e83ecfd9cba8c0_184448_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">9Bon&#39;s_Docs</a></h1>
+            <h2 class="site-description">Hungry</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/BonhyeonGu'
+                        target="_blank"
+                        
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
 </svg>
 
 
 
-                <span>뒤로가기</span>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://cloud.9bon.org'
+                        target="_blank"
+                        
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-12" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
             </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                    
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>다크 모드</span>
+                </li>
+            
         </div>
-    
+    </ol>
+</aside>
 <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
@@ -119,15 +266,17 @@ if (!doNotTrack) {
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/">아파치 가상호스트 설정</a>
-    </h2>
-
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/">아파치 가상호스트 설정</a>
+        </h2>
     
-    <h3 class="article-subtitle">
-        서브도메인으로 가상호스트 설정을 적용하는 방법입니다.
-    </h3>
-    
+        
+        <h3 class="article-subtitle">
+            서브도메인으로 가상호스트 설정을 적용하는 방법입니다.
+        </h3>
+        
+    </div>
 
     
     <footer class="article-time">
@@ -162,6 +311,8 @@ if (!doNotTrack) {
             </div>
         
     </footer>
+    
+
     
 </div>
 </header>
@@ -254,14 +405,14 @@ if (!doNotTrack) {
 
     
 
-    <aside class="related-contents--wrapper">
     
-    
-        <h2 class="section-title">관련 글</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
+
+<aside class="related-contents--wrapper">
+    <h2 class="section-title">관련 글</h2>
+    <div class="related-contents">
+        <div class="flex article-list--tile">
+            
                 
-                    
 <article class="has-image">
     <a href="/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/">
         
@@ -283,8 +434,31 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
+<article class="has-image">
+    <a href="/p/dns-server-bind9/">
+        
+        
+            <div class="article-image">
+                <img src="/p/dns-server-bind9/thum.f68d12ea7bc480efb838f4446fab1e30_hu824554077030e2b5363c801976600b24_607940_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post DNS Server, BIND9"
+                        
+                        data-hash="md5-9o0S6nvEgO&#43;4OPREb6seMA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">DNS Server, BIND9</h2>
+        </div>
+    </a>
+</article>
+            
+                
 <article class="has-image">
     <a href="/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
         
@@ -306,8 +480,8 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/">
         
@@ -329,8 +503,8 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
+            
                 
-                    
 <article class="has-image">
     <a href="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/">
         
@@ -352,33 +526,9 @@ if (!doNotTrack) {
         </div>
     </a>
 </article>
-                
-                    
-<article class="has-image">
-    <a href="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/">
-        
-        
-            <div class="article-image">
-                <img src="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/thum.071afa6a9e938a71419aed456786df60_hub73c81dae35932a884eebb6fb7bc512a_556211_250x150_fill_box_smart1_3.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post 리눅스 디스크 사용"
-                        
-                        data-hash="md5-Bxr6ap6TinFBmu1FZ4bfYA==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">리눅스 디스크 사용</h2>
+            
         </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
-    
+    </div>
 </aside>
 
      
@@ -441,7 +591,7 @@ if (!doNotTrack) {
         
             방문해주셔서 감사합니다. <br/>
         <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
-        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.8.0">Stack</a></b> 테마 사용 중
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> 테마 사용 중
     </section>
 </footer>
 
@@ -525,34 +675,6 @@ if (!doNotTrack) {
             >
 
             </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                </div>
-                <h2 class="widget-title section-title">목차</h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
-  <ol>
-    <li><a href="#서론">서론</a></li>
-    <li><a href="#아파치-준비">아파치 준비</a></li>
-    <li><a href="#아파치-설정">아파치 설정</a></li>
-  </ol>
-</nav>
-                </div>
-            </section>
-        </aside>
     
 
         </div>
