@@ -1,326 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Pages on 9Bon&#39;s_Docs</title>
-        <link>https://docs.9bon.org/page/</link>
-        <description>Recent content in Pages on 9Bon&#39;s_Docs</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>ko-kr</language>
-        <lastBuildDate>Mon, 04 Oct 2021 20:11:31 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Photograph</title>
-        <link>https://docs.9bon.org/photograph/</link>
-        <pubDate>Mon, 04 Oct 2021 20:11:31 +0900</pubDate>
-        
-        <guid>https://docs.9bon.org/photograph/</guid>
-        <description>&lt;h2 id=&#34;2021&#34;&gt;2021&lt;/h2&gt;
-&lt;p&gt;창업교육센터, 창업동아리팀 Pandemic&lt;br&gt;
-&lt;img src=&#34;https://docs.9bon.org/photograph/05.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Pandemic 활동&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;2020&#34;&gt;2020&lt;/h2&gt;
-&lt;p&gt;네트워크 중급자 스터디 진행&lt;br&gt;
-&lt;img src=&#34;https://docs.9bon.org/photograph/04.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;네트워크 스터디 프로젝트&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;2017&#34;&gt;2017&lt;/h2&gt;
-&lt;p&gt;네트워크 스터디, 리눅스 스터디 진행&lt;br&gt;
-&lt;img src=&#34;https://docs.9bon.org/photograph/03.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;네트워크 스터디&#34;
-	
-	
-&gt;&lt;br&gt;
-&lt;img src=&#34;https://docs.9bon.org/photograph/02.jpg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;리눅스 스터디&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;2014&#34;&gt;2014&lt;/h2&gt;
-&lt;p&gt;2014 전국기능대회 정보통신 3과목&lt;br&gt;
-&lt;img src=&#34;https://docs.9bon.org/photograph/01.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;고등학교 2학년&#34;
-	
-	
-&gt;&lt;br&gt;
-아래는 전국대회 조건에 따라, 고등학생때 작성했던 문제 중 1과목입니다.&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;./01_sub.pdf&#34; &gt;작성한 문제&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>ServerLog</title>
-        <link>https://docs.9bon.org/serverlog/</link>
-        <pubDate>Sun, 03 Oct 2021 23:21:22 +0900</pubDate>
-        
-        <guid>https://docs.9bon.org/serverlog/</guid>
-        <description>&lt;h2 id=&#34;v01-2017202011&#34;&gt;v01 (2017~2020.11)&lt;/h2&gt;
-&lt;h3 id=&#34;사진&#34;&gt;사진&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/page/serverLog/01.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;1 세대&#34;
-	
-	
-&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;h3 id=&#34;사양&#34;&gt;사양&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;총 금액&lt;/th&gt;
-&lt;th&gt;~60,000원&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;기종&lt;/td&gt;
-&lt;td&gt;라즈베리파이3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;OS&lt;/td&gt;
-&lt;td&gt;라즈비안&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;CPU&lt;/td&gt;
-&lt;td&gt;4Core 1.2GHz&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;RAM&lt;/td&gt;
-&lt;td&gt;1GB&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;HDD&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;외장&lt;/strong&gt;-1TB&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;ARM 아키텍처 환경은 많은 단점이 있었습니다.&lt;br&gt;
-지원하지 않는것이 많았으며 복잡한 루틴이 어려웠습니다.&lt;/p&gt;
-&lt;h3 id=&#34;사양-1&#34;&gt;사양&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;최종 가동 서비스&lt;/th&gt;
-&lt;th&gt;데몬&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;WEB + CLOUD&lt;/td&gt;
-&lt;td&gt;APACHE + PYDIO&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;FTP&lt;/td&gt;
-&lt;td&gt;VSFTPD&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;DB&lt;/td&gt;
-&lt;td&gt;MYSQL&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;SHARE DIRECTORY&lt;/td&gt;
-&lt;td&gt;SAMBA&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;웹 클라우드 또한 PYDIO와 OwnCloud 등 여러가지 오픈소스를 사용 했었습니다.&lt;/p&gt;
-&lt;h2 id=&#34;v02-202011가동중&#34;&gt;v02 (2020.11~가동중)&lt;/h2&gt;
-&lt;h3 id=&#34;사진-1&#34;&gt;사진&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/page/serverLog/02.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;2 세대&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;h3 id=&#34;사양-2&#34;&gt;사양&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;총 금액&lt;/th&gt;
-&lt;th&gt;~200,000원&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;MB&lt;/td&gt;
-&lt;td&gt;ASROCK J5040-ITX&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;OS&lt;/td&gt;
-&lt;td&gt;Ubuntu&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;CPU&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;MB 결합&lt;/strong&gt;-4Core 2~3.2GHz&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;RAM&lt;/td&gt;
-&lt;td&gt;16GB&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;HDD&lt;/td&gt;
-&lt;td&gt;2TB&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;SYSFAN&lt;/td&gt;
-&lt;td&gt;NOCTUA120mm&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;CPU가 결합된 상태에서 출고되는 저전력이지만 데스크탑 아키텍처인 보드를 구해 기반을 맞췄습니다.&lt;/p&gt;
-&lt;h3 id=&#34;서비스&#34;&gt;서비스&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;도커 컨테이너 내에서 작동되는 서비스는 cn_이라 표기&lt;/strong&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;서비스&lt;/th&gt;
-&lt;th&gt;상세&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;cn_WEB1&lt;/td&gt;
-&lt;td&gt;Nginx_Main&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;cn_WEB2&lt;/td&gt;
-&lt;td&gt;NextCloud&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;cn_AFP&lt;/td&gt;
-&lt;td&gt;Netatalk&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;FTP&lt;/td&gt;
-&lt;td&gt;VSFTPD&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;cn_DB1&lt;/td&gt;
-&lt;td&gt;MARIADB&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;cn_DB2&lt;/td&gt;
-&lt;td&gt;MSSQL&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;서버-이벤트&#34;&gt;서버 이벤트&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;날짜&lt;/th&gt;
-&lt;th&gt;내용&lt;/th&gt;
-&lt;th&gt;사유&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;2021.07.25&lt;/td&gt;
-&lt;td&gt;방화벽 추가 설정&lt;/td&gt;
-&lt;td&gt;불특정한 잦은 핑 수신&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2021.08.06&lt;/td&gt;
-&lt;td&gt;SYSFAN 추가&lt;/td&gt;
-&lt;td&gt;발열문제로 인한 쓰로틀링, 여름이라 유난히 그런듯&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2021.10.12&lt;/td&gt;
-&lt;td&gt;컨테이너 정리&lt;/td&gt;
-&lt;td&gt;체계적으로 분류하여 관리를 용이하게 함&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2022.03.25&lt;/td&gt;
-&lt;td&gt;하드디스크 교환&lt;/td&gt;
-&lt;td&gt;짧은 주기의 큰  긁는 소리와 함께 파일이 소실됨&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2022.03.28&lt;/td&gt;
-&lt;td&gt;Netatalk 설치&lt;/td&gt;
-&lt;td&gt;맥북용 AFP 구현&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2022.04.01&lt;/td&gt;
-&lt;td&gt;데비안-&amp;gt;우분투로 재설치&lt;/td&gt;
-&lt;td&gt;우분투의 저장소를 더 많이 씀&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2022.04.03&lt;/td&gt;
-&lt;td&gt;Apache2-&amp;gt;Nginx&lt;/td&gt;
-&lt;td&gt;더 대중적인 웹데몬 사용&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-        </item>
-        <item>
-        <title>Archives</title>
-        <link>https://docs.9bon.org/archives/</link>
-        <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://docs.9bon.org/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>About</title>
-        <link>https://docs.9bon.org/about/</link>
-        <pubDate>Tue, 31 Aug 2021 19:09:40 +0900</pubDate>
-        
-        <guid>https://docs.9bon.org/about/</guid>
-        <description>&lt;p&gt;&lt;strong&gt;Contact&lt;/strong&gt; 🙋&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;mailto:tayasriel@gmail.com&#34; &gt;tayasriel@gmail.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Introduce&lt;/strong&gt; 🧑‍💼&lt;br&gt;
-Link :&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Photograph&lt;/strong&gt; 📸&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://docs.9bon.org/photograph/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://docs.9bon.org/photograph/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;ServerLog&lt;/strong&gt; 🧰&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://docs.9bon.org/serverlog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://docs.9bon.org/serverlog/&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Search</title>
-        <link>https://docs.9bon.org/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://docs.9bon.org/search/</guid>
-        <description></description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>Pages on 9Bon&#39;s_Docs</title>
+    <link>https://docs.9bon.org/page/</link>
+    <description>Recent content in Pages on 9Bon&#39;s_Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 04 Oct 2021 20:11:31 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Photograph</title>
+      <link>https://docs.9bon.org/photograph/</link>
+      <pubDate>Mon, 04 Oct 2021 20:11:31 +0900</pubDate>
+      
+      <guid>https://docs.9bon.org/photograph/</guid>
+      <description>2021 창업교육센터, 창업동아리팀 Pandemic
+2020 네트워크 중급자 스터디 진행
+2017 네트워크 스터디, 리눅스 스터디 진행
+2014 2014 전국기능대회 정보통신 3과목
+아래는 전국대회 조건에 따라, 고등학생때 작성했던 문제 중 1과목입니다.
+작성한 문제</description>
+    </item>
+    
+    <item>
+      <title>ServerLog</title>
+      <link>https://docs.9bon.org/serverlog/</link>
+      <pubDate>Sun, 03 Oct 2021 23:21:22 +0900</pubDate>
+      
+      <guid>https://docs.9bon.org/serverlog/</guid>
+      <description>v01 (2017~2020.11) 사진 사양    총 금액 ~60,000원     기종 라즈베리파이3   OS 라즈비안   CPU 4Core 1.2GHz   RAM 1GB   HDD 외장-1TB    ARM 아키텍처 환경은 많은 단점이 있었습니다.
+지원하지 않는것이 많았으며 복잡한 루틴이 어려웠습니다.
+사양    최종 가동 서비스 데몬     WEB + CLOUD APACHE + PYDIO   FTP VSFTPD   DB MYSQL   SHARE DIRECTORY SAMBA    웹 클라우드 또한 PYDIO와 OwnCloud 등 여러가지 오픈소스를 사용 했었습니다.</description>
+    </item>
+    
+    <item>
+      <title>Archives</title>
+      <link>https://docs.9bon.org/archives/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.9bon.org/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://docs.9bon.org/about/</link>
+      <pubDate>Tue, 31 Aug 2021 19:09:40 +0900</pubDate>
+      
+      <guid>https://docs.9bon.org/about/</guid>
+      <description>Contact 🙋
+tayasriel@gmail.com
+Introduce 🧑‍💼
+Link :
+Photograph 📸
+https://docs.9bon.org/photograph/
+ServerLog 🧰
+https://docs.9bon.org/serverlog/</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://docs.9bon.org/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.9bon.org/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
 </rss>

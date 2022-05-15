@@ -1,150 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>redirect on 9Bon&#39;s_Docs</title>
-        <link>https://docs.9bon.org/tags/redirect/</link>
-        <description>Recent content in redirect on 9Bon&#39;s_Docs</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>ko-kr</language>
-        <lastBuildDate>Fri, 01 Oct 2021 18:41:21 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/tags/redirect/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>아파치 SSL 적용, Let&#39;s Encrypt</title>
-        <link>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</link>
-        <pubDate>Fri, 01 Oct 2021 18:41:21 +0900</pubDate>
-        
-        <guid>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</guid>
-        <description>&lt;img src="https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/thum.png" alt="Featured image of post 아파치 SSL 적용, Let&#39;s Encrypt" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
-&lt;p&gt;only HTTP 사용된 전달은 보호되지 않습니다. 우리가 입력할 아이디와 비밀번호는 평문으로 전달되게 될 것이며&lt;br&gt;
-이는 공격자가 쉽게 중간에서 가로챌 수 있습니다.&lt;br&gt;
-이를 방지하기 위해 지금은 TLS내지 SSL을 사용한 HTTPS가 사용되고 있습니다.&lt;br&gt;
-국내에서는 웹서버 정보제공자가 로그인과 관련된 페이지에서 HTTPS 사용을 의무한 법안이 시행중입니다.&lt;/p&gt;
-&lt;h3 id=&#34;인증서&#34;&gt;인증서&lt;/h3&gt;
-&lt;p&gt;페이지 제공자와 수신자는 CA(인증 기관&amp;ndash;업체)를 사이로 아래와 같은 작업을 시행합니다.&lt;/p&gt;
-&lt;h3 id=&#34;lets-encrypt&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;https://letsencrypt.org/ko/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Let&amp;rsquo;s Encrypt 는 무료 CA입니다. 대신 해당 인증서는 짧은 유효기간을 가졌으며 설정의 제한이 많지만&lt;br&gt;
-&lt;strong&gt;certbot&lt;/strong&gt;을 통하여 쉽고 빠른 추가/갱신이 가능합니다.&lt;/p&gt;
-&lt;h2 id=&#34;certbot&#34;&gt;certbot&lt;/h2&gt;
-&lt;p&gt;certbot은 Let&amp;rsquo;s Encrypt에서 인증서와 키의 발급을 용이하게 도와주는 프로그램입니다. 아래처럼 설치할 수 있습니다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install python3-certbot-apache
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;공식 사이트에는 python-certbot-apache 라고 나와 있었지만 작동되지 않습니다. 파이썬 버전에 참고해야 하는 것 같습니다.&lt;/p&gt;
-&lt;h3 id=&#34;일반-인증서-발급&#34;&gt;일반 인증서 발급&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;certbot --apache certonly
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;입력후 도메인을 포함한&lt;/p&gt;
-&lt;h3 id=&#34;와일드카드-인증서-발급&#34;&gt;와일드카드 인증서 발급&lt;/h3&gt;
-&lt;p&gt;와일드카드 인증서는 하나의 부모 도메인 인증서로 자식 모두를 등록시킬 수 있는 인증서입니다.&lt;br&gt;
-하지만 자동 갱신을 시킬 방법이 없어 이점에 주의해야합니다.&lt;/p&gt;
-&lt;p&gt;만약 &lt;code&gt;www.a.com, mail.a.com&lt;/code&gt; 등 *a.com을 인증시키는 것이 목표라면 다음과 같습니다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;certbot certonly --manual --preferred-challenges dns -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;*.a.com&amp;#34;&lt;/span&gt; -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;a.com&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 위의 일반 인증서 발급과 다르게 추가 인증이 필요하다는 메세지를 볼 수 있습니다. 몇가지 제시를 해주는데&lt;br&gt;
-도메인이 본인의 것이 맞다면 도메인 인증이 가장 편리한 것 같습니다.&lt;/p&gt;
-&lt;p&gt;저는 구글 도메인 서비스를 이용 중이기 때문에 아래의 화면에서 설정 가능합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google.png&#34;
-	width=&#34;1005&#34;
-	height=&#34;376&#34;
-	srcset=&#34;https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google_hu4f2bd7349f00618c3a33491322cfc093_18650_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google_hu4f2bd7349f00618c3a33491322cfc093_18650_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image1&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;267&#34;
-		data-flex-basis=&#34;641px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;타입은 텍스트로 한 후 호스트이름과 데이터에 요구조건대로 적용하면 완료됩니다.&lt;br&gt;
-단 도메인 정보가 전파되는데 시간이 걸릴 수 있으니 조금 기다렸다가 nslookup등으로 확인 한 후 다음 버튼을 누르시는걸 권장합니다.&lt;/p&gt;
-&lt;h3 id=&#34;인증서-취소&#34;&gt;인증서 취소&lt;/h3&gt;
-&lt;p&gt;여러가지 방법이 있지만 인증키를 모두 가지고 있다면 아래 방법이 가장 편리합니다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;certbot revoke --cert-path cert.pem --key-path privkey.pem
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cron-을-통한-자동갱신&#34;&gt;cron 을 통한 자동갱신&lt;/h2&gt;
-&lt;p&gt;인증서를 갱신시키는 명령어는 다음과 같습니다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;certbot renew --quiet
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 유효기간이 가까워 지기 전마다 해당 명령어를 치는 것은 불편할 것입니다.&lt;br&gt;
-따라서 리눅스 잡 스케줄러인 cron을 사용하여 원하는 날짜가 됐을때 자동으로 해당 명령어를 사용하게 합시다.&lt;br&gt;
-아래  명령어로 스케줄러 설정 파일에 들어갈 수 있습니다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crontab -e
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;크론텝은 5개의 숫자와 예약 명령어로 한 줄씩 추가 할 수 있습니다.&lt;br&gt;
-각 숫자는 순서대로 분, 시간, 일, 월, 요일(일요일=0)이며 *로 대체되면 그 부분은 상관없게 됩니다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; * * /bin/bash -l -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;certbot renew --quiet&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;즉 이렇게 하면 매월 2일마다 갱신작업을 실행합니다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service cron restart
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;후&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service cron status
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 제대로 동작중인지 확인할 수 있습니다.
-만약 문제가 생겼고 해결이 안된다면&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crontab -r
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 cron을 초기화 시킬수 있습니다.&lt;/p&gt;
-&lt;h2 id=&#34;아파치-설정&#34;&gt;아파치 설정&lt;/h2&gt;
-&lt;p&gt;마지막으로 아파치에 적용하면 작업종료입니다.&lt;/p&gt;
-&lt;h3 id=&#34;인증서-적용&#34;&gt;인증서 적용&lt;/h3&gt;
-&lt;p&gt;먼저 모듈을 키고 수정할 사이트를 내려줍니다.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2enmod ssl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2dissite www.a.com
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이제 사이트 설정 콘피그에 들어가 기본 HTTP포트 80으로 호스팅 되어있는 부분을 삭제하고 SSL포트 443번으로 수정시킨 후 아래 처럼 만들어줍니다. &lt;strong&gt;경로에 주의해야 합니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ApacheConf&#34; data-lang=&#34;ApacheConf&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;*:443&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;ServerName&lt;/span&gt;  www.a.com
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;DocumentRoot&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/var/www/www.a.com&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLEngine&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;on&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCertificateKeyFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/privkey.pem&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCertificateFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/cert.pem&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCACertificateFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/fullchain.pem&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;AllowOverride&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Options&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt; -Indexes
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Require&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;all&lt;/span&gt; granted
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;저장 후&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2ensite www.a.com
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service apache2 restart
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;http-접근시-대처&#34;&gt;HTTP 접근시 대처&lt;/h3&gt;
-&lt;p&gt;만약 서버측에서 HTTPS로 구현 했음에도 불구하고 유저가 HTTP로 접근한다면 접속 불가하게 만드는 것 보다 자동으로 HTTPS로 재접근 되게 만드는 것이 유저 친화적일 것입니다. 이런 기능을 &lt;strong&gt;Rewrite, Redirect&lt;/strong&gt;라고 합니다. 모듈명은 Rewrite입니다.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Rewrite&lt;/th&gt;
-&lt;th&gt;Redirect&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;서버 사이드&lt;/td&gt;
-&lt;td&gt;클라이언트 사이드&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;클라이언트 모르게 설정된 경로로 바뀜, URL을 숨기는 용도로도 사용가능&lt;/td&gt;
-&lt;td&gt;클라이언트측 브라우저가 설정된 경로로 재접근함&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2enmod rewrite
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2dissite www.a.com
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ApacheConf&#34; data-lang=&#34;ApacheConf&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;*:443&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;ServerName&lt;/span&gt;  www.a.com
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;DocumentRoot&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/var/www/www.a.com&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLEngine&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;on&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCertificateKeyFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/privkey.pem&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCertificateFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/cert.pem&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCACertificateFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/fullchain.pem&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;AllowOverride&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Options&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt; -Indexes
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Require&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;all&lt;/span&gt; granted
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;*:80&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;ServerName&lt;/span&gt; www.a.com
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Redirect&lt;/span&gt; / https://www.a.com
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>redirect on 9Bon&#39;s_Docs</title>
+    <link>https://docs.9bon.org/tags/redirect/</link>
+    <description>Recent content in redirect on 9Bon&#39;s_Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 01 Oct 2021 18:41:21 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/tags/redirect/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>아파치 SSL 적용, Let&#39;s Encrypt</title>
+      <link>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</link>
+      <pubDate>Fri, 01 Oct 2021 18:41:21 +0900</pubDate>
+      
+      <guid>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</guid>
+      <description>서론 only HTTP 사용된 전달은 보호되지 않습니다. 우리가 입력할 아이디와 비밀번호는 평문으로 전달되게 될 것이며
+이는 공격자가 쉽게 중간에서 가로챌 수 있습니다.
+이를 방지하기 위해 지금은 TLS내지 SSL을 사용한 HTTPS가 사용되고 있습니다.
+국내에서는 웹서버 정보제공자가 로그인과 관련된 페이지에서 HTTPS 사용을 의무한 법안이 시행중입니다.
+인증서 페이지 제공자와 수신자는 CA(인증 기관&amp;ndash;업체)를 사이로 아래와 같은 작업을 시행합니다.
+Let&amp;rsquo;s Encrypt https://letsencrypt.org/ko/  Let&amp;rsquo;s Encrypt 는 무료 CA입니다. 대신 해당 인증서는 짧은 유효기간을 가졌으며 설정의 제한이 많지만</description>
+    </item>
+    
+  </channel>
 </rss>
