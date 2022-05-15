@@ -57,6 +57,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://docs.9bon.org/categories/%EC%8A%A4%ED%84%B0%EB%94%94/</loc>
+    <lastmod>2022-04-12T20:49:09+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://docs.9bon.org/tags/dhcp/</loc>
     <lastmod>2022-04-01T08:30:11+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -78,11 +83,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
-    <lastmod>2022-04-01T08:30:11+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://docs.9bon.org/categories/%EC%8A%A4%ED%84%B0%EB%94%94/</loc>
     <lastmod>2022-04-01T08:30:11+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
