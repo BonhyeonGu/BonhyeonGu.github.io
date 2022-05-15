@@ -193,7 +193,7 @@ if (!doNotTrack) {
 <p>DNS은 Domain name을 IP Address로 변환해주는 정방향, 그 반대인 역방향이라는 개념과 주, 보조영역의 개념이 존재합니다. 오늘은 주 영역으로 정, 역방향을 구성해보도록 하겠습니다.</p>
 <h3 id="구현">구현</h3>
 <p>설치하고 zone 설정을 시행합니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get install bind9
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">apt-get install bind9
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> /etc/bind9
 </span></span><span class="line"><span class="cl">nano named.conf.local
 </span></span></code></pre></div><p>아래처럼 작성해 보겠습니다. 위에는 정방향, 아래는 역방향입니다.</p>
@@ -212,7 +212,7 @@ if (!doNotTrack) {
 	
 ></p>
 <p>이제 정의해준 파일을 만들어 주어야 합니다. 포함된 예제가 있으니 그것을 복사해서 사용하겠습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp db.empty /var/cache/bind/busan.com.zone
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">cp db.empty /var/cache/bind/busan.com.zone
 </span></span><span class="line"><span class="cl">nano /var/cache/bind/busan.com.zone
 </span></span></code></pre></div><p><img src="/p/dns-server-bind9/3.png"
 	width="885"
@@ -232,7 +232,7 @@ if (!doNotTrack) {
 그 이후부터는 맨 왼쪽의 문자로 접근했을 때 내보낼 결과를 뜻합니다. 단 @는 <a class="link" href="http://busan.com"  target="_blank" rel="noopener"
     >busan.com</a> 자체가 요청 됐을때의 경우입니다.<br>
 이제 역방향 파일을 만들어주겠습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp /var/cache/bind/busan.com.zone /var/cache/bind/busan.com.zone.rev
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">cp /var/cache/bind/busan.com.zone /var/cache/bind/busan.com.zone.rev
 </span></span><span class="line"><span class="cl">nano /var/cache/bind/busan.com.zone.rev
 </span></span></code></pre></div><p><img src="/p/dns-server-bind9/4.png"
 	width="897"
@@ -250,15 +250,15 @@ if (!doNotTrack) {
 ></p>
 <p>IN 이 PTR로 바뀌었다는 것 말고는 뜻이 동일합니다.</p>
 <p>마무리 하셨다면</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">named-checkconf
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">named-checkconf
 </span></span></code></pre></div><p>로 신택스 테스트를 할 수 있습니다. 아무 출력도 없으면 통과 된 것입니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service bind9 restart
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">service bind9 restart
 </span></span></code></pre></div><p>로 bind9설정을 적용시킬 수 있습니다.</p>
 <h3 id="외부-설정">외부 설정</h3>
 <p>이제 Server01,02 그리고 Client01 각각 DNS 위치가 Server02라는 것을 설정해야합니다.<br>
 이 또한 나중에 인터넷 연결이 필요할 때 다시 원상태로 복구해야하는 점을 고려하여 원래 있던 내용을 <strong>주석처리</strong> 하시길 바랍니다.</p>
 <p>윈도우는 쉬우니 넘어가고 Debian만 살펴보겠습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano /etc/resolv.conf
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">nano /etc/resolv.conf
 </span></span></code></pre></div><p><img src="/p/dns-server-bind9/5.png"
 	width="858"
 	height="168"
@@ -276,7 +276,7 @@ if (!doNotTrack) {
 <p>이렇게 설정하시면 완료됩니다. 참고로 리눅스에서는 DNS주소 설정이 resolv뿐만 있는것이 아닙니다.</p>
 <h2 id="테스트">테스트</h2>
 <p>먼저 Server01로 가보겠습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nslookup client01.busan.com
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">nslookup client01.busan.com
 </span></span><span class="line"><span class="cl">nslookup www.busan.com
 </span></span><span class="line"><span class="cl">nslookup 192.168.10.10
 </span></span></code></pre></div><p><img src="/p/dns-server-bind9/6.png"
