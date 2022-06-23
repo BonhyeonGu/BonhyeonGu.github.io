@@ -105,7 +105,7 @@ oh-my-zsh! 설명 zsh를 설정할 수 있는 편리한 콘피그들을 제공�
 이를 방지하기 위해 지금은 TLS내지 SSL을 사용한 HTTPS가 사용되고 있습니다.
 국내에서는 웹서버 정보제공자가 로그인과 관련된 페이지에서 HTTPS 사용을 의무한 법안이 시행중입니다.
 인증서 페이지 제공자와 수신자는 CA(인증 기관&amp;ndash;업체)를 사이로 아래와 같은 작업을 시행합니다.
-Let&amp;rsquo;s Encrypt https://letsencrypt.org/ko/  Let&amp;rsquo;s Encrypt 는 무료 CA입니다. 대신 해당 인증서는 짧은 유효기간을 가졌으며 설정의 제한이 많지만</description>
+Let&amp;rsquo;s Encrypt https://letsencrypt.org/ko/ Let&amp;rsquo;s Encrypt 는 무료 CA입니다. 대신 해당 인증서는 짧은 유효기간을 가졌으며 설정의 제한이 많지만</description>
     </item>
     
     <item>
