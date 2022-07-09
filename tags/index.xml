@@ -6,43 +6,7 @@
     <description>Recent content in Tags on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 28 Jun 2022 21:55:53 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ddns</title>
-      <link>https://docs.9bon.org/tags/ddns/</link>
-      <pubDate>Tue, 28 Jun 2022 21:55:53 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/tags/ddns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dhcp</title>
-      <link>https://docs.9bon.org/tags/dhcp/</link>
-      <pubDate>Tue, 28 Jun 2022 21:55:53 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/tags/dhcp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hostname</title>
-      <link>https://docs.9bon.org/tags/hostname/</link>
-      <pubDate>Tue, 28 Jun 2022 21:55:53 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/tags/hostname/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rndc</title>
-      <link>https://docs.9bon.org/tags/rndc/</link>
-      <pubDate>Tue, 28 Jun 2022 21:55:53 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/tags/rndc/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Tue, 12 Apr 2022 20:49:09 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>address</title>
       <link>https://docs.9bon.org/tags/address/</link>
@@ -76,6 +40,15 @@
       <pubDate>Tue, 12 Apr 2022 20:49:09 +0900</pubDate>
       
       <guid>https://docs.9bon.org/tags/ping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dhcp</title>
+      <link>https://docs.9bon.org/tags/dhcp/</link>
+      <pubDate>Fri, 01 Apr 2022 08:30:11 +0900</pubDate>
+      
+      <guid>https://docs.9bon.org/tags/dhcp/</guid>
       <description></description>
     </item>
     

@@ -1,268 +1,1240 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>9Bon&#39;s_Docs</title>
-    <link>https://docs.9bon.org/</link>
-    <description>Recent content on 9Bon&#39;s_Docs</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ko-kr</language>
-    <lastBuildDate>Tue, 28 Jun 2022 21:55:53 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>리눅스 DHCP, DDNS</title>
-      <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/</link>
-      <pubDate>Tue, 28 Jun 2022 21:55:53 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/</guid>
-      <description>서론 개요 DHCP를 리눅스에서 구성하는 것은 어렵지 않습니다. 두개 정도되는 설정파일을 수정하는 것 만으로 구성할 수 있습니다.
-문제는 DNS입니다. 만약 클라이언트 측의 IP Address가 동적으로 변한다면 DNS도 이에 따라 변해야 할 것입니다.
-이렇게 정보가 바뀔 때 마다 DNS에 자동으로 갱신 시킬 수 있는 서비스를 DynamicDNS라고 부릅니다.
-이번 작업을 하기전에 앞의 작업 동안 정말로 이상이 없는지 확인해 보는 시간을 가지시는걸 추천드립니다.
-당연히 이런건 말을 하지 않아도 해주는 것이 좋습니다. 또한 이 과정에 없더라도 어떤 단순 명령이 동작하지 않으면</description>
-    </item>
-    
-    <item>
-      <title>DNS Server, BIND9</title>
-      <link>https://docs.9bon.org/p/dns-server-bind9/</link>
-      <pubDate>Tue, 12 Apr 2022 20:49:09 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/dns-server-bind9/</guid>
-      <description>서론 앞에서 IP Address로 신호를 보내봤지만, Domain name형식이 아닌 주소를 쓰는 경우는 매우 보기 어렵습니다.
-대부분의 학생분들은 DNS라는 단어를 들어보셨을 거라 생각합니다. IP Address와 Domain name간의 맵핑을 이루게 해주는 서비스, 내지 서버입니다.
-실은 여기 Domain이란 단어는 우리가 알고있는 문자 형식의 주소를 뜻하는 말보다 더 여러가지의 내용이 포괄된 단어입니다. 이 내용과 관련해서는 다음에 다루어보도록 하겠습니다.
-Bind9 설명 우리의 목표는 아래의 토폴로지입니다. 이 블로그 페이지는 Server2에 있는, DNS를 만들어주는 Bind9의 설정법을 다루어 볼 것입니다.</description>
-    </item>
-    
-    <item>
-      <title>DNS Server, BIND9</title>
-      <link>https://docs.9bon.org/p/dns-server-bind9/</link>
-      <pubDate>Tue, 12 Apr 2022 20:49:09 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/dns-server-bind9/</guid>
-      <description>서론 앞에서 IP Address로 신호를 보내봤지만, Domain name형식이 아닌 주소를 쓰는 경우는 매우 보기 어렵습니다.
-대부분의 학생분들은 DNS라는 단어를 들어보셨을 거라 생각합니다. IP Address와 Domain name간의 맵핑을 이루게 해주는 서비스, 내지 서버입니다.
-실은 여기 Domain이란 단어는 우리가 알고있는 문자 형식의 주소를 뜻하는 말보다 더 여러가지의 내용이 포괄된 단어입니다. 이 내용과 관련해서는 다음에 다루어보도록 하겠습니다.
-Bind9 설명 우리의 목표는 아래의 토폴로지입니다. 이 블로그 페이지는 Server2에 있는, DNS를 만들어주는 Bind9의 설정법을 다루어 볼 것입니다.</description>
-    </item>
-    
-    <item>
-      <title>VMWare 서버 공부환경 만들기</title>
-      <link>https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
-      <pubDate>Fri, 01 Apr 2022 08:30:11 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
-      <description>서론 GuestOS에서 무언가를 설치하기 위해 인터넷과 연결하여 사용할 때가 있을 것이며
-인터넷이 아닌 공부 목적의, 내부 네트워크의 환경을 사용하는 일도 있을 것입니다. 이 두가지를 쉽게 오가면서 사용할 수 있도록
-미리 준비 해놓으면 굉장히 편리합니다.
-우리의 목표는 아래의 토폴로지와 같은 매우 간단한 형태의 네트워크망입니다.
-VMNet 설명 VMNet은 VMWare Workstation에서 지원하는 가상 인터페이스, 네트워크입니다. 이것을 통하여 내부 네트워크망을 구현할 수 있습니다.
-네트워크 환경은 Subneting, Gateway 그리고 구축하지 않아도 제공되는 DHCP 서비스등을 설정할 수 있으며 인터페이스는 위의 네트워크 환경이 아니더라도 NAT, Bridge 등을 지원합니다.</description>
-    </item>
-    
-    <item>
-      <title>리눅스 디스크 백업</title>
-      <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</link>
-      <pubDate>Fri, 25 Mar 2022 11:21:02 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</guid>
-      <description>백업 설명 백업/복원은 말 그대로 나중에 되돌릴 수 있게 사본을 복사하여 저장하는 기능입니다. 과거에도 OS에서 지원하는
-소프트웨어가 있었지만, 그럼에도 저 같은 경우에는 CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습니다.
-그 이유와 관련하여 방식의 종류를 살펴보도록 하겠습니다.
-백업의 종류 디스크를 통째로, 디스크의 일부 파티션만, 파일만 백업, 이것을 떠나서 백업은 세 가지의 방식이 존재합니다.
-1일 2일 3일, 총 삼일 동안 파일이 써지고 있는 동일한 시스템을 백업했다고 가정하고 예를 들어보겠습니다.
-전체 백업(Full)</description>
-    </item>
-    
-    <item>
-      <title>리눅스 디스크 문제</title>
-      <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</link>
-      <pubDate>Sat, 12 Mar 2022 03:43:58 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</guid>
-      <description>하드디스크의 문제 증상 저장, 삭제시 에러문구 : &amp;ldquo;Structure needs cleaning&amp;rdquo;, &amp;ldquo;구조에 청소가 필요합니다&amp;rdquo;
-ls 시 : ??? ?? ???? 로 표시
-설명 불량, 노후화, 최악에는 소프트웨어의 오류에도 하드디스크에 치명적인 문제가 발생할 수 있습니다.
-제가 겪은 문제는 서버가 일종의 과부하를 받을 때 디렉토리 일부가 사라져 조회조차 하지 못하는 상황에
-놓이는 것이였습니다.
-놀라서 umount하거나 reboot해서 돌아와보면 디렉토리가 다시 보였지만
-디렉토리를 포함한 파일의 일부가 열리지만 소실되었거나, 열리지도 않으며 청소가 필요하다는 경고가 나타났습니다.
-흥미로웠던 사실은 비교적 최근에 생성된 것만 그런 상태였습니다.</description>
-    </item>
-    
-    <item>
-      <title>리눅스 디스크 사용</title>
-      <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</link>
-      <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</guid>
-      <description>Partion 설명 기본적으로 리눅스의 Filesystem은 다음과 같은 과정을 통해 만들어집니다. Partion &amp;gt; Format &amp;gt; Mount 의 과정을 거칩니다.
-윈도우는 자동 마운트됩니다.
-기본적으로 Partion은 하나의 보조기억장치를 여러 개의 Filesystem으로 만들고 싶을 때 사용합니다. 분할해서 사용하지
-않는다고 해도 칸 하나를 사용하겠다는 명시가 필요합니다.
-추가로 리눅스에서는 여러개의 저장 장치를 하나로 합치는 LVM이라는 개념이 존재합니다. Partion의 반대 개념에 가까우며
-최근에 윈도우에도 비슷한 기능이 추가되었습니다.
-명령어 fdisk -l 로 정확한 장치를 찾아서
-fdisk /dev/[장치명] 으로 파티션 모드에 진입할 수 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>도커와 윈도우</title>
-      <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</link>
-      <pubDate>Sun, 20 Feb 2022 16:54:39 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</guid>
-      <description>윈도우 윈도우에서의 도커 도커의 기본 환경은 리눅스에 맞춰져 있습니다. 따라서 윈도우에서 도커를 사용하려면 다른 방법을 선택할 필요가 있으며
-각 방법은 장단점이 존재했습니다. 대부분 가상머신을 이용한 방법입니다.
-가상 머신 출처
-가상머신은 기존의 운영체제(Host OS)에 가상의 운영체제(Guest OS)를 올릴 수 있게 해주는 소프트웨어 입니다.
-도커도 가상머신과 흡사하지만 GuestOS를 모두 올리는 것이 아니라. 필요한 쉘과 커널등만 올린다는 차이점이 있습니다.
-즉 도커는 가상머신 만큼 자유롭지는 못하나. 환경을 만들고 사용하는 부분에서 가볍게 진행 가능합니다.
-정리해보면 윈도우에서 우분투 컨테이너를 사용하려면</description>
-    </item>
-    
-    <item>
-      <title>도커 파일</title>
-      <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/</link>
-      <pubDate>Sun, 02 Jan 2022 02:21:44 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/</guid>
-      <description>간단한 형식 운영체제 #원본이 될 이미지, https://hub.docker.com/ 참고 #버전을 기록하지 않으면 최신 버전을 사용하게 된다. FROM ubuntu:16.04 #작성자 정보, 필수는 아님, 옛날에는 MAINTAINER을 사용했으나 대체됨 LABEL email=&amp;#34;tayasriel@gmail.com&amp;#34; LABEL name=&amp;#34;BonhyeonGu&amp;#34; #언어 설정, ENV 자체는 도커 이미지 환경변수를 조작한다. ENV LC_ALL=C.UTF-8 ENV LANG=C.UTF-8 #명령어, 물음이 오는것을 피해야 진행이 가능하다. RUN apt-get update -y &amp;amp;&amp;amp; \ apt-get install -y nano #노출될 포트, 주의할 점은 이게 포트포워딩을 해주는 것이 아님 EXPOSE 5000, 5001 인터프리터 FROM ubuntu LABEL email=&amp;#34;tayasriel@gmail.</description>
-    </item>
-    
-    <item>
-      <title>RDP  문제</title>
-      <link>https://docs.9bon.org/p/rdp-%EB%AC%B8%EC%A0%9C/</link>
-      <pubDate>Fri, 31 Dec 2021 11:38:57 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/rdp-%EB%AC%B8%EC%A0%9C/</guid>
-      <description>설명 문제 윈도우즈, 윈도우즈 서버 운영체제를 사용할 때 정책을 사용해야 하는 이유로
-반드시 공식 지원하는 &amp;lsquo;RDP&amp;rsquo;를 사용해야 할 때가 있습니다.
-해당 프로그램은 대부분의 기능을 지원하지만 의외의 문제점이 있습니다.
-바로 SSH, 원격 터미널과 흡사한 부분이 있는 것입니다.
-RDP 은 유저가 연결을 끊으면 로그오프되어 Foreground 는 당연하고 Background마저 설정해 놓지 않으면 닫히게 됩니다.
-한번은 윈도우 환경에서만 지원하는 GUI Foreground 프로세스를 지속적으로 가동시킬 목적으로 AWS에서 Windows Server를 구입하여 사용한 적이 있었습니다.
-하지만 위와 같은 이유로 곤혹을 겪었습니다.</description>
-    </item>
-    
-    <item>
-      <title>zsh, oh-my-zsh!</title>
-      <link>https://docs.9bon.org/p/zsh-oh-my-zsh/</link>
-      <pubDate>Fri, 24 Dec 2021 16:11:32 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/zsh-oh-my-zsh/</guid>
-      <description>zsh 설명 기능이 다양해서 유행중인 bash 쉘을 대체하는 쉘입니다.
-설치 apt-get install zsh chsh -s `which zsh` 쉘은 유저에 귀속되므로 권한에 주의해야 합니다. 또한 작은 따옴표가 아닙니다.
-재시작 하면 설치가 완료됩니다.
-echo $SHELL 로 확인 할 수 있습니다.
-oh-my-zsh! 설명 zsh를 설정할 수 있는 편리한 콘피그들을 제공해주는 프레임워크입니다.
-설치 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh 해당 설치법은 http://ohmyz.sh/ 에서 제공하는 방법입니다. 문제가 생길경우 이곳에서 편집되었는지 확인할 수 있습니다.
-설정 vim ~/.zshrc 에서 제가 주로 사용하는 것은</description>
-    </item>
-    
-    <item>
-      <title>Photograph</title>
-      <link>https://docs.9bon.org/photograph/</link>
-      <pubDate>Mon, 04 Oct 2021 20:11:31 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/photograph/</guid>
-      <description>2021 창업교육센터, 창업동아리팀 Pandemic
-2020 네트워크 중급자 스터디 진행
-2017 네트워크 스터디, 리눅스 스터디 진행
-2014 2014 전국기능대회 정보통신 3과목
-아래는 전국대회 조건에 따라, 고등학생때 작성했던 문제 중 1과목입니다.
-작성한 문제</description>
-    </item>
-    
-    <item>
-      <title>ServerLog</title>
-      <link>https://docs.9bon.org/serverlog/</link>
-      <pubDate>Sun, 03 Oct 2021 23:21:22 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/serverlog/</guid>
-      <description>v01 (2017~2020.11) 사진 사양 총 금액 ~60,000원 기종 라즈베리파이3 OS 라즈비안 CPU 4Core 1.2GHz RAM 1GB HDD 외장-1TB ARM 아키텍처 환경은 많은 단점이 있었습니다.
-지원하지 않는것이 많았으며 복잡한 루틴이 어려웠습니다.
-사양 최종 가동 서비스 데몬 WEB + CLOUD APACHE + PYDIO FTP VSFTPD DB MYSQL SHARE DIRECTORY SAMBA 웹 클라우드 또한 PYDIO와 OwnCloud 등 여러가지 오픈소스를 사용 했었습니다.
-v02 (2020.11~가동중) 사진 사양 총 금액 ~200,000원 MB ASROCK J5040-ITX OS Ubuntu CPU MB 결합-4Core 2~3.</description>
-    </item>
-    
-    <item>
-      <title>도커 명령어와 예제</title>
-      <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/</link>
-      <pubDate>Sun, 03 Oct 2021 01:40:54 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/</guid>
-      <description>기본 컨테이너 조회 docker ps -a 첨자 뜻 -a 꺼져있는 것을 포함하여 모두 컨테이너 시작, 종료 docker apache start 이후 내용 뜻 start 실행 restart 재시작 stop 중지 status 상태확인 컨테이너 생성/수정 일반적인 경우 docker container run --name nextcloud -d -v /media/ext1/Docker/cloud/:/var/www/html/data -p 1234:80 nextcloud 첨자 뜻 -run 생성 후 바로 실행함 &amp;ndash;name 생성될 컨테이너의 이름 지정 -d 백그라운드(데몬 프로세스)로 실행 -v (복수가능) 저장공간 맵핑/마운트 컨테이너 외부(호스트) : 컨테이너 내부 -p (복수가능) 포트 맵핑/포워딩 컨테이너 외부(호스트) : 컨테이너 내부 이후 내용엔 이미지 파일 이름 환경변수 설정 docker container run --name test_DB_YJ -d -p 49152:22 -p 1234:3306 -e MYSQL_ROOT_PASSWORD=12345 mariadb --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci docker run -e &amp;#34;ACCEPT_EULA=Y&amp;#34; -e &amp;#34;SA_PASSWORD=12345&amp;#34; -p 1234:1433 --name rpadb -d mcr.</description>
-    </item>
-    
-    <item>
-      <title>아파치 SSL 적용, Let&#39;s Encrypt</title>
-      <link>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</link>
-      <pubDate>Fri, 01 Oct 2021 18:41:21 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</guid>
-      <description>서론 only HTTP 사용된 전달은 보호되지 않습니다. 우리가 입력할 아이디와 비밀번호는 평문으로 전달되게 될 것이며
-이는 공격자가 쉽게 중간에서 가로챌 수 있습니다.
-이를 방지하기 위해 지금은 TLS내지 SSL을 사용한 HTTPS가 사용되고 있습니다.
-국내에서는 웹서버 정보제공자가 로그인과 관련된 페이지에서 HTTPS 사용을 의무한 법안이 시행중입니다.
-인증서 페이지 제공자와 수신자는 CA(인증 기관&amp;ndash;업체)를 사이로 아래와 같은 작업을 시행합니다.
-Let&amp;rsquo;s Encrypt https://letsencrypt.org/ko/ Let&amp;rsquo;s Encrypt 는 무료 CA입니다. 대신 해당 인증서는 짧은 유효기간을 가졌으며 설정의 제한이 많지만</description>
-    </item>
-    
-    <item>
-      <title>아파치 가상호스트 설정</title>
-      <link>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/</link>
-      <pubDate>Thu, 02 Sep 2021 19:32:24 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/</guid>
-      <description>서론 웹 서버 데몬은 한 호스트를 여러 호스트처럼 쓸 수 있는 가상 호스트(VirtualHost) 를 대부분 지원하고 있습니다. 포트번호, 서브도메인, 출발지 주소등의 규칙을 적용시킵니다. 이번엔 Debian과 Apache로 서브 도메인에 따른 규칙으로 가상 호스트를 구현해 보도록 하겠습니다. 마지막엔 cloud.9bon.org와 9bon.org가 똑같은 장치에 구성되어있음에 불구하고 서로 다른 내용을 보여주는 것이 목표입니다.
-아파치 준비 아파치가 설치되어있지 않으면 패키지 관리자로 쉽게 설치 가능합니다.
-apt-get update &amp;amp;&amp;amp; apt-get install apache2 또한 앞으로의 과정 중 재시작을 하고 싶을땐 다음과 같습니다.</description>
-    </item>
-    
-    <item>
-      <title>휴고 서버에 직접 구동시키기</title>
-      <link>https://docs.9bon.org/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/</link>
-      <pubDate>Wed, 01 Sep 2021 14:21:27 +1023</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
-      <description>주의사항 2022.03.20 하드디스크가 문제가 생겼었고, 교환 받은 디스크도 종종 긁히는 소리가 갑자기 생기는데 Hugo를 직접 호스팅 하기 전까지 이런적은 없었습니다.
-hugo server 로 24시간 작동시키는것이 다른 문제가 있는지 의심하는 중입니다. 주의하시길 바랍니다.
-서론 학습했던 것들을 정리하기 위해 정적 페이지를 알아보다 HUGO와 Github page를 사용한 대중적인 게시글들을 확인할 수 있었습니다. Github page를 사용하면 관리하기 편리할 것 같지만 호스팅 경험을 위하여 예전부터 동작 중인 개인 서버를 통해 가동해 보겠습니다.
-Homebrew 설치 2021년 08월 29일 기준 데비안 10.</description>
-    </item>
-    
-    <item>
-      <title>Archives</title>
-      <link>https://docs.9bon.org/archives/</link>
-      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.9bon.org/archives/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://docs.9bon.org/about/</link>
-      <pubDate>Tue, 31 Aug 2021 19:09:40 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/about/</guid>
-      <description>Contact 🙋
-tayasriel@gmail.com
-Introduce 🧑‍💼
-Link :
-Photograph 📸
-https://docs.9bon.org/photograph/
-ServerLog 🧰
-https://docs.9bon.org/serverlog/</description>
-    </item>
-    
-    <item>
-      <title>Search</title>
-      <link>https://docs.9bon.org/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.9bon.org/search/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>9Bon&#39;s_Docs</title>
+        <link>https://docs.9bon.org/</link>
+        <description>Recent content on 9Bon&#39;s_Docs</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko-kr</language>
+        <lastBuildDate>Tue, 12 Apr 2022 20:49:09 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DNS Server, BIND9</title>
+        <link>https://docs.9bon.org/p/dns-server-bind9/</link>
+        <pubDate>Tue, 12 Apr 2022 20:49:09 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/dns-server-bind9/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/dns-server-bind9/thum.png" alt="Featured image of post DNS Server, BIND9" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+&lt;p&gt;앞에서 IP Address로 신호를 보내봤지만, Domain name형식이 아닌 주소를 쓰는 경우는 매우 보기 어렵습니다.&lt;br&gt;
+대부분의 학생분들은 DNS라는 단어를 들어보셨을 거라 생각합니다. IP Address와 Domain name간의 맵핑을 이루게 해주는 서비스, 내지 서버입니다.&lt;/p&gt;
+&lt;p&gt;실은 여기 Domain이란 단어는 우리가 알고있는 문자 형식의 주소를 뜻하는 말보다 더 여러가지의 내용이 포괄된 단어입니다. 이 내용과 관련해서는 다음에 다루어보도록 하겠습니다.&lt;/p&gt;
+&lt;h2 id=&#34;bind9&#34;&gt;Bind9&lt;/h2&gt;
+&lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;우리의 목표는 아래의 토폴로지입니다. 이 블로그 페이지는 Server2에 있는, DNS를 만들어주는 Bind9의 설정법을 다루어 볼 것입니다. 그 밖의 설정들은 되어있다고 가정하겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/dns-server-bind9/1.png&#34;
+	width=&#34;850&#34;
+	height=&#34;465&#34;
+	srcset=&#34;https://docs.9bon.org/p/dns-server-bind9/1_hu5282afc79d8de0158f3ec4bb28bdba9d_83590_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/dns-server-bind9/1_hu5282afc79d8de0158f3ec4bb28bdba9d_83590_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;토폴로지&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;438px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;DNS은 Domain name을 IP Address로 변환해주는 정방향, 그 반대인 역방향이라는 개념과 주, 보조영역의 개념이 존재합니다. 오늘은 주 영역으로 정, 역방향을 구성해보도록 하겠습니다.&lt;/p&gt;
+&lt;h3 id=&#34;구현&#34;&gt;구현&lt;/h3&gt;
+&lt;p&gt;설치하고 zone 설정을 시행합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install bind9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/bind9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano named.conf.local
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;아래처럼 작성해 보겠습니다. 위에는 정방향, 아래는 역방향입니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/dns-server-bind9/2.png&#34;
+	width=&#34;904&#34;
+	height=&#34;318&#34;
+	srcset=&#34;https://docs.9bon.org/p/dns-server-bind9/2_huefd410dedda1b1270c311ad5204d7923_7374_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/dns-server-bind9/2_huefd410dedda1b1270c311ad5204d7923_7374_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;zone 설정&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;284&#34;
+		data-flex-basis=&#34;682px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;이제 정의해준 파일을 만들어 주어야 합니다. 포함된 예제가 있으니 그것을 복사해서 사용하겠습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp db.empty /var/cache/bind/busan.com.zone
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /var/cache/bind/busan.com.zone
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/dns-server-bind9/3.png&#34;
+	width=&#34;891&#34;
+	height=&#34;309&#34;
+	srcset=&#34;https://docs.9bon.org/p/dns-server-bind9/3_hu724f506c7055d8f3475104a392f245ae_7560_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/dns-server-bind9/3_hu724f506c7055d8f3475104a392f245ae_7560_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;정방향 설정&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;288&#34;
+		data-flex-basis=&#34;692px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;SOA로 시작하는 내용은 DNS의 갱신, 캐시, 재요청등의 설정들을 뜻하며&lt;br&gt;
+그 이후부터는 맨 왼쪽의 문자로 접근했을 때 내보낼 결과를 뜻합니다. 단 @는 &lt;a class=&#34;link&#34; href=&#34;http://busan.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;busan.com&lt;/a&gt; 자체가 요청 됐을때의 경우입니다.&lt;br&gt;
+이제 역방향 파일을 만들어주겠습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /var/cache/bind/busan.com.zone /var/cache/bind/busan.com.zone.rev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /var/cache/bind/busan.com.zone.rev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/dns-server-bind9/4.png&#34;
+	width=&#34;897&#34;
+	height=&#34;319&#34;
+	srcset=&#34;https://docs.9bon.org/p/dns-server-bind9/4_hu82d5f1eb6de024d8ed5a83502982dc39_7615_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/dns-server-bind9/4_hu82d5f1eb6de024d8ed5a83502982dc39_7615_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;역방향 설정&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;281&#34;
+		data-flex-basis=&#34;674px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;IN 이 PTR로 바뀌었다는 것 말고는 뜻이 동일합니다.&lt;/p&gt;
+&lt;p&gt;마무리 하셨다면&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;named-checkconf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 신택스 테스트를 할 수 있습니다. 아무 출력도 없으면 통과 된 것입니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service bind9 restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 bind9설정을 적용시킬 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&#34;외부-설정&#34;&gt;외부 설정&lt;/h3&gt;
+&lt;p&gt;이제 Server01,02 그리고 Client01 각각 DNS 위치가 Server02라는 것을 설정해야합니다.&lt;br&gt;
+이 또한 나중에 인터넷 연결이 필요할 때 다시 원상태로 복구해야하는 점을 고려하여 원래 있던 내용을 &lt;strong&gt;주석처리&lt;/strong&gt; 하시길 바랍니다.&lt;/p&gt;
+&lt;p&gt;윈도우는 쉬우니 넘어가고 Debian만 살펴보겠습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /etc/resolv.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/dns-server-bind9/5.png&#34;
+	width=&#34;858&#34;
+	height=&#34;168&#34;
+	srcset=&#34;https://docs.9bon.org/p/dns-server-bind9/5_hu766f6b050319b24f848360373f71d742_3129_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/dns-server-bind9/5_hu766f6b050319b24f848360373f71d742_3129_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;resolv 설정&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;510&#34;
+		data-flex-basis=&#34;1225px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 설정하시면 완료됩니다. 참고로 리눅스에서는 DNS주소 설정이 resolv뿐만 있는것이 아닙니다.&lt;/p&gt;
+&lt;h2 id=&#34;테스트&#34;&gt;테스트&lt;/h2&gt;
+&lt;p&gt;먼저 Server01로 가보겠습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nslookup client01.busan.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nslookup www.busan.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nslookup 192.168.10.10
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/dns-server-bind9/6.png&#34;
+	width=&#34;779&#34;
+	height=&#34;299&#34;
+	srcset=&#34;https://docs.9bon.org/p/dns-server-bind9/6_hu61e610084107e6ce25ae7d21fc8b754f_8252_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/dns-server-bind9/6_hu61e610084107e6ce25ae7d21fc8b754f_8252_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;nslookup&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;260&#34;
+		data-flex-basis=&#34;625px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;정상적으로 나오는 모습을 확인할 수 있습니다.&lt;br&gt;
+client01의 브라우저로 &lt;a class=&#34;link&#34; href=&#34;http://www.busan.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.busan.com&lt;/a&gt; 에 접속해 보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/dns-server-bind9/7.png&#34;
+	width=&#34;1908&#34;
+	height=&#34;650&#34;
+	srcset=&#34;https://docs.9bon.org/p/dns-server-bind9/7_hu4d7479727f0177b5b603e7d150cc4546_26954_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/dns-server-bind9/7_hu4d7479727f0177b5b603e7d150cc4546_26954_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;브라우저&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;293&#34;
+		data-flex-basis=&#34;704px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;역시 잘 되는 모습을 확인할 수 있습니다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>VMWare 서버 공부환경 만들기</title>
+        <link>https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+        <pubDate>Fri, 01 Apr 2022 08:30:11 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/thum.png" alt="Featured image of post VMWare 서버 공부환경 만들기" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+&lt;p&gt;GuestOS에서 무언가를 설치하기 위해 인터넷과 연결하여 사용할 때가 있을 것이며&lt;br&gt;
+인터넷이 아닌 공부 목적의, 내부 네트워크의 환경을 사용하는 일도 있을 것입니다. 이 두가지를 쉽게 오가면서 사용할 수 있도록&lt;br&gt;
+미리 준비 해놓으면 굉장히 편리합니다.&lt;/p&gt;
+&lt;p&gt;우리의 목표는 아래의 토폴로지와 같은 매우 간단한 형태의 네트워크망입니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01.png&#34;
+	width=&#34;829&#34;
+	height=&#34;514&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01_hu078c8a65e899595cbaffd1547d116d51_67192_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/01_hu078c8a65e899595cbaffd1547d116d51_67192_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;간단한 토폴로지&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;387px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vmnet&#34;&gt;VMNet&lt;/h2&gt;
+&lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;VMNet은 VMWare Workstation에서 지원하는 가상 인터페이스, 네트워크입니다. 이것을 통하여 내부 네트워크망을 구현할 수 있습니다.&lt;br&gt;
+네트워크 환경은 Subneting, Gateway 그리고 구축하지 않아도 제공되는 DHCP 서비스등을 설정할 수 있으며
+인터페이스는 위의 네트워크 환경이 아니더라도 NAT, Bridge 등을 지원합니다.&lt;/p&gt;
+&lt;p&gt;이번 시간에 필요한 환경은 하나의 내부 네트워크가 필요합니다. VMNet은 하나를 추가로 만들 것입니다.&lt;/p&gt;
+&lt;h3 id=&#34;virtual-network-editor-설정&#34;&gt;Virtual Network Editor 설정&lt;/h3&gt;
+&lt;p&gt;Edit→Virtual Network Editor 으로 들어갑니다. 그 후에 아래의 Change Settings까지 눌러주셔야 합니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;적용된 설정&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Host-only&lt;/td&gt;
+&lt;td&gt;브릿지, 나트가 아닌 외부와 단절된, VM 내부에서만 동작하게 되는 망입니다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Connect a host vitual adapter~&lt;/td&gt;
+&lt;td&gt;체크를 하게되면 HostOS 설정(ex 윈도우 제어판)에도 해당 어뎁터가 감지됩니다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Use local DHCP~&lt;/td&gt;
+&lt;td&gt;VMWare에서 지원하는 DHCP를 적용시킬 수 있습니다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;우리는 Add Network로 Vmnet10 을 추가하면 됩니다. 설정하면 다음과 같습니다.
+&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02.png&#34;
+	width=&#34;603&#34;
+	height=&#34;529&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02_hu3aaf4cd514939851847ff6017d4bb4a6_27810_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/02_hu3aaf4cd514939851847ff6017d4bb4a6_27810_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;완료된 모습&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;113&#34;
+		data-flex-basis=&#34;273px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;linuxdebian계열&#34;&gt;Linux(Debian계열)&lt;/h2&gt;
+&lt;h3 id=&#34;설명-1&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;인터넷망과 내부망의 연결을 오갈수 있다고 끝난 이야기가 아닙니다. 그때 마다 올바른 아이피주소를 사용해야 할 것입니다.&lt;br&gt;
+기존은 DHCP로 되어있을 것이니 Static설정을 추가하고 경우에 따라 주석처리, 주석해제를 반복하며 사용하면 편리합니다.&lt;/p&gt;
+&lt;h3 id=&#34;설정&#34;&gt;설정&lt;/h3&gt;
+&lt;p&gt;위쪽(1)의 버튼을 눌러 잠깐 GuestOS에서 빠져나올 수 있습니다. 그 다음(2)을 누르면 바로 인터페이스 설정에 들어갈 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03.png&#34;
+	width=&#34;1936&#34;
+	height=&#34;734&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03_hu1f4a05cf610854b13ed5eebdde3f01db_139681_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/03_hu1f4a05cf610854b13ed5eebdde3f01db_139681_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;버튼 안내&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;263&#34;
+		data-flex-basis=&#34;633px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;이곳에서 앞에서 설정했던 VMNet을 선택해주겠습니다. 만약 GuestOS가 실제 Host였다면 인터페이스에서 나온 선이 인터넷이&lt;br&gt;
+아닌  내부망의 허브에 물린 셈입니다.&lt;/p&gt;
+&lt;p&gt;다시 Debian으로 복귀해 본격적인 설정하기 앞서 ifconfig으로 인터페이스 이름을 확인해 보겠습니다. 당연히 명령어를 사용하실 때는 권한에 유의하셔야 합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ifconfig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04.png&#34;
+	width=&#34;633&#34;
+	height=&#34;166&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04_hua977036e3b138b5513d7081816a9dd27_8399_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04_hua977036e3b138b5513d7081816a9dd27_8399_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ifconfig&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;381&#34;
+		data-flex-basis=&#34;915px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;저같은 경우는 &lt;strong&gt;ens33&lt;/strong&gt;입니다. 사진처럼 외부 아이피주소가 할당된 인터페이스를 찾으면 됩니다.&lt;/p&gt;
+&lt;p&gt;이제 이름을 기억하고 아래처럼 인터페이스 설정파일에 접근하겠습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /etc/network/interfaces
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;여기서 부터는 오타에 주의해야합니다. 오타가 발생하면 인터페이스 갱신이 불가능 해지며 이것은 연결이 불가능함을 뜻합니다.&lt;/p&gt;
+&lt;p&gt;여기서는 각 인터페이스의 address, subnet, netmask, broadcast, gateway 등을 설정할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;기존의 DHCP 설정은 주석처리하고 아래와 같이 적어보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05.png&#34;
+	width=&#34;853&#34;
+	height=&#34;355&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05_hu4c74e0fb8f0d954402e2a66f261951a2_9922_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05_hu4c74e0fb8f0d954402e2a66f261951a2_9922_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;interfaces&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;240&#34;
+		data-flex-basis=&#34;576px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;이후엔 오타를 다시 확인해보고 갱신 명령을 실행시키면 완료됩니다. 설정이 제대로 변경되었는지 확인해봅시다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service networking reload
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ifconfig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06.png&#34;
+	width=&#34;689&#34;
+	height=&#34;381&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06_hua40824f8825bd75f26e421cbe720e24d_16361_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06_hua40824f8825bd75f26e421cbe720e24d_16361_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;interfaces&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;434px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;windows&#34;&gt;Windows&lt;/h2&gt;
+&lt;h3 id=&#34;설명-2&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;Windows는 Linux보다 더 편리하게 설정할 수 있습니다. 먼저 위와 동일하게 해당 GuestOS의 인터페이스 VMNet은 변경해야 합니다.&lt;br&gt;
+위의 토폴로지처럼 마찬가지로, 동일한 VMNet과 연결하면 되겠습니다. 또한 윈도우에서 아이피 주소를 변경하는 방법은 자세히&lt;br&gt;
+나와있으니 쉽게 하실수 있습니다만 윈도우 방화벽 정책에 ICMP와 같은 여러 프로토콜이 막혀있기 때문에 &lt;strong&gt;방화벽을 설정하거나 해제해야 합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;마무리&#34;&gt;마무리&lt;/h2&gt;
+&lt;p&gt;서로 ping명령어를 사용하여 연결이 제대로 되어있는지 확인할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07.png&#34;
+	width=&#34;530&#34;
+	height=&#34;146&#34;
+	srcset=&#34;https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07_hu43046406ca2e829d90ec60d6027fb892_6838_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/07_hu43046406ca2e829d90ec60d6027fb892_6838_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ping&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;363&#34;
+		data-flex-basis=&#34;871px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>리눅스 디스크 백업</title>
+        <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</link>
+        <pubDate>Fri, 25 Mar 2022 11:21:02 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%B0%B1%EC%97%85/thum.png" alt="Featured image of post 리눅스 디스크 백업" /&gt;&lt;h2 id=&#34;백업&#34;&gt;백업&lt;/h2&gt;
+&lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;백업/복원은 말 그대로 나중에 되돌릴 수 있게 사본을 복사하여 저장하는 기능입니다. 과거에도 OS에서 지원하는&lt;br&gt;
+소프트웨어가 있었지만, 그럼에도 저 같은 경우에는 CD, USB에 담아서 사용하는 고스트를 자주 봤었던 기억이 있습니다.&lt;/p&gt;
+&lt;p&gt;그 이유와 관련하여 방식의 종류를 살펴보도록 하겠습니다.&lt;/p&gt;
+&lt;h3 id=&#34;백업의-종류&#34;&gt;백업의 종류&lt;/h3&gt;
+&lt;p&gt;디스크를 통째로, 디스크의 일부 파티션만, 파일만 백업, 이것을 떠나서 백업은 세 가지의 방식이 존재합니다.&lt;br&gt;
+1일 2일 3일, 총 삼일 동안 파일이 써지고 있는 동일한 시스템을 백업했다고 가정하고 예를 들어보겠습니다.&lt;/p&gt;
+&lt;p&gt;전체 백업(Full)&lt;br&gt;
+1일 //// __ __&lt;br&gt;
+2일 //// //// __&lt;br&gt;
+3일 //// //// ////&lt;/p&gt;
+&lt;p&gt;차등 백업(Differential)&lt;br&gt;
+1일 //// __ __&lt;br&gt;
+2일 __ //// __&lt;br&gt;
+3일 __ //// ////&lt;/p&gt;
+&lt;p&gt;증분 백업(Incremental)&lt;br&gt;
+1일 //// __ __&lt;br&gt;
+2일 __ //// __&lt;br&gt;
+3일 __ __ ////&lt;/p&gt;
+&lt;p&gt;간단히 전체는 그 말대로 모든 내용을, 차등은 첫 백업 이후의 내용들을, 증분백업은 각 백업시의 변화 내용을&lt;br&gt;
+기록하는 것입니다. 이렇게 보면 증분백업이 가장 좋아보이지만 복원시 오랜 시간이 소모되고 백업 파일이&lt;br&gt;
+하나라도 손실되면 복원이 불가능한 특징을 가지고 있습니다.&lt;/p&gt;
+&lt;p&gt;요즘엔 고스트가 윈도우에 설치되어 증분백업까지 지원을 하지만 과거의, 특히 컴퓨터 수리를 업으로 하는 입장에서는&lt;br&gt;
+각기 다른 시스템을 접해야 했기 때문에 전체 백업이 좋은 선택지였다고 생각합니다.&lt;/p&gt;
+&lt;p&gt;참고로 맥의 타임머신도 기본은 증분백업이며, 타임머신을 포함한 대부분 요즘 소프트웨어는 세 가지 백업 방식을&lt;br&gt;
+모두 지원하고 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;명령&#34;&gt;명령&lt;/h2&gt;
+&lt;h3 id=&#34;tar&#34;&gt;tar&lt;/h3&gt;
+&lt;p&gt;tar은 백업보다 압축이 주 목적인 명령어입니다.&lt;/p&gt;
+&lt;p&gt;파일 전체백업&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar cvfp home.tar /file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;파일 증분백업&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar cvfp home.tar /file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;백업 위치지정&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar zcf /dev/sdb1 /file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;``&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;현재 디렉토리에 압축 해제
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;```&lt;/span&gt;bash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar zcf /dev/sdb1 /now
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dump&#34;&gt;dump&lt;/h3&gt;
+&lt;p&gt;파일 전체백업&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dump -0f /dev/sdb1 /file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;파티션 백업(sda1), 경로지정, 정보 기록(-u:/etc/dumpdates로)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dump -0u -f /dev/sdb1 /dev/sda1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;증분 백업(-2:2레벨의 백업)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dump -2u -f /dev/sdb1 /dev/sda1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;복원(-r:전체:단 파일시스템 마운트 동일해야함, -i:대화식)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;restore -rf /dev/sdb1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dd&#34;&gt;dd&lt;/h3&gt;
+&lt;p&gt;디스크 전체, 특정 파티션 모두 가능합니다. 해당 명령어는 백업뿐만 아니라 여러곳에서 쓰입니다.&lt;/p&gt;
+&lt;p&gt;전체 백업(bs:블럭 사이즈, 디스크 형편에 맞출 것)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sda &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdb &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;256k
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>리눅스 디스크 문제</title>
+        <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</link>
+        <pubDate>Sat, 12 Mar 2022 03:43:58 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/thum.png" alt="Featured image of post 리눅스 디스크 문제" /&gt;&lt;h2 id=&#34;하드디스크의-문제&#34;&gt;하드디스크의 문제&lt;/h2&gt;
+&lt;h3 id=&#34;증상&#34;&gt;증상&lt;/h3&gt;
+&lt;p&gt;저장, 삭제시 에러문구 : &amp;ldquo;Structure needs cleaning&amp;rdquo;, &amp;ldquo;구조에 청소가 필요합니다&amp;rdquo;&lt;br&gt;
+ls 시 : ??? ?? ???? 로 표시&lt;/p&gt;
+&lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;불량, 노후화, 최악에는 소프트웨어의 오류에도 하드디스크에 치명적인 문제가 발생할 수 있습니다.&lt;br&gt;
+제가 겪은 문제는 서버가 일종의 과부하를 받을 때 디렉토리 일부가 사라져 조회조차 하지 못하는 상황에&lt;br&gt;
+놓이는 것이였습니다.&lt;/p&gt;
+&lt;p&gt;놀라서 umount하거나 reboot해서 돌아와보면 디렉토리가 다시 보였지만&lt;br&gt;
+디렉토리를 포함한 파일의 일부가 열리지만 소실되었거나, 열리지도 않으며 청소가 필요하다는 경고가 나타났습니다.&lt;br&gt;
+흥미로웠던 사실은 비교적 최근에 생성된 것만 그런 상태였습니다. 추정해보면 EXT파일시스템의 특징이&lt;br&gt;
+여기서 보이는 것이 아닐까 생각했습니다.&lt;/p&gt;
+&lt;p&gt;현재는 과거의 사태에 높은 확률을 따라, 하드디스크의 불량이라고 생각하고 있지만&lt;br&gt;
+정확한 원인을 알기는 어려운 상황입니다. 이런일이 발생한다면 어떻게 대처하고 판단해야하는지&lt;br&gt;
+작성해 보겠습니다.&lt;/p&gt;
+&lt;h2 id=&#34;해결&#34;&gt;해결&lt;/h2&gt;
+&lt;h3 id=&#34;fsck&#34;&gt;fsck&lt;/h3&gt;
+&lt;p&gt;fsck는 리눅스에서 지원하는 Filesystem fix 명령입니다. 실행하면 체크를 하고, 문제가 생긴 항목을 불러준 뒤&lt;br&gt;
+허락하면 교정을 시작합니다. 당연히 un mount 되어있는 상황이여야 합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /dev/&amp;lt;장치명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fsck -y /dev/&amp;lt;장치명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Yes 또는 No로 물어보는 항목이 많고 대부분 오래 걸리므로 -y를 붙여 진행할 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&#34;badblocks&#34;&gt;badblocks&lt;/h3&gt;
+&lt;p&gt;badblocks는 리눅스에서 기본적으로 하드디스크의 badblock을 점검해주는 명령어 입니다.&lt;br&gt;
+어차피 읽기 전용모드로 작동되기 때문에 un mount 되어 있을 필요는 없으나&lt;br&gt;
+항상 장치적 문제를 해결할 때는 un mount 하시는 것을 추천드리고 싶습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /dev/&amp;lt;장치명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;badblocks -v -o out.txt /dev/&amp;lt;장치명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;-v는 자세하게 보여달라는 뜻이고 -o는 badblock list 를 file output으로 해달라는 뜻입니다.&lt;/p&gt;
+&lt;h3 id=&#34;smartctl&#34;&gt;smartctl&lt;/h3&gt;
+&lt;p&gt;smartctl은 기본 제공은 아니지만 자주 사용했었던 것입니다.&lt;br&gt;
+하드디스크의 모니터링 기술 SMART(Self-Monitoring, Analysis, and Reporting Technology)을 사용하여&lt;br&gt;
+점검하는 도구이며 아주 옛날의 하드디스크가 아닌 이상 대부분 장착되어 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install smartmontools
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /dev/&amp;lt;장치명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;smartctl -a /dev/&amp;lt;장치명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;자세히는 -a, 간단히는 -H, 정보만은 -i 옵션을 사용하여 진행 가능합니다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>리눅스 디스크 사용</title>
+        <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</link>
+        <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/thum.png" alt="Featured image of post 리눅스 디스크 사용" /&gt;&lt;h2 id=&#34;partion&#34;&gt;Partion&lt;/h2&gt;
+&lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;기본적으로 리눅스의 Filesystem은 다음과 같은 과정을 통해 만들어집니다. Partion &amp;gt; Format &amp;gt; Mount 의 과정을 거칩니다.&lt;br&gt;
+윈도우는 자동 마운트됩니다.&lt;/p&gt;
+&lt;p&gt;기본적으로 Partion은 하나의 보조기억장치를 여러 개의 Filesystem으로 만들고 싶을 때 사용합니다. 분할해서 사용하지&lt;br&gt;
+않는다고 해도 칸 하나를 사용하겠다는 명시가 필요합니다.&lt;/p&gt;
+&lt;p&gt;추가로 리눅스에서는 여러개의 저장 장치를 하나로 합치는 LVM이라는 개념이 존재합니다. Partion의 반대 개념에 가까우며&lt;br&gt;
+최근에 윈도우에도 비슷한 기능이 추가되었습니다.&lt;/p&gt;
+&lt;h3 id=&#34;명령어&#34;&gt;명령어&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fdisk -l
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 정확한 장치를 찾아서&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fdisk /dev/&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;장치명&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;으로 파티션 모드에 진입할 수 있습니다. 명령어로 진행되는 것이 아니라,  마법사형식을 이용합니다.&lt;br&gt;
+n, p 등을 누르면서 안내하는 내용을 따르면 문제 없습니다.&lt;/p&gt;
+&lt;p&gt;윈도우와 다르게 고려되어야 할 사항은 주영역, 가상영역, 그리고 Swap입니다. 이것은 가상메모리의 역할을 합니다.&lt;/p&gt;
+&lt;h2 id=&#34;format&#34;&gt;Format&lt;/h2&gt;
+&lt;h3 id=&#34;설명-1&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;저장공간의 Format은 선택한 공간에 FileSystem을 구성시키는 것을 뜻합니다. 이 단어가 주로 초기화 작업을 뜻하는 이유는&lt;br&gt;
+FileSystem은 하나의 공간에 하나만 사용될 수 있으며 새롭게 FileSystem 을 구성시킬때 본래있던&lt;br&gt;
+저장장치의 파일을 가르키는 맵핑, 테이블 정보가 덮어씌워지면서 사실상 정보가 삭제된 것처럼 되기 때문입니다.&lt;/p&gt;
+&lt;p&gt;리눅스에서 자주 사용되는 FileSystem은Ext4, XFS등이 있습니다. 자세한 내용은 다음에 다루겠습니다.&lt;/p&gt;
+&lt;h3 id=&#34;명령어-1&#34;&gt;명령어&lt;/h3&gt;
+&lt;p&gt;혹시 쓰던 저장장치를 포맷할 계획이라면 당연히 unmount된 상태여야 합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkfs.&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;파일 시스템 타입&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /dev/&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;장치&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;마찬가지로 마법사 형식입니다. y를 누르며 진행할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;mount&#34;&gt;Mount&lt;/h2&gt;
+&lt;h3 id=&#34;설명-2&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;mount는 특정 저장장치를 디렉토리와 연결하는 행위입니다. 윈도우는 알아서 해주거나, 파일 관리자를 거쳐 해결할 수 있으며&lt;br&gt;
+요즘 우분투 사용자 편의를 위해 알아서 데스크탑에 mount 하게 됩니다.&lt;/p&gt;
+&lt;p&gt;물론 mount를 하여 제대로 쓰기 위해선 fdisk와 같은 명령어로 포멧, 파일시스템 구축이 완료된 상태여야 합니다.&lt;/p&gt;
+&lt;h3 id=&#34;mount-상태-확인&#34;&gt;Mount 상태 확인&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;findmnt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;fdisk -l 또는 mount -l&lt;/em&gt; 도 있지만 해당 경우에는 위의 명령어가 훨씬 보기 편리했습니다.&lt;/p&gt;
+&lt;h3 id=&#34;mount-하기&#34;&gt;Mount 하기&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mount /dev/&amp;lt;장치명&amp;gt; &amp;lt;마운트 포인트&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;취소는&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;umount /dev/&amp;lt;장치명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 위의 명령어는 일시적이며 reboot 후 필요하다면 다시 입력해야 합니다.&lt;/p&gt;
+&lt;h3 id=&#34;fstab-파일시스템-테이블&#34;&gt;fstab-파일시스템 테이블&lt;/h3&gt;
+&lt;p&gt;부팅 시 자동으로 mount가 되기 위해선 해당 파일을 수정해야 합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano /etc/fstab
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1.png&#34;
+	width=&#34;751&#34;
+	height=&#34;200&#34;
+	srcset=&#34;https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;fstab&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;375&#34;
+		data-flex-basis=&#34;901px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;기본적인 mount 는 하단에 &lt;em&gt;&amp;lt;장치명&amp;gt; &amp;lt;마운트 포인트&amp;gt; &amp;lt;파일 시스템 종류&amp;gt; &amp;lt;옵션&amp;gt;&lt;/em&gt; 을 추가하면
+reboot 후부터 적용됩니다.&lt;/p&gt;
+&lt;p&gt;주의해야 할 사항이 있는데&lt;br&gt;
+만약 현재 ssh등의 방법으로 remote중에 이것을 변경했다면 &lt;strong&gt;반드시 오탈자가 없는지 확인해야 합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;만약 오타가 존재한다면 리눅스가 reboot 중에 SSH server를 포함한 프로세스를 실행하기 전 오류로 중단되므로 담당자가 remote를&lt;br&gt;
+하지 못하고 직접 가서 local상으로 부팅 설정을 해야 하는 상황이 발생합니다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>도커와 윈도우</title>
+        <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</link>
+        <pubDate>Sun, 20 Feb 2022 16:54:39 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum.png" alt="Featured image of post 도커와 윈도우" /&gt;&lt;h2 id=&#34;윈도우&#34;&gt;윈도우&lt;/h2&gt;
+&lt;h3 id=&#34;윈도우에서의-도커&#34;&gt;윈도우에서의 도커&lt;/h3&gt;
+&lt;p&gt;도커의 기본 환경은 리눅스에 맞춰져 있습니다. 따라서 윈도우에서 도커를 사용하려면 다른 방법을 선택할 필요가 있으며&lt;br&gt;
+각 방법은 장단점이 존재했습니다.  대부분 가상머신을 이용한 방법입니다.&lt;/p&gt;
+&lt;h3 id=&#34;가상-머신&#34;&gt;가상 머신&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1.jpg&#34;
+	width=&#34;1787&#34;
+	height=&#34;1131&#34;
+	srcset=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_huf9a7205103b4dcec72fcfbc1fadcd1aa_209651_480x0_resize_q75_box.jpg 480w, https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_huf9a7205103b4dcec72fcfbc1fadcd1aa_209651_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;가상머신과 도커&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://commons.wikimedia.org/wiki/File:Dockervsvm.jpg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;출처&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;가상머신은 기존의 운영체제(Host OS)에 가상의 운영체제(Guest OS)를 올릴 수 있게 해주는 소프트웨어 입니다.&lt;br&gt;
+도커도 가상머신과 흡사하지만 GuestOS를 모두 올리는 것이 아니라. 필요한 쉘과 커널등만 올린다는 차이점이 있습니다.&lt;br&gt;
+즉 도커는 가상머신 만큼 자유롭지는 못하나. 환경을 만들고 사용하는 부분에서 가볍게 진행 가능합니다.&lt;/p&gt;
+&lt;p&gt;정리해보면 윈도우에서 우분투 컨테이너를 사용하려면&lt;br&gt;
+&lt;strong&gt;윈도우 -&amp;gt; 가상머신 -&amp;gt; 리눅스 -&amp;gt; 도커 -&amp;gt; 컨테이너&lt;/strong&gt;&lt;br&gt;
+의 관계를 거쳐야 합니다. 그렇게 최적화된 방법은 아닐 것입니다.&lt;/p&gt;
+&lt;h2 id=&#34;윈도우에서-사용하는-방법들&#34;&gt;윈도우에서 사용하는 방법들&lt;/h2&gt;
+&lt;h3 id=&#34;docker-toolbox&#34;&gt;Docker Toolbox&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/docker-archive/toolbox/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;공식 Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;과거에는 Docker Toolbox를 주로 사용했습니다.  이것은 Virtualbox로 도커를 쉽게 설치/연결 시켜주는 가상머신 파일입니다.&lt;br&gt;
+그 시절 때 상대적으로 가벼웠던 Virtualbox는 도커를 쓰기 위해 잠깐 사용 할 가상머신으로 적합했습니다.&lt;br&gt;
+그러나 가상머신 특징상 HostOS와 GuestOS가 분리되어 IDE로 Remote하지 않는 이상 환경 공유에 불편함이 따랐습니다.&lt;/p&gt;
+&lt;p&gt;결국은 이후에 더 편리한 방법이 나와 2019년에 프로젝트가 중단되었습니다.&lt;/p&gt;
+&lt;h3 id=&#34;wls2&#34;&gt;WLS2&lt;/h3&gt;
+&lt;p&gt;WLS2는 Windows에서 제공하는 리눅스용 하위 프로그램입니다. 쉽게 말하면 오직 리눅스 계열을 구동시킬 수 있는 가상머신입니다.&lt;br&gt;
+기존의 WLS1은 가상머신과 거리가 멀되 HostOS인 윈도우와 호환성이 높게 만들어졌었으나&lt;br&gt;
+Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능을 더 우선시하게 만들어 졌습니다.&lt;/p&gt;
+&lt;p&gt;비록 WLS1보다는 문제가 있지만 HostOS와 환경 공유도 가능하고 GuestOS의 성능도 뛰어나 출시 후 각광 받았습니다.&lt;br&gt;
+이 곳에다 Docker를 설치하여 컨테이너가 필요한 순간마다 WSL2를 사용하면 됩니다.&lt;/p&gt;
+&lt;h3 id=&#34;docker-desktop&#34;&gt;Docker Desktop&lt;/h3&gt;
+&lt;p&gt;위에서 나오는 모든 방법들은 컨테이너를 사용하기 위해 가상 머신을 사용해야 한다는 공통점을 가지고 있습니다. 이것은 번거로운 일입니다.&lt;/p&gt;
+&lt;p&gt;Docker Desktop은 이와 다르게, 설치되어있는 WSL2을 이용하여 HostOS에서 Docker를 사용할 수 있도록 도와줍니다.&lt;br&gt;
+그렇기 때문에 사용하기 위해선 Hyper-V과 WSL2가 설치되어 있어야 합니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2.png&#34;
+	width=&#34;724&#34;
+	height=&#34;536&#34;
+	srcset=&#34;https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;도커 데스크탑 원리&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;324px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;예전에는 ARM 아키텍처를 이용하는 맥OS 계열에서도 이것을 사용했으나&lt;br&gt;
+최근 Docker는 ARM아키텍처를 지원하게 되었기 때문에 해당 선택지를 고를 필요는 없습니다.&lt;/p&gt;
+&lt;p&gt;이것은 편리하지만 심각한 메모리의 사용률과 상업적 이용의 유료화 때문에 상위호환의 선택지가 될 수 없습니다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>도커 파일</title>
+        <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/</link>
+        <pubDate>Sun, 02 Jan 2022 02:21:44 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/thum.png" alt="Featured image of post 도커 파일" /&gt;&lt;h2 id=&#34;간단한-형식&#34;&gt;간단한 형식&lt;/h2&gt;
+&lt;h3 id=&#34;운영체제&#34;&gt;운영체제&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-docker&#34; data-lang=&#34;docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;#원본이 될 이미지, https://hub.docker.com/ 참고&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#버전을 기록하지 않으면 최신 버전을 사용하게 된다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; ubuntu:16.04&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#작성자 정보, 필수는 아님, 옛날에는 MAINTAINER을 사용했으나 대체됨&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;LABEL&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;tayasriel@gmail.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;LABEL&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;BonhyeonGu&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#언어 설정, ENV 자체는 도커 이미지 환경변수를 조작한다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ENV&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LC_ALL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;C.UTF-8&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ENV&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LANG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;C.UTF-8&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#명령어, 물음이 오는것을 피해야 진행이 가능하다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;RUN&lt;/span&gt; apt-get update -y &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; apt-get install -y nano&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#노출될 포트, 주의할 점은 이게 포트포워딩을 해주는 것이 아님&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;EXPOSE&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; 5000, 5001&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;인터프리터&#34;&gt;인터프리터&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-docker&#34; data-lang=&#34;docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; ubuntu&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;LABEL&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;tayasriel@gmail.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;LABEL&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;BonhyeonGu&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;RUN&lt;/span&gt;  apt-get update -y &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; apt-get install -y python-pip python-dev&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#호스트 경로 .의 파일들을 컨테이너의 경로 /app으로 복사시킨다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;COPY&lt;/span&gt;  . /app&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#컨테이너가 실행되면 활성화 될 경로, cd /app 과 동일하다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;WORKDIR&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;  /app&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;RUN&lt;/span&gt;  pip install -r requirements.txt&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#명령어 실행, RUN과 다르게 컨테이너가 활성화 될 때 마다 실행된다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ENTRYPOINT&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;python&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#명령어 실행, ENTRYPOINT 와 비슷하지만, 만약 도커 컨테이너 실행과 함께&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#인수가 제공되면 그것으로 대체된다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CMD&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;app.py&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## 즉 이 형태는 컨테이너 start와 함께, 파이썬이 실행되고 컨테이너가 stop되는 형식&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;도커-컴포즈-도커-파일의-조합&#34;&gt;도커 컴포즈, 도커 파일의 조합&lt;/h2&gt;
+&lt;h3 id=&#34;안내&#34;&gt;안내&lt;/h3&gt;
+&lt;p&gt;이런 방법으로 컴공에 새로 입문하시는 분들께 개발환경을 배포할 수 있을 것 같습니다.&lt;/p&gt;
+&lt;h3 id=&#34;파이썬-인터프리터&#34;&gt;파이썬 인터프리터&lt;/h3&gt;
+&lt;p&gt;도커파일&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-docker&#34; data-lang=&#34;docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; ubuntu&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;LABEL&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;tayasriel@gmail.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;LABEL&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;BonhyeonGu&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;RUN&lt;/span&gt;  apt-get update -y &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; apt-get install -y python3-pip python3-dev&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#mkdir 이 필요할 수 있다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;WORKDIR&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;  /app&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;RUN&lt;/span&gt; pip install --no-cache-dir --upgrade pip &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    pip install numpy&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;#경우에 따라서 pip 모두 업그레이드 받는건 피해야겠다. 꽤 오래걸림&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#명령어 실행, RUN과 다르게 컨테이너가 활성화 될 때 마다 실행된다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ENTRYPOINT&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;python3&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#명령어 실행, ENTRYPOINT 와 비슷하지만, 만약 도커 컨테이너 실행과 함께&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#인수가 제공되면 그것으로 대체된다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CMD&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;app.py&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## 즉 이 형태는 컨테이너 start와 함께, 파이썬이 실행되고 컨테이너가 stop되는 형식&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;컴포즈&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-docker&#34; data-lang=&#34;docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;version: &lt;span class=&#34;s2&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;services:&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt; test1:&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;  build: .&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;  volumes:&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;   - .:/app&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이후&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-docker&#34; data-lang=&#34;docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker-compose up &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; docker-compose rm -f&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 쉬운 실행/삭제 가능&lt;/p&gt;
+&lt;h3 id=&#34;파이썬-리모트-전용&#34;&gt;파이썬 리모트 전용&lt;/h3&gt;
+&lt;p&gt;도커파일&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-docker&#34; data-lang=&#34;docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; ubuntu&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;LABEL&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;tayasriel@gmail.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;LABEL&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;BonhyeonGu&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#언어 설정, ENV 자체는 도커 이미지 환경변수를 조작한다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ENV&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LC_ALL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;C.UTF-8&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ENV&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LANG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;C.UTF-8&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;RUN&lt;/span&gt;  apt-get update -y &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; apt-get install -y python3-pip python3-dev&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#vscode remote시 초기 경로를 root로 잡는다.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;WORKDIR&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;  /root&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;RUN&lt;/span&gt; pip install --no-cache-dir --upgrade pip &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    pip install numpy&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;컴포즈&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-docker&#34; data-lang=&#34;docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;version: &lt;span class=&#34;s2&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;services:&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt; test2:&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;#stdin_open: true # docker run -i&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;  tty: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;        &lt;span class=&#34;c1&#34;&gt;# docker run -t&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;  build: .&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;  volumes:&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;   - .:/root&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이후&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-docker&#34; data-lang=&#34;docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker-compose up -d&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;code .&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;그리고 리모트, 다쓰면 이후로&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;docker-compose down&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>RDP  문제</title>
+        <link>https://docs.9bon.org/p/rdp-%EB%AC%B8%EC%A0%9C/</link>
+        <pubDate>Fri, 31 Dec 2021 11:38:57 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/rdp-%EB%AC%B8%EC%A0%9C/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/rdp-%EB%AC%B8%EC%A0%9C/thum.png" alt="Featured image of post RDP  문제" /&gt;&lt;h2 id=&#34;설명&#34;&gt;설명&lt;/h2&gt;
+&lt;h3 id=&#34;문제&#34;&gt;문제&lt;/h3&gt;
+&lt;p&gt;윈도우즈, 윈도우즈 서버 운영체제를 사용할 때 정책을 사용해야 하는 이유로&lt;br&gt;
+반드시 공식 지원하는 &amp;lsquo;RDP&amp;rsquo;를 사용해야 할 때가 있습니다.&lt;/p&gt;
+&lt;p&gt;해당 프로그램은 대부분의 기능을 지원하지만 의외의 문제점이 있습니다.&lt;br&gt;
+바로 SSH, 원격 터미널과 흡사한 부분이 있는 것입니다.&lt;br&gt;
+&lt;strong&gt;RDP 은 유저가 연결을 끊으면 로그오프되어 Foreground 는 당연하고 Background마저 설정해 놓지 않으면 닫히게 됩니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;한번은 윈도우 환경에서만 지원하는 GUI Foreground 프로세스를 지속적으로 가동시킬 목적으로 AWS에서  Windows Server를 구입하여 사용한 적이 있었습니다.&lt;br&gt;
+하지만 위와 같은 이유로 곤혹을 겪었습니다.&lt;/p&gt;
+&lt;h3 id=&#34;해결&#34;&gt;해결&lt;/h3&gt;
+&lt;p&gt;해결방법은 RDP를 마치고 싶을 때 연결 종료가 아닌 작업중인 호스트에서 자기 자신한테 RDP를 연결 시키는 것입니다.&lt;br&gt;
+이러면 RDP 가 끝나지 않았으니 작업을 멈추지 않으며, 다른 사람이 연결을 신청했으니 현제 연결중인 클라이언트는 끊기게 됩니다.&lt;br&gt;
+나중에 알게 됐지만 이 방법은 여러 곳에서 많이 사용 중 이였습니다.&lt;/p&gt;
+&lt;h2 id=&#34;powershell-코드&#34;&gt;PowerShell 코드&lt;/h2&gt;
+&lt;h3 id=&#34;코드&#34;&gt;코드&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ps1&#34; data-lang=&#34;ps1&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$ID&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$FIND&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$LINES&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;query&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;session&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$LINE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$LINES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;$WORDS&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$LINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;where &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;foreach&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$WORD&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$WORDS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$WORD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-eq&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nb&#34;&gt;echo &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FIND&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-eq&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nb&#34;&gt;echo &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$WORD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-eq&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;user01&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&lt;span class=&#34;nv&#34;&gt;$FIND&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FIND&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-eq&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$CMD&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;tscon $ID /dest:console /password:!!!!!!!!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;iex &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$CMD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;설명-1&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;먼저 현재 진행중인 RDP를 찾아냅니다.&lt;br&gt;
+이후 해당 세션을 tscon으로 루프백 연결시키게 만듭니다.&lt;/p&gt;
+&lt;h2 id=&#34;파워쉘-코드를-실행하는-배치파일&#34;&gt;파워쉘 코드를 실행하는 배치파일&lt;/h2&gt;
+&lt;h3 id=&#34;코드-1&#34;&gt;코드&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;runas /user:localhost\administrator &lt;span class=&#34;s2&#34;&gt;&amp;#34;powershell.exe -noprofile -executionpolicy bypass -file &amp;#34;&lt;/span&gt;POWER경로&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;설명-2&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;또 다른 문제로, 해당 Powershell 코드는 관리자 권한이 필요한데&lt;br&gt;
+세션에 접속한 사용자는 관리자가 아니였습니다. 이를 위해 runas를 사용하여&lt;br&gt;
+관리자 권한을 통하여 코드를 실행하게 만들었습니다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>zsh, oh-my-zsh!</title>
+        <link>https://docs.9bon.org/p/zsh-oh-my-zsh/</link>
+        <pubDate>Fri, 24 Dec 2021 16:11:32 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/zsh-oh-my-zsh/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/zsh-oh-my-zsh/thum.png" alt="Featured image of post zsh, oh-my-zsh!" /&gt;&lt;h2 id=&#34;zsh&#34;&gt;zsh&lt;/h2&gt;
+&lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;기능이 다양해서 유행중인 bash 쉘을 대체하는 쉘입니다.&lt;/p&gt;
+&lt;h3 id=&#34;설치&#34;&gt;설치&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install zsh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chsh -s &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;which zsh&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;쉘은 유저에 귀속되므로 &lt;strong&gt;권한에 주의해야 합니다.&lt;/strong&gt;
+또한 &lt;strong&gt;작은 따옴표가 아닙니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;재시작 하면 설치가 완료됩니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$SHELL&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 확인 할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;oh-my-zsh&#34;&gt;oh-my-zsh!&lt;/h2&gt;
+&lt;h3 id=&#34;설명-1&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;zsh를 설정할 수 있는 편리한 콘피그들을 제공해주는 프레임워크입니다.&lt;/p&gt;
+&lt;h3 id=&#34;설치-1&#34;&gt;설치&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;해당 설치법은 &lt;a class=&#34;link&#34; href=&#34;http://ohmyz.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://ohmyz.sh/&lt;/a&gt; 에서 제공하는 방법입니다. 문제가 생길경우 이곳에서 편집되었는지 확인할 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&#34;설정&#34;&gt;설정&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;에서 제가 주로 사용하는 것은&lt;/p&gt;
+&lt;p&gt;ZSH_THEME=&amp;ldquo;agnoster&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;입니다.&lt;/p&gt;
+&lt;p&gt;또한 agnoster 테마를 이용하기 위해서는 다른 글꼴이 필요합니다.
+적당한 디렉토리에&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/powerline/fonts.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; fonts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;또는 apt 패키지 관리자로 설치 가능합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install fonts-powerline
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;만약 wsl2와 같은 윈도우 환경이라면 수동으로 설치해야합니다.
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/powerline/fonts.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/powerline/fonts.git&lt;/a&gt; 의 릴리즈에 들어가 압축파일을 받은 뒤
+수동 설치를 진행하고 터미널-&amp;gt;속성에서 글꼴을 변경할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;기타&#34;&gt;기타&lt;/h2&gt;
+&lt;h3 id=&#34;업데이트-충돌-오류&#34;&gt;업데이트 충돌 오류&lt;/h3&gt;
+&lt;p&gt;여러가지 수정하고 oh-my-zsh 업데이트를 받을 시 git 오류가 발생하는 것을 확인했습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/.oh-my-zsh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;후&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;등을 이용하여&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;omz update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 수동 업데이트를 진행하여 해결했습니다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>도커 명령어와 예제</title>
+        <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/</link>
+        <pubDate>Sun, 03 Oct 2021 01:40:54 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/thum.png" alt="Featured image of post 도커 명령어와 예제" /&gt;&lt;h2 id=&#34;기본&#34;&gt;기본&lt;/h2&gt;
+&lt;h3 id=&#34;컨테이너-조회&#34;&gt;컨테이너 조회&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Docker&#34; data-lang=&#34;Docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker ps -a&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;첨자&lt;/th&gt;
+&lt;th&gt;뜻&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-a&lt;/td&gt;
+&lt;td&gt;꺼져있는 것을 포함하여 모두&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;컨테이너-시작-종료&#34;&gt;컨테이너 시작, 종료&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Docker&#34; data-lang=&#34;Docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker apache start&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;이후 내용&lt;/th&gt;
+&lt;th&gt;뜻&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;start&lt;/td&gt;
+&lt;td&gt;실행&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;restart&lt;/td&gt;
+&lt;td&gt;재시작&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;stop&lt;/td&gt;
+&lt;td&gt;중지&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;status&lt;/td&gt;
+&lt;td&gt;상태확인&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;컨테이너-생성수정&#34;&gt;컨테이너 생성/수정&lt;/h2&gt;
+&lt;h3 id=&#34;일반적인-경우&#34;&gt;일반적인 경우&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Docker&#34; data-lang=&#34;Docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker container run --name nextcloud -d -v /media/ext1/Docker/cloud/:/var/www/html/data -p 1234:80 nextcloud&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;첨자&lt;/th&gt;
+&lt;th&gt;뜻&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-run&lt;/td&gt;
+&lt;td&gt;생성 후 바로 실행함&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;ndash;name&lt;/td&gt;
+&lt;td&gt;생성될 컨테이너의 이름 지정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-d&lt;/td&gt;
+&lt;td&gt;백그라운드(데몬 프로세스)로 실행&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-v (복수가능)&lt;/td&gt;
+&lt;td&gt;저장공간 맵핑/마운트 컨테이너 외부(호스트) : 컨테이너 내부&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-p (복수가능)&lt;/td&gt;
+&lt;td&gt;포트 맵핑/포워딩 컨테이너 외부(호스트) : 컨테이너 내부&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;이후 내용엔 이미지 파일 이름&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;환경변수-설정&#34;&gt;환경변수 설정&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Docker&#34; data-lang=&#34;Docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker container run --name test_DB_YJ -d -p 49152:22 -p 1234:3306 -e &lt;span class=&#34;nv&#34;&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;12345&lt;/span&gt; mariadb --character-set-server&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;utf8mb4 --collation-server&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;utf8mb4_unicode_ci&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;docker run -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;ACCEPT_EULA=Y&amp;#34;&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;SA_PASSWORD=12345&amp;#34;&lt;/span&gt; -p 1234:1433 --name rpadb -d mcr.microsoft.com/mssql/server:2019-latest&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;첨자&lt;/th&gt;
+&lt;th&gt;뜻&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-e&lt;/td&gt;
+&lt;td&gt;컨테이너 내부 환경변수 수정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;실행&#34;&gt;실행&lt;/h2&gt;
+&lt;h3 id=&#34;컨테이너-내부-쉘실행&#34;&gt;컨테이너 내부 쉘실행&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Docker&#34; data-lang=&#34;Docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; -it nextcloud bash&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;첨자&lt;/th&gt;
+&lt;th&gt;뜻&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-i&lt;/td&gt;
+&lt;td&gt;상호작용 할 것, 입력 출력이 가능해짐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;-t&lt;/td&gt;
+&lt;td&gt;쉘과 같이 사용 될 것&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;이후 내용엔 실행할 명령어&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;컨테이너-내부-권한으로-명령-실행&#34;&gt;컨테이너 내부 권한으로 명령 실행&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-docker&#34; data-lang=&#34;docker&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; -u www-data nextcloud php occ files:scan --all&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;docker &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; -u &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; -it rpadb /bin/bash&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;첨자 및 매게변수&lt;/th&gt;
+&lt;th&gt;뜻&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;-u&lt;/td&gt;
+&lt;td&gt;해당 유저의 권한으로&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;이후 내용엔 실행할 명령어&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>아파치 SSL 적용, Let&#39;s Encrypt</title>
+        <link>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</link>
+        <pubDate>Fri, 01 Oct 2021 18:41:21 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/thum.png" alt="Featured image of post 아파치 SSL 적용, Let&#39;s Encrypt" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+&lt;p&gt;only HTTP 사용된 전달은 보호되지 않습니다. 우리가 입력할 아이디와 비밀번호는 평문으로 전달되게 될 것이며&lt;br&gt;
+이는 공격자가 쉽게 중간에서 가로챌 수 있습니다.&lt;br&gt;
+이를 방지하기 위해 지금은 TLS내지 SSL을 사용한 HTTPS가 사용되고 있습니다.&lt;br&gt;
+국내에서는 웹서버 정보제공자가 로그인과 관련된 페이지에서 HTTPS 사용을 의무한 법안이 시행중입니다.&lt;/p&gt;
+&lt;h3 id=&#34;인증서&#34;&gt;인증서&lt;/h3&gt;
+&lt;p&gt;페이지 제공자와 수신자는 CA(인증 기관&amp;ndash;업체)를 사이로 아래와 같은 작업을 시행합니다.&lt;/p&gt;
+&lt;h3 id=&#34;lets-encrypt&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;https://letsencrypt.org/ko/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s Encrypt 는 무료 CA입니다. 대신 해당 인증서는 짧은 유효기간을 가졌으며 설정의 제한이 많지만&lt;br&gt;
+&lt;strong&gt;certbot&lt;/strong&gt;을 통하여 쉽고 빠른 추가/갱신이 가능합니다.&lt;/p&gt;
+&lt;h2 id=&#34;certbot&#34;&gt;certbot&lt;/h2&gt;
+&lt;p&gt;certbot은 Let&amp;rsquo;s Encrypt에서 인증서와 키의 발급을 용이하게 도와주는 프로그램입니다. 아래처럼 설치할 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install python3-certbot-apache
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;공식 사이트에는 python-certbot-apache 라고 나와 있었지만 작동되지 않습니다. 파이썬 버전에 참고해야 하는 것 같습니다.&lt;/p&gt;
+&lt;h3 id=&#34;일반-인증서-발급&#34;&gt;일반 인증서 발급&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;certbot --apache certonly
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;입력후 도메인을 포함한&lt;/p&gt;
+&lt;h3 id=&#34;와일드카드-인증서-발급&#34;&gt;와일드카드 인증서 발급&lt;/h3&gt;
+&lt;p&gt;와일드카드 인증서는 하나의 부모 도메인 인증서로 자식 모두를 등록시킬 수 있는 인증서입니다.&lt;br&gt;
+하지만 자동 갱신을 시킬 방법이 없어 이점에 주의해야합니다.&lt;/p&gt;
+&lt;p&gt;만약 &lt;code&gt;www.a.com, mail.a.com&lt;/code&gt; 등 *a.com을 인증시키는 것이 목표라면 다음과 같습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;certbot certonly --manual --preferred-challenges dns -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;*.a.com&amp;#34;&lt;/span&gt; -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;a.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 위의 일반 인증서 발급과 다르게 추가 인증이 필요하다는 메세지를 볼 수 있습니다. 몇가지 제시를 해주는데&lt;br&gt;
+도메인이 본인의 것이 맞다면 도메인 인증이 가장 편리한 것 같습니다.&lt;/p&gt;
+&lt;p&gt;저는 구글 도메인 서비스를 이용 중이기 때문에 아래의 화면에서 설정 가능합니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google.png&#34;
+	width=&#34;1005&#34;
+	height=&#34;376&#34;
+	srcset=&#34;https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google_hu4f2bd7349f00618c3a33491322cfc093_18650_480x0_resize_box_3.png 480w, https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google_hu4f2bd7349f00618c3a33491322cfc093_18650_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;267&#34;
+		data-flex-basis=&#34;641px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;타입은 텍스트로 한 후 호스트이름과 데이터에 요구조건대로 적용하면 완료됩니다.&lt;br&gt;
+단 도메인 정보가 전파되는데 시간이 걸릴 수 있으니 조금 기다렸다가 nslookup등으로 확인 한 후 다음 버튼을 누르시는걸 권장합니다.&lt;/p&gt;
+&lt;h3 id=&#34;인증서-취소&#34;&gt;인증서 취소&lt;/h3&gt;
+&lt;p&gt;여러가지 방법이 있지만 인증키를 모두 가지고 있다면 아래 방법이 가장 편리합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;certbot revoke --cert-path cert.pem --key-path privkey.pem
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cron-을-통한-자동갱신&#34;&gt;cron 을 통한 자동갱신&lt;/h2&gt;
+&lt;p&gt;인증서를 갱신시키는 명령어는 다음과 같습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;certbot renew --quiet
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 유효기간이 가까워 지기 전마다 해당 명령어를 치는 것은 불편할 것입니다.&lt;br&gt;
+따라서 리눅스 잡 스케줄러인 cron을 사용하여 원하는 날짜가 됐을때 자동으로 해당 명령어를 사용하게 합시다.&lt;br&gt;
+아래  명령어로 스케줄러 설정 파일에 들어갈 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crontab -e
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;크론텝은 5개의 숫자와 예약 명령어로 한 줄씩 추가 할 수 있습니다.&lt;br&gt;
+각 숫자는 순서대로 분, 시간, 일, 월, 요일(일요일=0)이며 *로 대체되면 그 부분은 상관없게 됩니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; * * /bin/bash -l -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;certbot renew --quiet&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;즉 이렇게 하면 매월 2일마다 갱신작업을 실행합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service cron restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;후&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service cron status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 제대로 동작중인지 확인할 수 있습니다.
+만약 문제가 생겼고 해결이 안된다면&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crontab -r
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 cron을 초기화 시킬수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;아파치-설정&#34;&gt;아파치 설정&lt;/h2&gt;
+&lt;p&gt;마지막으로 아파치에 적용하면 작업종료입니다.&lt;/p&gt;
+&lt;h3 id=&#34;인증서-적용&#34;&gt;인증서 적용&lt;/h3&gt;
+&lt;p&gt;먼저 모듈을 키고 수정할 사이트를 내려줍니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2enmod ssl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2dissite www.a.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이제 사이트 설정 콘피그에 들어가 기본 HTTP포트 80으로 호스팅 되어있는 부분을 삭제하고 SSL포트 443번으로 수정시킨 후 아래 처럼 만들어줍니다. &lt;strong&gt;경로에 주의해야 합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ApacheConf&#34; data-lang=&#34;ApacheConf&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;*:443&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;ServerName&lt;/span&gt;  www.a.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;DocumentRoot&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/var/www/www.a.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLEngine&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;on&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCertificateKeyFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/privkey.pem&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCertificateFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/cert.pem&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCACertificateFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/fullchain.pem&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;AllowOverride&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Options&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt; -Indexes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Require&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;all&lt;/span&gt; granted
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;저장 후&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2ensite www.a.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service apache2 restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;http-접근시-대처&#34;&gt;HTTP 접근시 대처&lt;/h3&gt;
+&lt;p&gt;만약 서버측에서 HTTPS로 구현 했음에도 불구하고 유저가 HTTP로 접근한다면 접속 불가하게 만드는 것 보다 자동으로 HTTPS로 재접근 되게 만드는 것이 유저 친화적일 것입니다. 이런 기능을 &lt;strong&gt;Rewrite, Redirect&lt;/strong&gt;라고 합니다. 모듈명은 Rewrite입니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Rewrite&lt;/th&gt;
+&lt;th&gt;Redirect&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;서버 사이드&lt;/td&gt;
+&lt;td&gt;클라이언트 사이드&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;클라이언트 모르게 설정된 경로로 바뀜, URL을 숨기는 용도로도 사용가능&lt;/td&gt;
+&lt;td&gt;클라이언트측 브라우저가 설정된 경로로 재접근함&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2enmod rewrite
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2dissite www.a.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ApacheConf&#34; data-lang=&#34;ApacheConf&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;*:443&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;ServerName&lt;/span&gt;  www.a.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;DocumentRoot&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/var/www/www.a.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLEngine&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;on&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCertificateKeyFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/privkey.pem&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCertificateFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/cert.pem&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;SSLCACertificateFile&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/etc/letsencrypt/live/www.a.com/fullchain.pem&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;AllowOverride&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Options&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt; -Indexes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Require&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;all&lt;/span&gt; granted
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;*:80&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;ServerName&lt;/span&gt; www.a.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Redirect&lt;/span&gt; / https://www.a.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>아파치 가상호스트 설정</title>
+        <link>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/</link>
+        <pubDate>Thu, 02 Sep 2021 19:32:24 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EC%95%84%ED%8C%8C%EC%B9%98-%EA%B0%80%EC%83%81%ED%98%B8%EC%8A%A4%ED%8A%B8-%EC%84%A4%EC%A0%95/thum.png" alt="Featured image of post 아파치 가상호스트 설정" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+&lt;p&gt;웹 서버 데몬은 한 호스트를 여러 호스트처럼 쓸 수 있는 &lt;strong&gt;가상 호스트(VirtualHost)&lt;/strong&gt; 를 대부분 지원하고 있습니다. 포트번호, 서브도메인, 출발지 주소등의 규칙을 적용시킵니다.
+이번엔 Debian과 Apache로 서브 도메인에 따른 규칙으로 가상 호스트를 구현해 보도록 하겠습니다.
+마지막엔 cloud.9bon.org와 9bon.org가 똑같은 장치에 구성되어있음에 불구하고 서로 다른 내용을 보여주는 것이 목표입니다.&lt;/p&gt;
+&lt;h2 id=&#34;아파치-준비&#34;&gt;아파치 준비&lt;/h2&gt;
+&lt;p&gt;아파치가 설치되어있지 않으면 패키지 관리자로 쉽게 설치 가능합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get install apache2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;또한 앞으로의 과정 중 재시작을 하고 싶을땐 다음과 같습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service apache2 restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;당연히 재시작 말고도 start, stop, &lt;strong&gt;reload&lt;/strong&gt;, status를 사용할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;아파치-설정&#34;&gt;아파치 설정&lt;/h2&gt;
+&lt;p&gt;데비안 10기준 Apache2에서는 설정파일이 모두 모듈화 되어있으며 추가 설정 또한 부분화하길 권장하고 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/apache2/sites-available/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;아래처럼 설정파일을 &amp;lt;추가할 사이트 도메인&amp;gt;.conf 으로 생성하면 됩니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano a.com.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-apacheConf&#34; data-lang=&#34;apacheConf&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;*:80&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;ServerName&lt;/span&gt;  a.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;DocumentRoot&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/var/www/a.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;AllowOverride&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Options&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt; -Indexes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Require&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;all&lt;/span&gt; granted
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;요약하면 80번 포트로 연결되는 가상 호스트이며 도메인이 a.com일때 /var/www/a.com의 내용을 보여라는 뜻입니다.
+그대로  &lt;a class=&#34;link&#34; href=&#34;https://www.a.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.a.com&lt;/a&gt;또한 작성하면 됩니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano www.a.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ApacheConf&#34; data-lang=&#34;ApacheConf&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;VirtualHost&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;*:80&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;ServerName&lt;/span&gt;  www.a.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;DocumentRoot&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;/var/www/www.a.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;AllowOverride&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Options&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;All&lt;/span&gt; -Indexes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;Require&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;all&lt;/span&gt; granted
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/VirtualHost&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;작성을 마치면&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2ensite a.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2ensite www.a.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;잘못 입력했다면&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a2dissite &amp;lt;설정 파일을 기반한 주소&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;할 수 있습니다.
+마지막으로 reload 하면 완료입니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service apache2 reload
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;참고로 아파치는 사이트 설정을 바꾸는 것에는 reload를 모듈을 추가 해제할 때는 restart 하기를 추천하고 있습니다.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>휴고 서버에 직접 구동시키기</title>
+        <link>https://docs.9bon.org/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/</link>
+        <pubDate>Wed, 01 Sep 2021 14:21:27 +1023</pubDate>
+        
+        <guid>https://docs.9bon.org/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%ED%9C%B4%EA%B3%A0-%EC%84%9C%EB%B2%84%EC%97%90-%EC%A7%81%EC%A0%91-%EA%B5%AC%EB%8F%99%EC%8B%9C%ED%82%A4%EA%B8%B0/thum.png" alt="Featured image of post 휴고 서버에 직접 구동시키기" /&gt;&lt;h2 id=&#34;주의사항&#34;&gt;주의사항&lt;/h2&gt;
+&lt;h3 id=&#34;20220320&#34;&gt;2022.03.20&lt;/h3&gt;
+&lt;p&gt;하드디스크가 문제가 생겼었고, 교환 받은 디스크도 종종 긁히는 소리가 갑자기 생기는데 Hugo를 직접 호스팅 하기 전까지 이런적은 없었습니다.&lt;br&gt;
+hugo server 로 24시간 작동시키는것이 다른 문제가 있는지 의심하는 중입니다. 주의하시길 바랍니다.&lt;/p&gt;
+&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+&lt;p&gt;학습했던 것들을 정리하기 위해 정적 페이지를 알아보다 HUGO와 Github page를 사용한 대중적인 게시글들을 확인할 수 있었습니다.
+Github page를 사용하면 관리하기 편리할 것 같지만 호스팅 경험을 위하여 예전부터 동작 중인 개인 서버를 통해 가동해 보겠습니다.&lt;/p&gt;
+&lt;h2 id=&#34;homebrew-설치&#34;&gt;Homebrew 설치&lt;/h2&gt;
+&lt;p&gt;2021년 08월 29일 기준 데비안 10.10 버전의 apt 패키지 관리자에서는 최신 버전의 hugo를 지원하지 않고 있습니다.
+사용하고 싶은 테마가 최신버전의 hugo에서만 지원하고 있기 때문에 수동으로 받아 설치하거나 다른 패키지 관리자를 사용하는 것이 방법일 것입니다. 여기서는 Mac OS 에서 주로 사용하는 Homebrew를 사용했습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install build-essential curl file git 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh -c &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;여기서 brew는 설치, 설치후 사용할 때 root의 권한으로 동작시킬 수 없습니다.&lt;/p&gt;
+&lt;p&gt;설치가 완료되었다면 자기가 사용하는 쉘에 설치된 경로를 포함시켜야 합니다.
+데비안 기준 기본 쉘은 bash입니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;또는 사람들이 주로 사용하는 zsh는&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;를 사용해 아래를 추가해주고&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/linuxbrew/.linuxbrew/bin:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MANPATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/linuxbrew/.linuxbrew/share/man:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$MANPATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;INFOPATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/linuxbrew/.linuxbrew/share/info:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$INFOPATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;저장 후 자신의 쉘에 맞게&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;또는&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;를 실행시켜 주면 적용되어 바로 사용 할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;만약 저처럼 알기 힘든 오류를 출력하여 진행 할 수 없을 때는 아래와 같은 방법으로 해결방법을 찾을 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew doctor
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;저 같은 경우에는 해당 명령어를 추천했으며 올바르게 동작했습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rf /usr/local/Cellar /usr/local/.git &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; brew cleanup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;모든 것이 완료되었다면 아래처럼 테스트 해볼 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hello
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew remove hello
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hugo-설치-및-실행&#34;&gt;HUGO 설치 및 실행&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;후&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하면 올바르게 최신 버전이 설치되었음을 확인 할 수 있습니다.
+이후 원하는 디렉토리에 들어가 새로운 사이트를 생성하고&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site docs.9bon.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;원하는 테마를 받아 올 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://github.com/CaiJimmy/hugo-theme-stack.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;시험삼아 간단한 테스트를 하기위해 설정파일을 조작할 것인데
+기본으로 생기는 설정파일이 config.toml인것에 반해 제작자 가이드는 config.yaml에 맞추어져 있습니다. 편의상인 것으로 추측됩니다.
+원래 있는 config.toml을 치우고 config.yaml을 만들어주면 yaml타입으로 설정할 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; .. / mv ./config.toml ./__config.toml 나노 config.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이후에 설정파일은 테마 제작자 깃허브 &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/CaiJimmy/hugo-theme-stack&lt;/a&gt; 를 참고하여 작성 했습니다.&lt;/p&gt;
+&lt;p&gt;작성이 완료되었다면 해당 명령어로 로컬 서버를 동작시켜 사이트 테스트를 할 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;하지만 /tmp/hugo_cache/ 쪽에서 권한 문제가 생겼다는 에러를 확인할 수 있었습니다.
+또한 brew로 설치한 hugo는 root에 존재하지 않기 때문에 root권한으로 실행할 수 없습니다.
+따라서 해당 디렉토리 이하의 권한을 user권한으로 맞춰 줄 필요가 있습니다. 이 작업은 당연히 보안상에 문제가 없는지 검토가 이루어져야 합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chown -R &amp;lt; 사용자 이름 &amp;gt; : &amp;lt; 사용자 이름 &amp;gt; /tmp/hugo_cache/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;위의 작업까지 완료하고 작성한 포스트를 작성 후 함께 Github에 올리고 뿌리기 전용 저장소까지 완성하면 git page로 호스팅이 가능합니다. 방법은 쉽게 인터넷에서 찾아볼 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;hugo-server-상세-명령어&#34;&gt;hugo server 상세 명령어&lt;/h2&gt;
+&lt;p&gt;hugo server를 외부에 제한없이 오픈하려면 다음과 같은 명령어를 사용해야 합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --baseURL &lt;span class=&#34;s2&#34;&gt;&amp;#34;docs.9bon.org&amp;#34;&lt;/span&gt; --bind &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이때 baseURL을 추가하지 않으면 config.yaml에 따라 적용되는 것으로 보였습니다.
+hugo server의 기본 포트는 1313이기에 docs.9bon.org:1313으로 활성화 됩니다.&lt;/p&gt;
+&lt;p&gt;만약 포트번호를 바꾸고 싶다면&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --port &lt;span class=&#34;m&#34;&gt;2222&lt;/span&gt; --baseURL &lt;span class=&#34;s2&#34;&gt;&amp;#34;docs.9bon.org&amp;#34;&lt;/span&gt; --bind &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;와 같은 방법으로 포트 번호를 바꿀 수 있습니다.&lt;/p&gt;
+&lt;p&gt;만약 저처럼 해당 장치에 웹서버가 동작하고 있어 80포트는 사용할 수 없지만 URL에 포트번호가 찍혀 접속하는 것도 흉해서 싫다면 웹서버의 &lt;strong&gt;프록시&lt;/strong&gt;를 사용해야 합니다.
+프록시의 구축은 이후에 설명하겠습니다.&lt;/p&gt;
+&lt;p&gt;만약 장치에 &lt;strong&gt;리버스 프록시&lt;/strong&gt;가 적용된 웹서버가 존재하기 때문에 클라이언트는 접속을 80포트로 진행하게 될 예정이지만, 서버 내에선 다른 포트로 동작해야 한다면
+명령어에 오픈 주소와 포트를 붙이지 말라는 내용을 추가해야 합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server --port &lt;span class=&#34;m&#34;&gt;2222&lt;/span&gt; --appendPort&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt; --baseURL &lt;span class=&#34;s2&#34;&gt;&amp;#34;docs.9bon.org&amp;#34;&lt;/span&gt; --bind &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.0.0.0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이렇게 하고 웹서버의 설정도 맞춘다면
+서버 내에선 2222포트로 동작하며 클라이언트는 80포트가 생략된 docs.9bon.org의 주소로 접속해야만 합니다.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

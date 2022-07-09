@@ -6,32 +6,7 @@
     <description>Recent content in 서버 on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 28 Jun 2022 21:55:53 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/categories/%EC%84%9C%EB%B2%84/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>리눅스 DHCP, DDNS</title>
-      <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/</link>
-      <pubDate>Tue, 28 Jun 2022 21:55:53 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/</guid>
-      <description>서론 개요 DHCP를 리눅스에서 구성하는 것은 어렵지 않습니다. 두개 정도되는 설정파일을 수정하는 것 만으로 구성할 수 있습니다.
-문제는 DNS입니다. 만약 클라이언트 측의 IP Address가 동적으로 변한다면 DNS도 이에 따라 변해야 할 것입니다.
-이렇게 정보가 바뀔 때 마다 DNS에 자동으로 갱신 시킬 수 있는 서비스를 DynamicDNS라고 부릅니다.
-이번 작업을 하기전에 앞의 작업 동안 정말로 이상이 없는지 확인해 보는 시간을 가지시는걸 추천드립니다.
-당연히 이런건 말을 하지 않아도 해주는 것이 좋습니다. 또한 이 과정에 없더라도 어떤 단순 명령이 동작하지 않으면</description>
-    </item>
-    
-    <item>
-      <title>DNS Server, BIND9</title>
-      <link>https://docs.9bon.org/p/dns-server-bind9/</link>
-      <pubDate>Tue, 12 Apr 2022 20:49:09 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/dns-server-bind9/</guid>
-      <description>서론 앞에서 IP Address로 신호를 보내봤지만, Domain name형식이 아닌 주소를 쓰는 경우는 매우 보기 어렵습니다.
-대부분의 학생분들은 DNS라는 단어를 들어보셨을 거라 생각합니다. IP Address와 Domain name간의 맵핑을 이루게 해주는 서비스, 내지 서버입니다.
-실은 여기 Domain이란 단어는 우리가 알고있는 문자 형식의 주소를 뜻하는 말보다 더 여러가지의 내용이 포괄된 단어입니다. 이 내용과 관련해서는 다음에 다루어보도록 하겠습니다.
-Bind9 설명 우리의 목표는 아래의 토폴로지입니다. 이 블로그 페이지는 Server2에 있는, DNS를 만들어주는 Bind9의 설정법을 다루어 볼 것입니다.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 12 Apr 2022 20:49:09 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/categories/%EC%84%9C%EB%B2%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DNS Server, BIND9</title>
       <link>https://docs.9bon.org/p/dns-server-bind9/</link>
