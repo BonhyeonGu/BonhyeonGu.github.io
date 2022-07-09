@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mount on 9Bon&#39;s_Docs</title>
+    <link>docs.9bon.org/tags/mount/</link>
+    <description>Recent content in mount on 9Bon&#39;s_Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 01 Mar 2022 23:17:11 +0900</lastBuildDate><atom:link href="docs.9bon.org/tags/mount/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 하드디스크 문제</title>
+      <link>docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</link>
+      <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
+      
+      <guid>docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%ED%95%98%EB%93%9C%EB%94%94%EC%8A%A4%ED%81%AC-%EB%AC%B8%EC%A0%9C/</guid>
+      <description>Mount 설명 mount는 특정 저장장치를 디렉토리와 연결하는 행위입니다. 윈도우는 알아서 해주거나, 파일 관리자를 거쳐 해결할 수 있으며
+요즘 리눅스들은 사용자 편의를 위해 알아서 데스크탑에 mount 하게 됩니다.
+물론 mount를 하여 제대로 쓰기 위해선 fdisk와 같은 명령어로 포멧, 파일시스템 구축이 완료된 상태여야 합니다.
+Mount 상태 확인 findmnt mount -l 도 있지만 위의 명령어가 훨씬 보기 편리합니다.
+Mount 하기 mount /dev/&amp;lt;장치명&amp;gt; &amp;lt;마운트 포인트&amp;gt; 취소는
+umount /dev/&amp;lt;장치명&amp;gt; 하지만 위의 명령어는 일시적이며 reboot 후 필요하다면 다시 입력해야 합니다.</description>
+    </item>
+    
+  </channel>
+</rss>
