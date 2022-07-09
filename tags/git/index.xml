@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on 9Bon&#39;s_Docs</title>
-    <link>docs.9bon.org/tags/git/</link>
+    <link>https://docs.9bon.org/tags/git/</link>
     <description>Recent content in git on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 24 Dec 2021 16:11:32 +0900</lastBuildDate><atom:link href="docs.9bon.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Dec 2021 16:11:32 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>zsh, oh-my-zsh!</title>
-      <link>docs.9bon.org/p/zsh-oh-my-zsh/</link>
+      <link>https://docs.9bon.org/p/zsh-oh-my-zsh/</link>
       <pubDate>Fri, 24 Dec 2021 16:11:32 +0900</pubDate>
       
-      <guid>docs.9bon.org/p/zsh-oh-my-zsh/</guid>
+      <guid>https://docs.9bon.org/p/zsh-oh-my-zsh/</guid>
       <description>zsh 설명 기능이 다양해서 유행중인 bash 쉘을 대체하는 쉘입니다.
 설치 apt-get install zsh chsh -s `which zsh` 쉘은 유저에 귀속되므로 권한에 주의해야 합니다. 또한 작은 따옴표가 아닙니다.
 재시작 하면 설치가 완료됩니다.

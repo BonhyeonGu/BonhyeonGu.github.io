@@ -3,17 +3,28 @@
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='윈도우에서 도커를 사용하는 방법에 관한 내용입니다.'><title>도커와 윈도우</title>
 
-<link rel='canonical' href='docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/'>
+<link rel='canonical' href='https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/'>
 
-<link rel="stylesheet" href="/docs.9bon.org/scss/style.scss"><meta property='og:title' content='도커와 윈도우'>
+<link rel="stylesheet" href="/scss/style.min.9548733e003ddfd331209598b39909b6f8cb4f42ee5f551f2d9d10b27b5bfe39.css"><meta property='og:title' content='도커와 윈도우'>
 <meta property='og:description' content='윈도우에서 도커를 사용하는 방법에 관한 내용입니다.'>
-<meta property='og:url' content='docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/'>
+<meta property='og:url' content='https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/'>
 <meta property='og:site_name' content='9Bon&#39;s_Docs'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='docker_desktop' /><meta property='article:tag' content='hyper-v' /><meta property='article:tag' content='virtaul_box' /><meta property='article:tag' content='virtual_machine' /><meta property='article:tag' content='vscode' /><meta property='article:tag' content='wsl2' /><meta property='article:published_time' content='2022-02-20T16:54:39&#43;09:00'/><meta property='article:modified_time' content='2022-02-20T16:54:39&#43;09:00'/><meta property='og:image' content='/docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='docker_desktop' /><meta property='article:tag' content='hyper-v' /><meta property='article:tag' content='virtaul_box' /><meta property='article:tag' content='virtual_machine' /><meta property='article:tag' content='vscode' /><meta property='article:tag' content='wsl2' /><meta property='article:published_time' content='2022-02-20T16:54:39&#43;09:00'/><meta property='article:modified_time' content='2022-02-20T16:54:39&#43;09:00'/><meta property='og:image' content='https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum.png' />
 <meta name="twitter:title" content="도커와 윈도우">
 <meta name="twitter:description" content="윈도우에서 도커를 사용하는 방법에 관한 내용입니다."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='/docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum.png' />
-    <link rel="shortcut icon" href="favicon.png" />
+    <meta name="twitter:image" content='https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum.png' />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RY2XNPER73"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RY2XNPER73', { 'anonymize_ip': false });
+}
+</script>
 <style>
 		
     :root {
@@ -65,7 +76,7 @@
 ">
     
         <div id="article-toolbar">
-            <a href="/docs.9bon.org" class="back-home">
+            <a href="/" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />
@@ -81,9 +92,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/">
-                <img src="/docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum_hu28a6acd632bd249172ae213498f2ef9f_353935_800x0_resize_box_3.png"
-                        srcset="/docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum_hu28a6acd632bd249172ae213498f2ef9f_353935_800x0_resize_box_3.png 800w, /docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum_hu28a6acd632bd249172ae213498f2ef9f_353935_1600x0_resize_box_3.png 1600w"
+            <a href="/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/">
+                <img src="/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum_hu28a6acd632bd249172ae213498f2ef9f_353935_800x0_resize_box_3.png"
+                        srcset="/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum_hu28a6acd632bd249172ae213498f2ef9f_353935_800x0_resize_box_3.png 800w, /p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/thum_hu28a6acd632bd249172ae213498f2ef9f_353935_1600x0_resize_box_3.png 1600w"
                         width="800" 
                         height="249" 
                         loading="lazy"
@@ -97,11 +108,11 @@
     
     <header class="article-category">
         
-            <a href="docs.9bon.org/categories/%EB%8F%84%EC%BB%A4/" style="background-color: #0073e2; color: #fff;">
+            <a href="/categories/%EB%8F%84%EC%BB%A4/" style="background-color: #0073e2; color: #fff;">
                 도커
             </a>
         
-            <a href="docs.9bon.org/categories/%EC%9C%88%EB%8F%84%EC%9A%B0/" style="background-color: #080b35; color: #fff;">
+            <a href="/categories/%EC%9C%88%EB%8F%84%EC%9A%B0/" style="background-color: #080b35; color: #fff;">
                 윈도우
             </a>
         
@@ -109,7 +120,7 @@
     
 
     <h2 class="article-title">
-        <a href="docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/">도커와 윈도우</a>
+        <a href="/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/">도커와 윈도우</a>
     </h2>
 
     
@@ -163,26 +174,28 @@
 <p>도커의 기본 환경은 리눅스에 맞춰져 있습니다. 따라서 윈도우에서 도커를 사용하려면 다른 방법을 선택할 필요가 있으며<br>
 각 방법은 장단점이 존재했습니다.  대부분 가상머신을 이용한 방법입니다.</p>
 <h3 id="가상-머신">가상 머신</h3>
-<p><img src="/docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1.png"
-	width="1412"
-	height="874"
-	srcset="/docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_hu3904ad9e850c7e8c3fd5ad3a589653df_96067_480x0_resize_box_3.png 480w, /docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_hu3904ad9e850c7e8c3fd5ad3a589653df_96067_1024x0_resize_box_3.png 1024w"
+<p><img src="/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1.jpg"
+	width="1787"
+	height="1131"
+	srcset="/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_huf9a7205103b4dcec72fcfbc1fadcd1aa_209651_480x0_resize_q75_box.jpg 480w, /p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/1_huf9a7205103b4dcec72fcfbc1fadcd1aa_209651_1024x0_resize_q75_box.jpg 1024w"
 	loading="lazy"
 	
 		alt="가상머신과 도커"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="161"
-		data-flex-basis="387px"
+		data-flex-grow="158"
+		data-flex-basis="379px"
 	
 ></p>
+<p><a class="link" href="https://commons.wikimedia.org/wiki/File:Dockervsvm.jpg"  target="_blank" rel="noopener"
+    >출처</a></p>
 <p>가상머신은 기존의 운영체제(Host OS)에 가상의 운영체제(Guest OS)를 올릴 수 있게 해주는 소프트웨어 입니다.<br>
 도커도 가상머신과 흡사하지만 GuestOS를 모두 올리는 것이 아니라. 필요한 쉘과 커널등만 올린다는 차이점이 있습니다.<br>
 즉 도커는 가상머신 만큼 자유롭지는 못하나. 환경을 만들고 사용하는 부분에서 가볍게 진행 가능합니다.</p>
 <p>정리해보면 윈도우에서 우분투 컨테이너를 사용하려면<br>
 <strong>윈도우 -&gt; 가상머신 -&gt; 리눅스 -&gt; 도커 -&gt; 컨테이너</strong><br>
-의 관계를 거쳐야 합니다. 그렇게 깔끔하진 않은 것 같습니다.</p>
+의 관계를 거쳐야 합니다. 그렇게 최적화된 방법은 아닐 것입니다.</p>
 <h2 id="윈도우에서-사용하는-방법들">윈도우에서 사용하는 방법들</h2>
 <h3 id="docker-toolbox">Docker Toolbox</h3>
 <p><a class="link" href="https://github.com/docker-archive/toolbox/releases"  target="_blank" rel="noopener"
@@ -201,10 +214,10 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
 <p>위에서 나오는 모든 방법들은 컨테이너를 사용하기 위해 가상 머신을 사용해야 한다는 공통점을 가지고 있습니다. 이것은 번거로운 일입니다.</p>
 <p>Docker Desktop은 이와 다르게, 설치되어있는 WSL2을 이용하여 HostOS에서 Docker를 사용할 수 있도록 도와줍니다.<br>
 그렇기 때문에 사용하기 위해선 Hyper-V과 WSL2가 설치되어 있어야 합니다.</p>
-<p><img src="/docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2.png"
+<p><img src="/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2.png"
 	width="724"
 	height="536"
-	srcset="/docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_480x0_resize_box_3.png 480w, /docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_1024x0_resize_box_3.png 1024w"
+	srcset="/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_480x0_resize_box_3.png 480w, /p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/2_huf4b8058fb2743b47111768a81620e6ce_57321_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
 		alt="도커 데스크탑 원리"
@@ -226,17 +239,17 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
     
     <section class="article-tags">
         
-            <a href="docs.9bon.org/tags/docker_desktop/">docker_desktop</a>
+            <a href="/tags/docker_desktop/">docker_desktop</a>
         
-            <a href="docs.9bon.org/tags/hyper-v/">hyper-v</a>
+            <a href="/tags/hyper-v/">hyper-v</a>
         
-            <a href="docs.9bon.org/tags/virtaul_box/">virtaul_box</a>
+            <a href="/tags/virtaul_box/">virtaul_box</a>
         
-            <a href="docs.9bon.org/tags/virtual_machine/">virtual_machine</a>
+            <a href="/tags/virtual_machine/">virtual_machine</a>
         
-            <a href="docs.9bon.org/tags/vscode/">vscode</a>
+            <a href="/tags/vscode/">vscode</a>
         
-            <a href="docs.9bon.org/tags/wsl2/">wsl2</a>
+            <a href="/tags/wsl2/">wsl2</a>
         
     </section>
 
@@ -270,11 +283,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
                 
                     
 <article class="has-image">
-    <a href="docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/">
+    <a href="/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/">
         
         
             <div class="article-image">
-                <img src="/docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/thum.3905182d11eb6b1af03ab5ac0ab650d8_hue4e4871d6d6adcc9d6f68eaeea4aa7a3_628503_250x150_fill_box_smart1_3.png" 
+                <img src="/p/%EB%8F%84%EC%BB%A4-%ED%8C%8C%EC%9D%BC/thum.3905182d11eb6b1af03ab5ac0ab650d8_hue4e4871d6d6adcc9d6f68eaeea4aa7a3_628503_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -293,11 +306,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
                 
                     
 <article class="has-image">
-    <a href="docs.9bon.org/p/rdp-%EB%AC%B8%EC%A0%9C/">
+    <a href="/p/rdp-%EB%AC%B8%EC%A0%9C/">
         
         
             <div class="article-image">
-                <img src="/docs.9bon.org/p/rdp-%EB%AC%B8%EC%A0%9C/thum.36c65a2d71ccc450ce94b40a47734106_huad98ced58dee19f3c4c0f80aa2d20063_204635_250x150_fill_box_smart1_3.png" 
+                <img src="/p/rdp-%EB%AC%B8%EC%A0%9C/thum.36c65a2d71ccc450ce94b40a47734106_huad98ced58dee19f3c4c0f80aa2d20063_204635_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -316,11 +329,11 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
                 
                     
 <article class="has-image">
-    <a href="docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/">
+    <a href="/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/">
         
         
             <div class="article-image">
-                <img src="/docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/thum.868e255c0b10bc9d0424d5f2d216f832_hue0bf79941b42c6128bca718bfc176f0c_48339_250x150_fill_box_smart1_3.png" 
+                <img src="/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/thum.868e255c0b10bc9d0424d5f2d216f832_hue0bf79941b42c6128bca718bfc176f0c_48339_250x150_fill_box_smart1_3.png" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -400,7 +413,7 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
     
     <section class="powerby">
         
-            개인 저전력 서버 9bon.org에서 직접 호스팅중인 페이지입니다. <br/>
+            방문해주셔서 감사합니다. <br/>
         <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
         <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.8.0">Stack</a></b> 테마 사용 중
     </section>
@@ -531,7 +544,7 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/docs.9bon.org/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
