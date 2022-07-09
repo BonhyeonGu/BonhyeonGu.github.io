@@ -6,7 +6,20 @@
     <description>Recent content in 서버 on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 12 Apr 2022 20:49:09 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/categories/%EC%84%9C%EB%B2%84/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jun 2022 21:55:53 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/categories/%EC%84%9C%EB%B2%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 DHCP, DDNS</title>
+      <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/</link>
+      <pubDate>Tue, 28 Jun 2022 21:55:53 +0900</pubDate>
+      
+      <guid>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/</guid>
+      <description>서론 개요 DHCP를 리눅스에서 구성하는 것은 어렵지 않습니다. 두개 정도되는 설정파일을 수정하는 것 만으로 구성할 수 있습니다.
+문제는 DNS입니다. 만약 클라이언트 측의 IP Address가 동적으로 변한다면 DNS도 이에 따라 변해야 할 것입니다.
+이렇게 정보가 바뀔 때 마다 DNS에 자동으로 갱신 시킬 수 있는 서비스를 DynamicDNS라고 부릅니다.
+이번 작업을 하기전에 앞의 작업 동안 정말로 이상이 없는지 확인해 보는 시간을 가지시는걸 추천드립니다.
+당연히 이런건 말을 하지 않아도 해주는 것이 좋습니다. 또한 이 과정에 없더라도 어떤 단순 명령이 동작하지 않으면</description>
+    </item>
+    
     <item>
       <title>DNS Server, BIND9</title>
       <link>https://docs.9bon.org/p/dns-server-bind9/</link>
