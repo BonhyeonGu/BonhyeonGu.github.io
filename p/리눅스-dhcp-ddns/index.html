@@ -230,7 +230,7 @@ if (!doNotTrack) {
 	
 ></p>
 <h3 id="필요-패키지-설치">필요 패키지 설치</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">apt-get update
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get update
 </span></span><span class="line"><span class="cl">apt-get install isc-dhcp-server bind9-utils
 </span></span></code></pre></div><p>먼저 앞으로 필요한 데몬을 설치하겠습니다. 해당 데몬들은 이름에서 유추할 수 있는 기능 그대로를 제공합니다.</p>
 <h2 id="bind9-설정">BIND9 설정</h2>
@@ -269,7 +269,7 @@ if (!doNotTrack) {
 <p>확인이 완료되었으면 BIND9를 재시작 합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">service bind9 restart
 </span></span></code></pre></div><h2 id="dhcp">DHCP</h2>
-<h3 id="서론-1">서론</h3>
+<h3 id="개요-2">개요</h3>
 <p>DHCP는 서브넷팅 관련 지식이 있다면 추가적으로 설명할 내용은 없습니다.<br>
 이번 포스팅에서는 갱신 시간과 같은 상세 설명은 넘어가도록 하겠습니다.</p>
 <h3 id="설명-1">설명</h3>
@@ -349,7 +349,7 @@ if (!doNotTrack) {
 	
 ></p>
 <h3 id="추가-개념">추가 개념</h3>
-<p>이번 작업을 해보시면서 이해력이 빠르셨다면 의문점이 들 수 있습니다.<br>
+<p>이번 작업을 해보시면서 이해가 잘 되셨다면 의문점이 들 수 있습니다.<br>
 DHCP도 서버의 일종입니다. 당연히 그럼 통신이 이루어져야 하고 이것은 같은 범위의 네트워크여야 가능합니다.</p>
 <p>그렇다면 다른 범위에서 DHCP를 얻어오는것이 어떻게 이루어지는지 궁금할 수 있습니다. 이것을 가능하게 하는 기능을<br>
 <strong>DHCP Relay</strong> 라고 합니다.</p>
@@ -708,7 +708,7 @@ DHCP도 서버의 일종입니다. 당연히 그럼 통신이 이루어져야 �
     </li>
     <li><a href="#dhcp">DHCP</a>
       <ol>
-        <li><a href="#서론-1">서론</a></li>
+        <li><a href="#개요-2">개요</a></li>
         <li><a href="#설명-1">설명</a></li>
       </ol>
     </li>

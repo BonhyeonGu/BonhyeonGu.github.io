@@ -73,7 +73,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;필요-패키지-설치&#34;&gt;필요 패키지 설치&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get update
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get update
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install isc-dhcp-server bind9-utils
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;먼저 앞으로 필요한 데몬을 설치하겠습니다. 해당 데몬들은 이름에서 유추할 수 있는 기능 그대로를 제공합니다.&lt;/p&gt;
 &lt;h2 id=&#34;bind9-설정&#34;&gt;BIND9 설정&lt;/h2&gt;
@@ -112,7 +112,7 @@
 &lt;p&gt;확인이 완료되었으면 BIND9를 재시작 합니다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service bind9 restart
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;dhcp&#34;&gt;DHCP&lt;/h2&gt;
-&lt;h3 id=&#34;서론-1&#34;&gt;서론&lt;/h3&gt;
+&lt;h3 id=&#34;개요-2&#34;&gt;개요&lt;/h3&gt;
 &lt;p&gt;DHCP는 서브넷팅 관련 지식이 있다면 추가적으로 설명할 내용은 없습니다.&lt;br&gt;
 이번 포스팅에서는 갱신 시간과 같은 상세 설명은 넘어가도록 하겠습니다.&lt;/p&gt;
 &lt;h3 id=&#34;설명-1&#34;&gt;설명&lt;/h3&gt;
@@ -192,7 +192,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;추가-개념&#34;&gt;추가 개념&lt;/h3&gt;
-&lt;p&gt;이번 작업을 해보시면서 이해력이 빠르셨다면 의문점이 들 수 있습니다.&lt;br&gt;
+&lt;p&gt;이번 작업을 해보시면서 이해가 잘 되셨다면 의문점이 들 수 있습니다.&lt;br&gt;
 DHCP도 서버의 일종입니다. 당연히 그럼 통신이 이루어져야 하고 이것은 같은 범위의 네트워크여야 가능합니다.&lt;/p&gt;
 &lt;p&gt;그렇다면 다른 범위에서 DHCP를 얻어오는것이 어떻게 이루어지는지 궁금할 수 있습니다. 이것을 가능하게 하는 기능을&lt;br&gt;
 &lt;strong&gt;DHCP Relay&lt;/strong&gt; 라고 합니다.&lt;/p&gt;
