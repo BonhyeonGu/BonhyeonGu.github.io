@@ -21,11 +21,12 @@
 Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명해 보도록 하겠습니다.&lt;br&gt;
 해당 포스트를 이해하셨다면 서버에 직접 설치하는건 문제 없을거라 예상합니다.&lt;/p&gt;
 &lt;h3 id=&#34;고려사항&#34;&gt;고려사항&lt;/h3&gt;
-&lt;p&gt;다음은 이유는 파악 못했으나, 설치문제 원인을 확실히 찾아낸 것들의 내용입니다. &lt;strong&gt;2022-10&lt;/strong&gt; 기준입니다.&lt;/p&gt;
+&lt;p&gt;다음은 이유는 파악 못했으나, 문제 원인을 찾아낸 것들의 내용입니다. &lt;strong&gt;2022-12&lt;/strong&gt; 기준입니다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;우분투 22.04 환경 쿠버네티스 설치에서 인증 메니저 노드가 설치 안되는 것을 확인했습니다. 20.04는 문제가 없었습니다.&lt;/li&gt;
 &lt;li&gt;Readme에서는 쿠버플로우 1.20 이상 버전을 권장했으나 1.21.5-00 버전이 아니면 설치 문제가 발생했습니다.&lt;/li&gt;
 &lt;li&gt;마스터, 워커노드 모두 사양을 크게 잡아먹었습니다. 각 노드 모두 16GB이상의 메모리가 아니면 문제가 생겼습니다.&lt;/li&gt;
+&lt;li&gt;종종 kubeflow manifests의Install with a single command 방법이 종료되지 않는 문제를 겪었습니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;설치&#34;&gt;설치&lt;/h2&gt;
 &lt;p&gt;config등을 수정, 추가하는 부분은 위와 아래의 글을 참고해주세요&lt;/p&gt;
@@ -65,8 +66,6 @@ Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG docker &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;USER&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;newgrp docker
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod &lt;span class=&#34;m&#34;&gt;666&lt;/span&gt; /var/run/docker.sock
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chown &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$USER&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;:&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$USER&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; /home/&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$USER&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;/.docker -R
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod g+rwx &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/.docker&amp;#34;&lt;/span&gt; -R
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl restart docker
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl daemon-reload
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; docker
@@ -104,10 +103,15 @@ Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mkdir /nfsroot
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chown nobody:nogroup /nfsroot
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod &lt;span class=&#34;m&#34;&gt;777&lt;/span&gt; /nfsroot
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;sudo nano /etc/exports 로 아래 내용 추가&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;해당 과정은 NFS Client Provisioner를쿠버네티스가 사용할 수 있게 구축하고&lt;br&gt;
+사용할 NFS Server도 마스터 노드에 올리는 과정을 설명하고 있습니다.&lt;/p&gt;
+&lt;p&gt;sudo nano /etc/exports 로 아래 내용 추가&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/nfsroot 192.168.80.110&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;rw,insecure,sync,no_root_squash,no_subtree_check&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/nfsroot 192.168.80.111&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;rw,insecure,sync,no_root_squash,no_subtree_check&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo service nfs-kernel-server restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;해당 과정을 통하여, 존재하는 모든 노드에 NFS 공간을 할당하고 있습니다.&lt;br&gt;
+쿠버플로우에서 NFS는 의무가 아니지만 없을경우 가변적으로, 쿠버플로우가 볼륨을 잡기 때문에&lt;br&gt;
+비추천 하고 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo service nfs-kernel-server restart
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; rpcbind
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; nfs-server
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl start rpcbind
@@ -135,8 +139,9 @@ Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;insecure-registries&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;kubeflow-registry.default.svc.cluster.local:30000&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl restart docker
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;/etc/hosts&lt;/em&gt;에 추가&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;그리고 재시작합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl restart docker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;/etc/hosts&lt;/em&gt;에 추가(이 부분은 미리 추가해도 됨)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;192.168.80.110 kubeflow-registry.default.svc.cluster.local
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;워커노드에서-nfs-확인&#34;&gt;워커노드에서 nfs 확인&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl kubeflow-registry.default.svc.cluster.local:30000/v2/_catalog
@@ -151,8 +156,12 @@ Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; ! kustomize build example &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; kubectl apply -f -&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Retrying to apply resources&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; sleep 10&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;후에&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl port-forward svc/istio-ingressgateway -n istio-system 8080:80
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 &lt;a class=&#34;link&#34; href=&#34;mailto:user@example.com&#34; &gt;user@example.com&lt;/a&gt;/12341234을 사용하여 로컬상의 테스트가 가능합니다.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 &lt;a class=&#34;link&#34; href=&#34;mailto:user@example.com&#34; &gt;user@example.com&lt;/a&gt;/12341234을 사용하여 로컬상의 테스트가 가능합니다.&lt;br&gt;
+또는&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl port-forward --address 0.0.0.0 svc/istio-ingressgateway -n istio-system 8080:80
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 외부노출을 허용시킬 수 있습니다.&lt;/p&gt;
 &lt;h2 id=&#34;참고-자료들&#34;&gt;참고 자료들&lt;/h2&gt;
+&lt;p&gt;만약에 정상작동하지 않을 경우 아래의 자료를 확인해주세요.&lt;/p&gt;
 &lt;h3 id=&#34;설치법&#34;&gt;설치법&lt;/h3&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/kubeflow/manifests&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/kubeflow/manifests&lt;/a&gt;&lt;br&gt;
