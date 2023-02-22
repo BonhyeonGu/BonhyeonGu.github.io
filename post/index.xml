@@ -6,7 +6,21 @@
     <description>Recent content in Posts on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 20 Oct 2022 04:46:35 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 17:42:59 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>윈도우 대소문제 이름 구별</title>
+      <link>https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%A0%9C-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/</link>
+      <pubDate>Tue, 10 Jan 2023 17:42:59 +0900</pubDate>
+      
+      <guid>https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%A0%9C-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/</guid>
+      <description>서론 개요 쿠버플로우, 큐베플로우, 쿠브플로우.. 이것을 배포해야 하는 일이 있었습니다.
+하지만 추가 패키지를 이용하지 않고 K8s로 직접 설치하는 자료는 적었으며 따라해도 오류가 발생했습니다.
+그도 그럴것이 쿠버플로우는 계속해서 업데이트가 되고 있으며, 운영체제, 쿠버네티스, 도커를 포함한 여러 패키지의 업데이트에도 민감하기 때문에 문제가 계속 생기는 것 같습니다.
+이번 포스트에선 쿠버플로우에 대한 설명을 따로 하진 않을 것이며,
+Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명해 보도록 하겠습니다.
+해당 포스트를 이해하셨다면 서버에 직접 설치하는건 문제 없을거라 예상합니다.</description>
+    </item>
+    
     <item>
       <title>쿠버플로우 설치</title>
       <link>https://docs.9bon.org/p/%EC%BF%A0%EB%B2%84%ED%94%8C%EB%A1%9C%EC%9A%B0-%EC%84%A4%EC%B9%98/</link>
@@ -163,7 +177,7 @@ RDP 은 유저가 연결을 끊으면 로그오프되어 Foreground 는 당연�
       
       <guid>https://docs.9bon.org/p/zsh-oh-my-zsh/</guid>
       <description>zsh 설명 기능이 다양해서 유행중인 bash 쉘을 대체하는 쉘입니다.
-설치 apt-get install zsh chsh -s `which zsh` 쉘은 유저에 귀속되므로 권한에 주의해야 합니다. 또한 작은 따옴표가 아닙니다.
+설치 apt-get install zsh chsh -s /usr/bin/zsh 쉘은 유저에 귀속되므로 권한에 주의해야 합니다. 또한 작은 따옴표가 아닙니다.
 재시작 하면 설치가 완료됩니다.
 echo $SHELL 로 확인 할 수 있습니다.
 oh-my-zsh! 설명 zsh를 설정할 수 있는 편리한 콘피그들을 제공해주는 프레임워크입니다.

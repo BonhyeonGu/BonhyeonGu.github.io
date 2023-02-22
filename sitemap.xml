@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://docs.9bon.org/</loc>
-    <lastmod>2022-12-06T12:29:59+09:00</lastmod>
+    <lastmod>2023-01-10T17:42:59+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://docs.9bon.org/categories/</loc>
-    <lastmod>2022-12-06T12:29:59+09:00</lastmod>
+    <lastmod>2023-01-10T17:42:59+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://docs.9bon.org/tags/filename/</loc>
+    <lastmod>2023-01-10T17:42:59+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://docs.9bon.org/tags/lower-case/</loc>
+    <lastmod>2023-01-10T17:42:59+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://docs.9bon.org/post/</loc>
+    <lastmod>2023-01-10T17:42:59+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://docs.9bon.org/tags/</loc>
+    <lastmod>2023-01-10T17:42:59+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://docs.9bon.org/tags/upper_case/</loc>
+    <lastmod>2023-01-10T17:42:59+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://docs.9bon.org/categories/%EC%9C%88%EB%8F%84%EC%9A%B0/</loc>
+    <lastmod>2023-01-10T17:42:59+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%A0%9C-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/</loc>
+    <lastmod>2023-01-10T17:42:59+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -28,16 +63,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://docs.9bon.org/tags/ml-ops/</loc>
-    <lastmod>2022-12-06T12:29:59+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://docs.9bon.org/post/</loc>
-    <lastmod>2022-12-06T12:29:59+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://docs.9bon.org/tags/</loc>
     <lastmod>2022-12-06T12:29:59+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -258,11 +283,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</loc>
-    <lastmod>2022-02-20T16:54:39+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://docs.9bon.org/categories/%EC%9C%88%EB%8F%84%EC%9A%B0/</loc>
     <lastmod>2022-02-20T16:54:39+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
