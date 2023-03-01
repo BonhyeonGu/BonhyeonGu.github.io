@@ -6,21 +6,7 @@
     <description>Recent content in 도커 on 9Bon&#39;s_Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 20 Oct 2022 04:46:35 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/categories/%EB%8F%84%EC%BB%A4/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>쿠버플로우 설치</title>
-      <link>https://docs.9bon.org/p/%EC%BF%A0%EB%B2%84%ED%94%8C%EB%A1%9C%EC%9A%B0-%EC%84%A4%EC%B9%98/</link>
-      <pubDate>Thu, 20 Oct 2022 04:46:35 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/%EC%BF%A0%EB%B2%84%ED%94%8C%EB%A1%9C%EC%9A%B0-%EC%84%A4%EC%B9%98/</guid>
-      <description>서론 개요 쿠버플로우, 큐베플로우, 쿠브플로우.. 이것을 배포해야 하는 일이 있었습니다.
-하지만 추가 패키지를 이용하지 않고 K8s로 직접 설치하는 자료는 적었으며 따라해도 오류가 발생했습니다.
-그도 그럴것이 쿠버플로우는 계속해서 업데이트가 되고 있으며, 운영체제, 쿠버네티스, 도커를 포함한 여러 패키지의 업데이트에도 민감하기 때문에 문제가 계속 생기는 것 같습니다.
-이번 포스트에선 쿠버플로우에 대한 설명을 따로 하진 않을 것이며,
-Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명해 보도록 하겠습니다.
-해당 포스트를 이해하셨다면 서버에 직접 설치하는건 문제 없을거라 예상합니다.</description>
-    </item>
-    
+    <lastBuildDate>Sun, 20 Feb 2022 16:54:39 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/categories/%EB%8F%84%EC%BB%A4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>도커와 윈도우</title>
       <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4%EC%99%80-%EC%9C%88%EB%8F%84%EC%9A%B0/</link>
