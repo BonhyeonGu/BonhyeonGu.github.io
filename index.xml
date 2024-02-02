@@ -6,13 +6,13 @@
         <description>Recent content on 9Bon&#39;s_Docs</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko-kr</language>
-        <lastBuildDate>Tue, 10 Jan 2023 17:42:59 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>윈도우 대소문제 이름 구별</title>
-        <link>https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%A0%9C-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/</link>
-        <pubDate>Tue, 10 Jan 2023 17:42:59 +0900</pubDate>
+        <lastBuildDate>Thu, 20 Oct 2022 04:46:35 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>쿠버플로우 설치</title>
+        <link>https://docs.9bon.org/p/%EC%BF%A0%EB%B2%84%ED%94%8C%EB%A1%9C%EC%9A%B0-%EC%84%A4%EC%B9%98/</link>
+        <pubDate>Thu, 20 Oct 2022 04:46:35 +0900</pubDate>
         
-        <guid>https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%A0%9C-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/</guid>
-        <description>&lt;img src="https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%A0%9C-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/thum.png" alt="Featured image of post 윈도우 대소문제 이름 구별" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+        <guid>https://docs.9bon.org/p/%EC%BF%A0%EB%B2%84%ED%94%8C%EB%A1%9C%EC%9A%B0-%EC%84%A4%EC%B9%98/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EC%BF%A0%EB%B2%84%ED%94%8C%EB%A1%9C%EC%9A%B0-%EC%84%A4%EC%B9%98/thum.png" alt="Featured image of post 쿠버플로우 설치" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
 &lt;h3 id=&#34;개요&#34;&gt;개요&lt;/h3&gt;
 &lt;p&gt;쿠버플로우, 큐베플로우, 쿠브플로우.. 이것을 배포해야 하는 일이 있었습니다.&lt;br&gt;
 하지만 추가 패키지를 이용하지 않고 K8s로 직접 설치하는 자료는 적었으며 따라해도 오류가 발생했습니다.&lt;/p&gt;
