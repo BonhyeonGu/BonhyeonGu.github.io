@@ -1,26 +1,64 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>git on 9Bon&#39;s_Docs</title>
-    <link>https://docs.9bon.org/tags/git/</link>
-    <description>Recent content in git on 9Bon&#39;s_Docs</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ko-kr</language>
-    <lastBuildDate>Fri, 24 Dec 2021 16:11:32 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>zsh, oh-my-zsh!</title>
-      <link>https://docs.9bon.org/p/zsh-oh-my-zsh/</link>
-      <pubDate>Fri, 24 Dec 2021 16:11:32 +0900</pubDate>
-      
-      <guid>https://docs.9bon.org/p/zsh-oh-my-zsh/</guid>
-      <description>zsh 설명 기능이 다양해서 유행중인 bash 쉘을 대체하는 쉘입니다.
-설치 apt-get install zsh chsh -s /usr/bin/zsh 쉘은 유저에 귀속되므로 권한에 주의해야 합니다. 또한 작은 따옴표가 아닙니다.
-재시작 하면 설치가 완료됩니다.
-echo $SHELL 로 확인 할 수 있습니다.
-oh-my-zsh! 설명 zsh를 설정할 수 있는 편리한 콘피그들을 제공해주는 프레임워크입니다.
-설치 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh 해당 설치법은 http://ohmyz.sh/ 에서 제공하는 방법입니다. 문제가 생길경우 이곳에서 편집되었는지 확인할 수 있습니다.
-설정 vim ~/.zshrc 에서 제가 주로 사용하는 것은</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>git on 9Bon&#39;s_Docs</title>
+        <link>https://docs.9bon.org/tags/git/</link>
+        <description>Recent content in git on 9Bon&#39;s_Docs</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko-kr</language>
+        <lastBuildDate>Fri, 24 Dec 2021 16:11:32 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>zsh, oh-my-zsh!</title>
+        <link>https://docs.9bon.org/p/zsh-oh-my-zsh/</link>
+        <pubDate>Fri, 24 Dec 2021 16:11:32 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/zsh-oh-my-zsh/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/zsh-oh-my-zsh/thum.png" alt="Featured image of post zsh, oh-my-zsh!" /&gt;&lt;h2 id=&#34;zsh&#34;&gt;zsh&lt;/h2&gt;
+&lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;기능이 다양해서 유행중인 bash 쉘을 대체하는 쉘입니다.&lt;/p&gt;
+&lt;h3 id=&#34;설치&#34;&gt;설치&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install zsh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chsh -s /usr/bin/zsh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;쉘은 유저에 귀속되므로 &lt;strong&gt;권한에 주의해야 합니다.&lt;/strong&gt;
+또한 &lt;strong&gt;작은 따옴표가 아닙니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;재시작 하면 설치가 완료됩니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$SHELL&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 확인 할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;oh-my-zsh&#34;&gt;oh-my-zsh!&lt;/h2&gt;
+&lt;h3 id=&#34;설명-1&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;zsh를 설정할 수 있는 편리한 콘피그들을 제공해주는 프레임워크입니다.&lt;/p&gt;
+&lt;h3 id=&#34;설치-1&#34;&gt;설치&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;해당 설치법은 &lt;a class=&#34;link&#34; href=&#34;http://ohmyz.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://ohmyz.sh/&lt;/a&gt; 에서 제공하는 방법입니다. 문제가 생길경우 이곳에서 편집되었는지 확인할 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&#34;설정&#34;&gt;설정&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;에서 제가 주로 사용하는 것은&lt;/p&gt;
+&lt;p&gt;ZSH_THEME=&amp;ldquo;agnoster&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;입니다.&lt;/p&gt;
+&lt;p&gt;또한 agnoster 테마를 이용하기 위해서는 다른 글꼴이 필요합니다.
+적당한 디렉토리에&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/powerline/fonts.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; fonts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;또는 apt 패키지 관리자로 설치 가능합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install fonts-powerline
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;만약 wsl2와 같은 윈도우 환경이라면 수동으로 설치해야합니다.
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/powerline/fonts.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/powerline/fonts.git&lt;/a&gt; 의 릴리즈에 들어가 압축파일을 받은 뒤
+수동 설치를 진행하고 터미널-&amp;gt;속성에서 글꼴을 변경할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;기타&#34;&gt;기타&lt;/h2&gt;
+&lt;h3 id=&#34;업데이트-충돌-오류&#34;&gt;업데이트 충돌 오류&lt;/h3&gt;
+&lt;p&gt;여러가지 수정하고 oh-my-zsh 업데이트를 받을 시 git 오류가 발생하는 것을 확인했습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/.oh-my-zsh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;후&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;등을 이용하여&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;omz update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;로 수동 업데이트를 진행하여 해결했습니다.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

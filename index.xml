@@ -23,22 +23,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>
-        <title>윈도우 대소문자 파일 이름 구별</title>
-        <link>https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90-%ED%8C%8C%EC%9D%BC-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/</link>
-        <pubDate>Tue, 10 Jan 2023 17:42:59 +0900</pubDate>
-        
-        <guid>https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90-%ED%8C%8C%EC%9D%BC-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/</guid>
-        <description>&lt;img src="https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90-%ED%8C%8C%EC%9D%BC-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/thum.png" alt="Featured image of post 윈도우 대소문자 파일 이름 구별" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
-&lt;p&gt;윈도우는 파일 이름에서 대문자, 소문자를 구별하지 않습니다.&lt;br&gt;
-당연히 프로그래밍 언어, 라이브리를 사용할 때에도 마찬가지입니다.&lt;/p&gt;
-&lt;p&gt;정확히는 NTFS와 같은 윈도우 파일시스템은 대소문자를 구별하지만 OS에서 허용하지 않게 되어있습니다.&lt;br&gt;
-따라서 자신의 프로그램을 위해 아래의 명령어를 고려할 수 있습니다.&lt;/p&gt;
-&lt;h2 id=&#34;cmd&#34;&gt;CMD&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fsutil&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setCaseSensitiveInfo&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;경로&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;enable&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fsutil&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setCaseSensitiveInfo&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;경로&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;disable&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
         <title>쿠버플로우 설치</title>
         <link>https://docs.9bon.org/p/%EC%BF%A0%EB%B2%84%ED%94%8C%EB%A1%9C%EC%9A%B0-%EC%84%A4%EC%B9%98/</link>
         <pubDate>Thu, 20 Oct 2022 04:46:35 +0900</pubDate>
@@ -1369,6 +1353,270 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
 </description>
         </item>
         <item>
+        <title>Photograph</title>
+        <link>https://docs.9bon.org/photograph/</link>
+        <pubDate>Mon, 04 Oct 2021 20:11:31 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/photograph/</guid>
+        <description>&lt;h2 id=&#34;2021&#34;&gt;2021&lt;/h2&gt;
+&lt;p&gt;창업교육센터, 창업동아리팀 Pandemic&lt;br&gt;
+&lt;img src=&#34;https://docs.9bon.org/photograph/05.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Pandemic 활동&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2020&#34;&gt;2020&lt;/h2&gt;
+&lt;p&gt;네트워크 중급자 스터디 진행&lt;br&gt;
+&lt;img src=&#34;https://docs.9bon.org/photograph/04.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;네트워크 스터디 프로젝트&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2017&#34;&gt;2017&lt;/h2&gt;
+&lt;p&gt;네트워크 스터디, 리눅스 스터디 진행&lt;br&gt;
+&lt;img src=&#34;https://docs.9bon.org/photograph/03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;네트워크 스터디&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://docs.9bon.org/photograph/02.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;리눅스 스터디&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2014&#34;&gt;2014&lt;/h2&gt;
+&lt;p&gt;2014 전국기능대회 정보통신 3과목&lt;br&gt;
+&lt;img src=&#34;https://docs.9bon.org/photograph/01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;고등학교 2학년&#34;
+	
+	
+&gt;&lt;br&gt;
+아래는 전국대회 조건에 따라, 고등학생때 작성했던 문제 중 1과목입니다.&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;./01_sub.pdf&#34; &gt;작성한 문제&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>ServerLog</title>
+        <link>https://docs.9bon.org/serverlog/</link>
+        <pubDate>Sun, 03 Oct 2021 23:21:22 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/serverlog/</guid>
+        <description>&lt;h3 id=&#34;설명&#34;&gt;설명&lt;/h3&gt;
+&lt;p&gt;해당 페이지는 제가 집에서 호스팅한 서버들을 추억으로 남겨놓는 곳입니다. 😘&lt;/p&gt;
+&lt;h3 id=&#34;2017202011&#34;&gt;2017~2020.11&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/page/serverLog/01.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1 세대&#34;
+	
+	
+&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;금액&lt;/th&gt;
+&lt;th&gt;~60,000원&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;기종&lt;/td&gt;
+&lt;td&gt;라즈베리파이3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OS&lt;/td&gt;
+&lt;td&gt;라즈비안&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CPU&lt;/td&gt;
+&lt;td&gt;4Core 1.2GHz&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RAM&lt;/td&gt;
+&lt;td&gt;1GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HDD&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;외장&lt;/strong&gt;-1TB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;웹 클라우드 또한 PYDIO와 OwnCloud 등 여러가지 소스를 시도했었습니다. ARM 아키텍처는 문제점이 많았습니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;서비스&lt;/th&gt;
+&lt;th&gt;상세&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;WEB + CLOUD&lt;/td&gt;
+&lt;td&gt;APACHE + PYDIO&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FTP&lt;/td&gt;
+&lt;td&gt;VSFTPD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DB&lt;/td&gt;
+&lt;td&gt;MYSQL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DIR&lt;/td&gt;
+&lt;td&gt;SAMBA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;20201120220720&#34;&gt;2020.11~2022.07.20&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/page/serverLog/02.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;2 세대&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;금액&lt;/th&gt;
+&lt;th&gt;~200,000원&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;OS&lt;/td&gt;
+&lt;td&gt;Debian&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CPU&lt;/td&gt;
+&lt;td&gt;J5040 4Core 2~3.2GHz&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RAM&lt;/td&gt;
+&lt;td&gt;8GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HDD&lt;/td&gt;
+&lt;td&gt;2TB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SYSFAN&lt;/td&gt;
+&lt;td&gt;NOCTUA120mm&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;일체형 저전력 CPU입니다. 데스크탑 아키텍처인 보드를 구해 기반을 맞췄습니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;서비스&lt;/th&gt;
+&lt;th&gt;상세&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;WEB1&lt;/td&gt;
+&lt;td&gt;APACHE_Main&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;WEB2&lt;/td&gt;
+&lt;td&gt;HUGO&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;WEB3&lt;/td&gt;
+&lt;td&gt;NextCloud&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FTP&lt;/td&gt;
+&lt;td&gt;VSFTPD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DB1&lt;/td&gt;
+&lt;td&gt;MARIADB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DB2&lt;/td&gt;
+&lt;td&gt;MSSQL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;20220721&#34;&gt;2022.07.21~&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.9bon.org/page/serverLog/03.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;3 세대&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;금액&lt;/th&gt;
+&lt;th&gt;~900,000원&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;OS&lt;/td&gt;
+&lt;td&gt;Ubuntu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CPU&lt;/td&gt;
+&lt;td&gt;I5 12400&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RAM&lt;/td&gt;
+&lt;td&gt;32GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SSD&lt;/td&gt;
+&lt;td&gt;500GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HDD&lt;/td&gt;
+&lt;td&gt;2TB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
         <title>도커 명령어와 예제</title>
         <link>https://docs.9bon.org/p/%EB%8F%84%EC%BB%A4-%EB%AA%85%EB%A0%B9%EC%96%B4%EC%99%80-%EC%98%88%EC%A0%9C/</link>
         <pubDate>Sun, 03 Oct 2021 01:40:54 +0900</pubDate>
@@ -1797,6 +2045,41 @@ hugo server의 기본 포트는 1313이기에 docs.9bon.org:1313으로 활성화
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이렇게 하고 웹서버의 설정도 맞춘다면
 서버 내에선 2222포트로 동작하며 클라이언트는 80포트가 생략된 docs.9bon.org의 주소로 접속해야만 합니다.&lt;/p&gt;
 </description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>https://docs.9bon.org/archives/</link>
+        <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://docs.9bon.org/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>About</title>
+        <link>https://docs.9bon.org/about/</link>
+        <pubDate>Tue, 31 Aug 2021 19:09:40 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/about/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;Contact&lt;/strong&gt; 🙋&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;mailto:bonhyeon.gu@9bon.org&#34; &gt;bonhyeon.gu@9bon.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Introduce&lt;/strong&gt; 🧑‍💼&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://bonhyeon.9bon.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://bonhyeon.9bon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Photograph&lt;/strong&gt; 📸&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://docs.9bon.org/photograph/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.9bon.org/photograph/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ServerLog&lt;/strong&gt; 🧰&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://docs.9bon.org/serverlog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.9bon.org/serverlog/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://docs.9bon.org/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://docs.9bon.org/search/</guid>
+        <description></description>
         </item>
         
     </channel>

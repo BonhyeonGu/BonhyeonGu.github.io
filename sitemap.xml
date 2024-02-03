@@ -47,11 +47,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90-%ED%8C%8C%EC%9D%BC-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/</loc>
-    <lastmod>2023-01-10T17:42:59+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://docs.9bon.org/tags/docker/</loc>
     <lastmod>2022-12-06T12:29:59+09:00</lastmod>
     <changefreq>monthly</changefreq>
