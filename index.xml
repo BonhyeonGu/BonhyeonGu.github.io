@@ -1402,6 +1402,14 @@ ls 시 : ??? ?? ???? 로 표시&lt;/p&gt;
 </description>
         </item>
         <item>
+        <title>Archives</title>
+        <link>https://docs.9bon.org/archives/</link>
+        <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://docs.9bon.org/archives/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>리눅스 디스크 사용</title>
         <link>https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/</link>
         <pubDate>Tue, 01 Mar 2022 23:17:11 +0900</pubDate>
@@ -2166,7 +2174,7 @@ Hyper-V를 사용하는 WSL2로 만들면서 WLS1보다 가상 환경의 성능�
 	
 	
 &gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;img src = &#34;page/serverLog/01-01.png&#34; width=&#34;50%&#34; height=&#34;50%&#34;&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3186,14 +3194,6 @@ hugo server의 기본 포트는 1313이기에 docs.9bon.org:1313으로 활성화
 &lt;/div&gt;&lt;p&gt;이렇게 하고 웹서버의 설정도 맞춘다면
 서버 내에선 2222포트로 동작하며 클라이언트는 80포트가 생략된 docs.9bon.org의 주소로 접속해야만 합니다.&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>Archives</title>
-        <link>https://docs.9bon.org/archives/</link>
-        <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://docs.9bon.org/archives/</guid>
-        <description></description>
         </item>
         <item>
         <title>About</title>

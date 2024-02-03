@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/'>
 
-<link rel="stylesheet" href="/scss/style.min.ccac5d8e2a5ac8cda037b58bb38466983c3a83da7b83fcbd125ab4c526d3ea8c.css"><meta property='og:title' content='리눅스 DHCP, DDNS'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='리눅스 DHCP, DDNS'>
 <meta property='og:description' content='DHCP 구축과 그에따른 DDNS 구축 방법입니다.'>
 <meta property='og:url' content='https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/'>
 <meta property='og:site_name' content='9Bon&#39;s_Docs'>
@@ -14,7 +14,7 @@
 <meta name="twitter:title" content="리눅스 DHCP, DDNS">
 <meta name="twitter:description" content="DHCP 구축과 그에따른 DDNS 구축 방법입니다."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://docs.9bon.org/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/thum.png' />
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RY2XNPER73"></script>
 <script>
@@ -27,7 +27,6 @@ if (!doNotTrack) {
 }
 </script>
 <style>
-		
     :root {
         --article-font-family: "IBM Plex Sans KR", var(--base-font-family);
     }
@@ -107,7 +106,7 @@ if (!doNotTrack) {
                     <a 
                         href='https://github.com/BonhyeonGu'
                         target="_blank"
-                        
+                        title="0_GitHub"
                         rel="me"
                     >
                         
@@ -127,7 +126,7 @@ if (!doNotTrack) {
                     <a 
                         href='https://bonhyeon.9bon.org'
                         target="_blank"
-                        
+                        title="1_Porfolio"
                         rel="me"
                     >
                         
@@ -150,7 +149,7 @@ if (!doNotTrack) {
                     <a 
                         href='https://cloud.9bon.org'
                         target="_blank"
-                        
+                        title="3_Cloud"
                         rel="me"
                     >
                         
@@ -168,6 +167,26 @@ if (!doNotTrack) {
             
         </ol><ol class="menu" id="main-menu">
         
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
         
         
         <li >
@@ -193,8 +212,6 @@ if (!doNotTrack) {
             <a href='/archives/' >
                 
                 
-                    
-                
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -214,8 +231,6 @@ if (!doNotTrack) {
         <li >
             <a href='/search/' >
                 
-                
-                    
                 
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -259,7 +274,68 @@ if (!doNotTrack) {
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">목차</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#서론">서론</a>
+      <ol>
+        <li><a href="#개요">개요</a></li>
+        <li><a href="#토폴로지">토폴로지</a></li>
+      </ol>
+    </li>
+    <li><a href="#준비작업">준비작업</a>
+      <ol>
+        <li><a href="#클라이언트-추가">클라이언트 추가</a></li>
+        <li><a href="#bind9-정적-정보-삭제">BIND9 정적 정보 삭제</a></li>
+        <li><a href="#필요-패키지-설치">필요 패키지 설치</a></li>
+      </ol>
+    </li>
+    <li><a href="#bind9-설정">BIND9 설정</a>
+      <ol>
+        <li><a href="#개요-1">개요</a></li>
+        <li><a href="#설명">설명</a></li>
+      </ol>
+    </li>
+    <li><a href="#dhcp">DHCP</a>
+      <ol>
+        <li><a href="#개요-2">개요</a></li>
+        <li><a href="#설명-1">설명</a></li>
+      </ol>
+    </li>
+    <li><a href="#마치며">마치며</a>
+      <ol>
+        <li><a href="#검사">검사</a></li>
+        <li><a href="#추가-개념">추가 개념</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="has-image main-article">
@@ -819,14 +895,12 @@ DHCP도 서버의 일종입니다. 당연히 그럼 통신이 이루어져야 �
     <section class="copyright">
         &copy; 
         
-            2021 - 
+            2020 - 
         
         2024 9Bon&#39;s_Docs
     </section>
     
     <section class="powerby">
-        
-            방문해주셔서 감사합니다. <br/>
         <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
         <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 테마 사용 중
     </section>
