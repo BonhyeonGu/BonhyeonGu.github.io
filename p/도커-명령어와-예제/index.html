@@ -348,8 +348,15 @@ if (!doNotTrack) {
     
     <h2 id="기본">기본</h2>
 <h3 id="컨테이너-조회">컨테이너 조회</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Docker" data-lang="Docker"><span class="line"><span class="cl">docker ps -a<span class="err">
-</span></span></span></code></pre></div><div class="table-wrapper"><table>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Docker" data-lang="Docker"><span class="line"><span class="cl">docker ps -a<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>첨자</th>
@@ -364,8 +371,15 @@ if (!doNotTrack) {
 </tbody>
 </table></div>
 <h3 id="컨테이너-시작-종료">컨테이너 시작, 종료</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Docker" data-lang="Docker"><span class="line"><span class="cl">docker apache start<span class="err">
-</span></span></span></code></pre></div><div class="table-wrapper"><table>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Docker" data-lang="Docker"><span class="line"><span class="cl">docker apache start<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>이후 내용</th>
@@ -393,8 +407,15 @@ if (!doNotTrack) {
 </table></div>
 <h2 id="컨테이너-생성수정">컨테이너 생성/수정</h2>
 <h3 id="일반적인-경우">일반적인 경우</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Docker" data-lang="Docker"><span class="line"><span class="cl">docker container run --name nextcloud -d -v /media/ext1/Docker/cloud/:/var/www/html/data -p 1234:80 nextcloud<span class="err">
-</span></span></span></code></pre></div><div class="table-wrapper"><table>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Docker" data-lang="Docker"><span class="line"><span class="cl">docker container run --name nextcloud -d -v /media/ext1/Docker/cloud/:/var/www/html/data -p 1234:80 nextcloud<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>첨자</th>
@@ -429,9 +450,17 @@ if (!doNotTrack) {
 </tbody>
 </table></div>
 <h3 id="환경변수-설정">환경변수 설정</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Docker" data-lang="Docker"><span class="line"><span class="cl">docker container run --name test_DB_YJ -d -p 49152:22 -p 1234:3306 -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="m">12345</span> mariadb --character-set-server<span class="o">=</span>utf8mb4 --collation-server<span class="o">=</span>utf8mb4_unicode_ci<span class="err">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Docker" data-lang="Docker"><span class="line"><span class="cl">docker container run --name test_DB_YJ -d -p 49152:22 -p 1234:3306 -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="m">12345</span> mariadb --character-set-server<span class="o">=</span>utf8mb4 --collation-server<span class="o">=</span>utf8mb4_unicode_ci<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>docker run -e <span class="s2">&#34;ACCEPT_EULA=Y&#34;</span> -e <span class="s2">&#34;SA_PASSWORD=12345&#34;</span> -p 1234:1433 --name rpadb -d mcr.microsoft.com/mssql/server:2019-latest<span class="err">
-</span></span></span></code></pre></div><div class="table-wrapper"><table>
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>첨자</th>
@@ -447,8 +476,15 @@ if (!doNotTrack) {
 </table></div>
 <h2 id="실행">실행</h2>
 <h3 id="컨테이너-내부-쉘실행">컨테이너 내부 쉘실행</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Docker" data-lang="Docker"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it nextcloud bash<span class="err">
-</span></span></span></code></pre></div><div class="table-wrapper"><table>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Docker" data-lang="Docker"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it nextcloud bash<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>첨자</th>
@@ -471,9 +507,17 @@ if (!doNotTrack) {
 </tbody>
 </table></div>
 <h3 id="컨테이너-내부-권한으로-명령-실행">컨테이너 내부 권한으로 명령 실행</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">docker <span class="nb">exec</span> -u www-data nextcloud php occ files:scan --all<span class="err">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">docker <span class="nb">exec</span> -u www-data nextcloud php occ files:scan --all<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>docker <span class="nb">exec</span> -u <span class="m">0</span> -it rpadb /bin/bash<span class="err">
-</span></span></span></code></pre></div><div class="table-wrapper"><table>
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>첨자 및 매게변수</th>

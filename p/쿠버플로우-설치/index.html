@@ -373,7 +373,25 @@ Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명
 <h2 id="설치">설치</h2>
 <p>config등을 수정, 추가하는 부분은 위와 아래의 글을 참고해주세요</p>
 <h3 id="공통-사전-설치">공통 사전 설치</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
 </span></span><span class="line"><span class="cl">sudo apt-get install <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>    ca-certificates <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>    curl <span class="se">\
@@ -387,9 +405,28 @@ Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명
 </span></span><span class="line"><span class="cl">sudo apt-get install docker-ce docker-ce-cli containerd.io
 </span></span><span class="line"><span class="cl">sudo curl -L <span class="s2">&#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&#34;</span> -o /usr/local/bin/docker-compose
 </span></span><span class="line"><span class="cl">sudo chmod +x /usr/local/bin/docker-compose
-</span></span></code></pre></div><p>도커, 도커 컴포즈를 설치합니다. 버전이 문제가 없다면 다른 방식으로 설치해도 무방할 것 같습니다.</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>도커, 도커 컴포즈를 설치합니다. 버전이 문제가 없다면 다른 방식으로 설치해도 무방할 것 같습니다.</p>
 <p>su&ndash;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; /etc/docker/daemon.json <span class="s">&lt;&lt;EOF
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; /etc/docker/daemon.json <span class="s">&lt;&lt;EOF
 </span></span></span><span class="line"><span class="cl"><span class="s">{
 </span></span></span><span class="line"><span class="cl"><span class="s">  &#34;exec-opts&#34;: [&#34;native.cgroupdriver=systemd&#34;],
 </span></span></span><span class="line"><span class="cl"><span class="s">  &#34;log-driver&#34;: &#34;json-file&#34;,
@@ -402,8 +439,28 @@ Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명
 </span></span></span><span class="line"><span class="cl"><span class="s">  ]
 </span></span></span><span class="line"><span class="cl"><span class="s">}
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
-</span></span></code></pre></div><p>suend&ndash;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /etc/systemd/system/docker.service.d
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>suend&ndash;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /etc/systemd/system/docker.service.d
 </span></span><span class="line"><span class="cl">sudo systemctl daemon-reload
 </span></span><span class="line"><span class="cl">sudo usermod -aG docker <span class="si">${</span><span class="nv">USER</span><span class="si">}</span>
 </span></span><span class="line"><span class="cl">newgrp docker
@@ -417,43 +474,122 @@ Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">sudo apt-get install -y <span class="nv">kubelet</span><span class="o">=</span>1.21.5-00 <span class="nv">kubeadm</span><span class="o">=</span>1.21.5-00 <span class="nv">kubectl</span><span class="o">=</span>1.21.5-00 --allow-downgrades --allow-change-held-packages
 </span></span><span class="line"><span class="cl">sudo apt-mark hold kubelet kubeadm kubectl
-</span></span></code></pre></div><p>도커 권한 설정을 하고 쿠버네티스를 설치합니다.</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>도커 권한 설정을 하고 쿠버네티스를 설치합니다.</p>
 <p>su&ndash;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat <span class="s">&lt;&lt;EOF &gt; /etc/sysctl.d/k8s.conf
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat <span class="s">&lt;&lt;EOF &gt; /etc/sysctl.d/k8s.conf
 </span></span></span><span class="line"><span class="cl"><span class="s">net.bridge.bridge-nf-call-ip6tables = 1
 </span></span></span><span class="line"><span class="cl"><span class="s">net.bridge.bridge-nf-call-iptables = 1
 </span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
-</span></span></code></pre></div><p>suend&ndash;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo sysctl --system
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>suend&ndash;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo sysctl --system
 </span></span><span class="line"><span class="cl">sudo systemctl daemon-reload
 </span></span><span class="line"><span class="cl">sudo systemctl restart kubelet
-</span></span></code></pre></div><p>이 이후로는 해당 가상 머신을 Clone 1회 또는 2회하여 마스터 노드와 워커노드로 나눕니다.<br>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>이 이후로는 해당 가상 머신을 Clone 1회 또는 2회하여 마스터 노드와 워커노드로 나눕니다.<br>
 호스트 네임과 아이피 주소에 주의하세요, 호스트 네임같은 동일할 경우 문제가 발생합니다.</p>
 <h3 id="마스터-노드-설치-조인-전">마스터 노드 설치-조인 전</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo kubeadm init
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo kubeadm init
 </span></span><span class="line"><span class="cl">mkdir -p <span class="nv">$HOME</span>/.kube
 </span></span><span class="line"><span class="cl">sudo cp -i /etc/kubernetes/admin.conf <span class="nv">$HOME</span>/.kube/config
 </span></span><span class="line"><span class="cl">sudo chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class="k">$(</span>id -g<span class="k">)</span> <span class="nv">$HOME</span>/.kube/config
 </span></span><span class="line"><span class="cl">kubectl taint nodes --all node-role.kubernetes.io/master-
 </span></span><span class="line"><span class="cl">kubectl create -f https://raw.githubusercontent.com/cilium/cilium/v1.6/install/kubernetes/quick-install.yaml
 </span></span><span class="line"><span class="cl">kubectl get pods -n kube-system --selector<span class="o">=</span>k8s-app<span class="o">=</span>cilium
-</span></span></code></pre></div><p>쿠버네티스를 초기화합니다. 이후 출력되는 명령어를 이용하여 워커노드를 조인 시킵니다. (sudo)</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>쿠버네티스를 초기화합니다. 이후 출력되는 명령어를 이용하여 워커노드를 조인 시킵니다. (sudo)</p>
 <h3 id="마스터-노드-설치-조인-후">마스터 노드 설치-조인 후</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/master/deploy/local-path-storage.yaml
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/master/deploy/local-path-storage.yaml
 </span></span><span class="line"><span class="cl">sudo apt install nfs-common
 </span></span><span class="line"><span class="cl">sudo apt install nfs-kernel-server
 </span></span><span class="line"><span class="cl">sudo mkdir /nfsroot
 </span></span><span class="line"><span class="cl">sudo chown nobody:nogroup /nfsroot
 </span></span><span class="line"><span class="cl">sudo chmod <span class="m">777</span> /nfsroot
-</span></span></code></pre></div><p>해당 과정은 NFS Client Provisioner를쿠버네티스가 사용할 수 있게 구축하고<br>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>해당 과정은 NFS Client Provisioner를쿠버네티스가 사용할 수 있게 구축하고<br>
 사용할 NFS Server도 마스터 노드에 올리는 과정을 설명하고 있습니다.</p>
 <p>sudo nano /etc/exports 로 아래 내용 추가</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/nfsroot 192.168.80.110<span class="o">(</span>rw,insecure,sync,no_root_squash,no_subtree_check<span class="o">)</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/nfsroot 192.168.80.110<span class="o">(</span>rw,insecure,sync,no_root_squash,no_subtree_check<span class="o">)</span>
 </span></span><span class="line"><span class="cl">/nfsroot 192.168.80.111<span class="o">(</span>rw,insecure,sync,no_root_squash,no_subtree_check<span class="o">)</span>
-</span></span></code></pre></div><p>해당 과정을 통하여, 존재하는 모든 노드에 NFS 공간을 할당하고 있습니다.<br>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>해당 과정을 통하여, 존재하는 모든 노드에 NFS 공간을 할당하고 있습니다.<br>
 쿠버플로우에서 NFS는 의무가 아니지만 없을경우 가변적으로, 쿠버플로우가 볼륨을 잡기 때문에<br>
 비추천 하고 있습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo service nfs-kernel-server restart
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo service nfs-kernel-server restart
 </span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> rpcbind
 </span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> nfs-server
 </span></span><span class="line"><span class="cl">sudo systemctl start rpcbind
@@ -474,21 +610,65 @@ Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">kubectl apply -f https://raw.githubusercontent.com/mojokb/handson-kubeflow/master/registry/kubeflow-registry-deploy.yaml
 </span></span><span class="line"><span class="cl">kubectl apply -f https://raw.githubusercontent.com/mojokb/handson-kubeflow/master/registry/kubeflow-registry-svc.yaml
-</span></span></code></pre></div><p><strong>아이피 주소 192.168.80.110, 192.168.80.111은 각각 마스터, 워커의 주소입니다.</strong> 환경에 맞춰서 사용해 주셔야 합니다.<br>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>아이피 주소 192.168.80.110, 192.168.80.111은 각각 마스터, 워커의 주소입니다.</strong> 환경에 맞춰서 사용해 주셔야 합니다.<br>
 쿠버플로우의 경우 nfs를 사용하지 않을 시 가변용량 저장소를 이용하기 때문에 사양문제가 발생한다고 합니다.</p>
 <h3 id="마스터-워커-공통-설치-진행">마스터, 워커 공통 설치 진행</h3>
 <p><em>/etc/docker/daemon.json</em>에 추가</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="s2">&#34;insecure-registries&#34;</span>: <span class="o">[</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="s2">&#34;insecure-registries&#34;</span>: <span class="o">[</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;kubeflow-registry.default.svc.cluster.local:30000&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="o">]</span>
-</span></span></code></pre></div><p>그리고 재시작합니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart docker
-</span></span></code></pre></div><p><em>/etc/hosts</em>에 추가(이 부분은 미리 추가해도 됨)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">192.168.80.110 kubeflow-registry.default.svc.cluster.local
-</span></span></code></pre></div><h3 id="워커노드에서-nfs-확인">워커노드에서 nfs 확인</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl kubeflow-registry.default.svc.cluster.local:30000/v2/_catalog
-</span></span></code></pre></div><h3 id="마스터-노드에서의-쿠버플로우-설치">마스터 노드에서의 쿠버플로우 설치</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://github.com/kubernetes-sigs/kustomize/releases/download/v3.2.0/kustomize_3.2.0_linux_amd64
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>그리고 재시작합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart docker
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>/etc/hosts</em>에 추가(이 부분은 미리 추가해도 됨)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">192.168.80.110 kubeflow-registry.default.svc.cluster.local
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="워커노드에서-nfs-확인">워커노드에서 nfs 확인</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl kubeflow-registry.default.svc.cluster.local:30000/v2/_catalog
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="마스터-노드에서의-쿠버플로우-설치">마스터 노드에서의 쿠버플로우 설치</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://github.com/kubernetes-sigs/kustomize/releases/download/v3.2.0/kustomize_3.2.0_linux_amd64
 </span></span><span class="line"><span class="cl">mv kustomize_3.2.0_linux_amd64 kustomize
 </span></span><span class="line"><span class="cl">chmod <span class="m">777</span> kustomize
 </span></span><span class="line"><span class="cl">sudo mv kustomize /usr/local/bin
@@ -496,12 +676,28 @@ Clone이 가능한 가상머신을 기준, GPU가 없는 것을 예제로 설명
 </span></span><span class="line"><span class="cl">git clone https://github.com/kubeflow/manifests.git
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> manifests
 </span></span><span class="line"><span class="cl"><span class="k">while</span> ! kustomize build example <span class="p">|</span> kubectl apply -f -<span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="s2">&#34;Retrying to apply resources&#34;</span><span class="p">;</span> sleep 10<span class="p">;</span> <span class="k">done</span>
-</span></span></code></pre></div><p>후에</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl port-forward svc/istio-ingressgateway -n istio-system 8080:80
-</span></span></code></pre></div><p>로 <a class="link" href="mailto:user@example.com" >user@example.com</a>/12341234을 사용하여 로컬상의 테스트가 가능합니다.<br>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>후에</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl port-forward svc/istio-ingressgateway -n istio-system 8080:80
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>로 <a class="link" href="mailto:user@example.com" >user@example.com</a>/12341234을 사용하여 로컬상의 테스트가 가능합니다.<br>
 또는</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl port-forward --address 0.0.0.0 svc/istio-ingressgateway -n istio-system 8080:80
-</span></span></code></pre></div><p>로 외부노출을 허용시킬 수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl port-forward --address 0.0.0.0 svc/istio-ingressgateway -n istio-system 8080:80
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>로 외부노출을 허용시킬 수 있습니다.</p>
 <h2 id="참고-자료들">참고 자료들</h2>
 <p>만약에 정상작동하지 않을 경우 아래의 자료를 확인해주세요.</p>
 <h3 id="설치법">설치법</h3>

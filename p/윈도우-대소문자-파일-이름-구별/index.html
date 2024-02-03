@@ -352,9 +352,17 @@ if (!doNotTrack) {
 <p>정확히는 NTFS와 같은 윈도우 파일시스템은 대소문자를 구별하지만 OS에서 허용하지 않게 되어있습니다.<br>
 따라서 자신의 프로그램을 위해 아래의 명령어를 고려할 수 있습니다.</p>
 <h2 id="cmd">CMD</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">fsutil</span> <span class="n">file</span> <span class="n">setCaseSensitiveInfo</span> <span class="p">&lt;</span><span class="n">경로</span><span class="p">&gt;</span> <span class="n">enable</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">fsutil</span> <span class="n">file</span> <span class="n">setCaseSensitiveInfo</span> <span class="p">&lt;</span><span class="n">경로</span><span class="p">&gt;</span> <span class="n">enable</span>
 </span></span><span class="line"><span class="cl"><span class="n">fsutil</span> <span class="n">file</span> <span class="n">setCaseSensitiveInfo</span> <span class="p">&lt;</span><span class="n">경로</span><span class="p">&gt;</span> <span class="n">disable</span>
-</span></span></code></pre></div>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 

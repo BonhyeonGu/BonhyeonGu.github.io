@@ -377,30 +377,91 @@ if (!doNotTrack) {
 <h3 id="tar">tar</h3>
 <p>tar은 백업보다 압축이 주 목적인 명령어입니다.</p>
 <p>파일 전체백업</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar cvfp home.tar /file
-</span></span></code></pre></div><p>파일 증분백업</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar cvfp home.tar /file
-</span></span></code></pre></div><p>백업 위치지정</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar zcf /dev/sdb1 /file
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar cvfp home.tar /file
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>파일 증분백업</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar cvfp home.tar /file
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>백업 위치지정</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar zcf /dev/sdb1 /file
 </span></span><span class="line"><span class="cl"><span class="sb">``</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">현재 디렉토리에 압축 해제
 </span></span><span class="line"><span class="cl"><span class="sb">```</span>bash
 </span></span><span class="line"><span class="cl">tar zcf /dev/sdb1 /now
-</span></span></code></pre></div><h3 id="dump">dump</h3>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="dump">dump</h3>
 <p>파일 전체백업</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dump -0f /dev/sdb1 /file
-</span></span></code></pre></div><p>파티션 백업(sda1), 경로지정, 정보 기록(-u:/etc/dumpdates로)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dump -0u -f /dev/sdb1 /dev/sda1
-</span></span></code></pre></div><p>증분 백업(-2:2레벨의 백업)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dump -2u -f /dev/sdb1 /dev/sda1
-</span></span></code></pre></div><p>복원(-r:전체:단 파일시스템 마운트 동일해야함, -i:대화식)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">restore -rf /dev/sdb1
-</span></span></code></pre></div><h3 id="dd">dd</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dump -0f /dev/sdb1 /file
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>파티션 백업(sda1), 경로지정, 정보 기록(-u:/etc/dumpdates로)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dump -0u -f /dev/sdb1 /dev/sda1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>증분 백업(-2:2레벨의 백업)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dump -2u -f /dev/sdb1 /dev/sda1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>복원(-r:전체:단 파일시스템 마운트 동일해야함, -i:대화식)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">restore -rf /dev/sdb1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="dd">dd</h3>
 <p>디스크 전체, 특정 파티션 모두 가능합니다. 해당 명령어는 백업뿐만 아니라 여러곳에서 쓰입니다.</p>
 <p>전체 백업(bs:블럭 사이즈, 디스크 형편에 맞출 것)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span>/dev/sda <span class="nv">of</span><span class="o">=</span>/dev/sdb <span class="nv">bs</span><span class="o">=</span>256k
-</span></span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span>/dev/sda <span class="nv">of</span><span class="o">=</span>/dev/sdb <span class="nv">bs</span><span class="o">=</span>256k
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 

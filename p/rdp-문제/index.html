@@ -361,7 +361,43 @@ if (!doNotTrack) {
 나중에 알게 됐지만 이 방법은 여러 곳에서 많이 사용 중 이였습니다.</p>
 <h2 id="powershell-코드">PowerShell 코드</h2>
 <h3 id="코드">코드</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ps1" data-lang="ps1"><span class="line"><span class="cl"><span class="nv">$ID</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ps1" data-lang="ps1"><span class="line"><span class="cl"><span class="nv">$ID</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$FIND</span> <span class="p">=</span> <span class="n">0</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$LINES</span> <span class="p">=</span> <span class="n">query</span> <span class="n">session</span>
 </span></span><span class="line"><span class="cl">
@@ -393,13 +429,22 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$CMD</span> <span class="p">=</span> <span class="s2">&#34;tscon $ID /dest:console /password:!!!!!!!!&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nb">iex </span><span class="nv">$CMD</span>
-</span></span></code></pre></div><h3 id="설명-1">설명</h3>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="설명-1">설명</h3>
 <p>먼저 현재 진행중인 RDP를 찾아냅니다.<br>
 이후 해당 세션을 tscon으로 루프백 연결시키게 만듭니다.</p>
 <h2 id="파워쉘-코드를-실행하는-배치파일">파워쉘 코드를 실행하는 배치파일</h2>
 <h3 id="코드-1">코드</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl">runas /user:localhost\administrator <span class="s2">&#34;powershell.exe -noprofile -executionpolicy bypass -file &#34;</span>POWER경로<span class="s2">&#34;&#34;</span>
-</span></span></code></pre></div><h3 id="설명-2">설명</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl">runas /user:localhost\administrator <span class="s2">&#34;powershell.exe -noprofile -executionpolicy bypass -file &#34;</span>POWER경로<span class="s2">&#34;&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="설명-2">설명</h3>
 <p>또 다른 문제로, 해당 Powershell 코드는 관리자 권한이 필요한데<br>
 세션에 접속한 사용자는 관리자가 아니였습니다. 이를 위해 runas를 사용하여<br>
 관리자 권한을 통하여 코드를 실행하게 만들었습니다.</p>

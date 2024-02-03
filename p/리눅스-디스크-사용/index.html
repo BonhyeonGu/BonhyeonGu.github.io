@@ -355,10 +355,24 @@ if (!doNotTrack) {
 <p>추가로 리눅스에서는 여러개의 저장 장치를 하나로 합치는 LVM이라는 개념이 존재합니다. Partion의 반대 개념에 가까우며<br>
 최근에 윈도우에도 비슷한 기능이 추가되었습니다.</p>
 <h3 id="명령어">명령어</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fdisk -l
-</span></span></code></pre></div><p>로 정확한 장치를 찾아서</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fdisk /dev/<span class="o">[</span>장치명<span class="o">]</span>
-</span></span></code></pre></div><p>으로 파티션 모드에 진입할 수 있습니다. 명령어로 진행되는 것이 아니라,  마법사형식을 이용합니다.<br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fdisk -l
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>로 정확한 장치를 찾아서</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fdisk /dev/<span class="o">[</span>장치명<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>으로 파티션 모드에 진입할 수 있습니다. 명령어로 진행되는 것이 아니라,  마법사형식을 이용합니다.<br>
 n, p 등을 누르면서 안내하는 내용을 따르면 문제 없습니다.</p>
 <p>윈도우와 다르게 고려되어야 할 사항은 주영역, 가상영역, 그리고 Swap입니다. 이것은 가상메모리의 역할을 합니다.</p>
 <h2 id="format">Format</h2>
@@ -369,25 +383,60 @@ FileSystem은 하나의 공간에 하나만 사용될 수 있으며 새롭게 Fi
 <p>리눅스에서 자주 사용되는 FileSystem은Ext4, XFS등이 있습니다. 자세한 내용은 다음에 다루겠습니다.</p>
 <h3 id="명령어-1">명령어</h3>
 <p>혹시 쓰던 저장장치를 포맷할 계획이라면 당연히 unmount된 상태여야 합니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.<span class="o">[</span>파일 시스템 타입<span class="o">]</span> /dev/<span class="o">[</span>장치<span class="o">]</span>
-</span></span></code></pre></div><p>마찬가지로 마법사 형식입니다. y를 누르며 진행할 수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.<span class="o">[</span>파일 시스템 타입<span class="o">]</span> /dev/<span class="o">[</span>장치<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>마찬가지로 마법사 형식입니다. y를 누르며 진행할 수 있습니다.</p>
 <h2 id="mount">Mount</h2>
 <h3 id="설명-2">설명</h3>
 <p>mount는 특정 저장장치를 디렉토리와 연결하는 행위입니다. 윈도우는 알아서 해주거나, 파일 관리자를 거쳐 해결할 수 있으며<br>
 요즘 우분투 사용자 편의를 위해 알아서 데스크탑에 mount 하게 됩니다.</p>
 <p>물론 mount를 하여 제대로 쓰기 위해선 fdisk와 같은 명령어로 포멧, 파일시스템 구축이 완료된 상태여야 합니다.</p>
 <h3 id="mount-상태-확인">Mount 상태 확인</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">findmnt
-</span></span></code></pre></div><p><em>fdisk -l 또는 mount -l</em> 도 있지만 해당 경우에는 위의 명령어가 훨씬 보기 편리했습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">findmnt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>fdisk -l 또는 mount -l</em> 도 있지만 해당 경우에는 위의 명령어가 훨씬 보기 편리했습니다.</p>
 <h3 id="mount-하기">Mount 하기</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/&lt;장치명&gt; &lt;마운트 포인트&gt;
-</span></span></code></pre></div><p>취소는</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">umount /dev/&lt;장치명&gt;
-</span></span></code></pre></div><p>하지만 위의 명령어는 일시적이며 reboot 후 필요하다면 다시 입력해야 합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/&lt;장치명&gt; &lt;마운트 포인트&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>취소는</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">umount /dev/&lt;장치명&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>하지만 위의 명령어는 일시적이며 reboot 후 필요하다면 다시 입력해야 합니다.</p>
 <h3 id="fstab-파일시스템-테이블">fstab-파일시스템 테이블</h3>
 <p>부팅 시 자동으로 mount가 되기 위해선 해당 파일을 수정해야 합니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano /etc/fstab
-</span></span></code></pre></div><p><img src="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1.png"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano /etc/fstab
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1.png"
 	width="751"
 	height="200"
 	srcset="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_480x0_resize_box_3.png 480w, /p/%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%94%94%EC%8A%A4%ED%81%AC-%EC%82%AC%EC%9A%A9/1_hud4ab1e8f4f03947783069e1b30865973_25325_1024x0_resize_box_3.png 1024w"

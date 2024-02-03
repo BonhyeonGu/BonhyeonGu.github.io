@@ -415,22 +415,47 @@ if (!doNotTrack) {
 	
 ></p>
 <h3 id="필요-패키지-설치">필요 패키지 설치</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get update
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get update
 </span></span><span class="line"><span class="cl">apt-get install isc-dhcp-server bind9-utils
-</span></span></code></pre></div><p>먼저 앞으로 필요한 데몬을 설치하겠습니다. 해당 데몬들은 이름에서 유추할 수 있는 기능 그대로를 제공합니다.</p>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>먼저 앞으로 필요한 데몬을 설치하겠습니다. 해당 데몬들은 이름에서 유추할 수 있는 기능 그대로를 제공합니다.</p>
 <h2 id="bind9-설정">BIND9 설정</h2>
 <h3 id="개요-1">개요</h3>
 <p>BIND9는 DHCP보다 설정할 것이 적습니다.
 해당 과정은 앞으로의 BIND9 설정에도 유용하게 쓰일 개념들이 많으니 참고해서 진행하시면 좋겠습니다.</p>
 <h3 id="설명">설명</h3>
 <p>이 곳을 수정합니다. 도메인의 상세 설정을 하는 곳입니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">nano /etc/bind/named.conf.local
-</span></span></code></pre></div><p>아래 내용을 추가합니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">include <span class="s2">&#34;/etc/bind/rndc.key&#34;</span><span class="p">;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">nano /etc/bind/named.conf.local
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>아래 내용을 추가합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">include <span class="s2">&#34;/etc/bind/rndc.key&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">controls <span class="o">{</span>
 </span></span><span class="line"><span class="cl">  inet 192.168.10.3 allow <span class="o">{</span> 192.168.10.3<span class="p">;</span> <span class="o">}</span> keys <span class="o">{</span> rndc-key<span class="p">;</span> <span class="o">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="o">}</span><span class="p">;</span>
-</span></span></code></pre></div><p><strong>rndc.key</strong>라는 단어가 나왔습니다. 해당 암호화키는 DHCP와 BIND9가 서로 약속된 사이가 맞다는 것을 증명합니다.<br>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>rndc.key</strong>라는 단어가 나왔습니다. 해당 암호화키는 DHCP와 BIND9가 서로 약속된 사이가 맞다는 것을 증명합니다.<br>
 만약 없거나, 새로운 rndc.key를 발급하고 싶다면  <em>rndc-confgen</em>를 사용하여 생성할 수 있습니다.</p>
 <p>이번에는 BIND9를 설치하면서 자동으로 생긴 키를 사용하겠습니다.<br>
 다음으로 해당 IP Address의 서비스를 해당 IP Address가 수정하는 것을 허락하겠다는 내용입니다.<br>
@@ -452,15 +477,29 @@ if (!doNotTrack) {
 	
 ></p>
 <p>확인이 완료되었으면 BIND9를 재시작 합니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">service bind9 restart
-</span></span></code></pre></div><h2 id="dhcp">DHCP</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">service bind9 restart
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="dhcp">DHCP</h2>
 <h3 id="개요-2">개요</h3>
 <p>DHCP는 서브넷팅 관련 지식이 있다면 추가적으로 설명할 내용은 없습니다.<br>
 이번 포스팅에서는 갱신 시간과 같은 상세 설명은 넘어가도록 하겠습니다.</p>
 <h3 id="설명-1">설명</h3>
 <p>먼저 전파점 인터페이스를 설정합니다. 인터페이스 이름이 기억이 안난다면 ifconfig으로 확인할 수 있습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano /etc/default/isc-dhcp-server 
-</span></span></code></pre></div><p><img src="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/5.png"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano /etc/default/isc-dhcp-server 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/5.png"
 	width="1928"
 	height="1056"
 	srcset="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/5_hufcbe288f402ca289f201183a58d28751_53714_480x0_resize_box_3.png 480w, /p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/5_hufcbe288f402ca289f201183a58d28751_53714_1024x0_resize_box_3.png 1024w"
@@ -476,10 +515,19 @@ if (!doNotTrack) {
 ></p>
 <p>다음은 본격적인 설정입니다. 길게 수정할 예정이기 때문에 원본 설정파일을 백업하고 파일을 그림처럼 작성합니다.<br>
 주석을 풀면서 만드셔도 되고, 다 지운 뒤 새로 작성해도 상관 없습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /etc/dhcp
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /etc/dhcp
 </span></span><span class="line"><span class="cl">cp dhcpd.conf dhcpd.conf.back
 </span></span><span class="line"><span class="cl">nano dhcpd.conf
-</span></span></code></pre></div><p><img src="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/6.png"
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/6.png"
 	width="1928"
 	height="1056"
 	srcset="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/6_hue87e05bfbaeb953c01c5ca1d7e399c5e_54469_480x0_resize_box_3.png 480w, /p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/6_hue87e05bfbaeb953c01c5ca1d7e399c5e_54469_1024x0_resize_box_3.png 1024w"
@@ -498,9 +546,17 @@ if (!doNotTrack) {
 그리고 <strong>subnet 영역</strong>이 우리가 기본적으로 알고있던 DHCP의 기능, 동적 주소 범위를 나타내는 것이며<br>
 원한다면 이곳에 특정 MAC Address에는 고정주소가 발급되도록 만들 수 있습니다.</p>
 <p>작성이 완료되었다면 dhcpd -t를 통해 문법 검사를 실시할 수 있습니다. 문제 없다면 재시작 하면 완료입니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dhcpd -t
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dhcpd -t
 </span></span><span class="line"><span class="cl">service isc-dhcp-server restart
-</span></span></code></pre></div><h2 id="마치며">마치며</h2>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="마치며">마치며</h2>
 <h3 id="검사">검사</h3>
 <p>먼저 각 클라이언트를 내부망에도 불구하고 static을 해제합니다.</p>
 <p><img src="/p/%EB%A6%AC%EB%88%85%EC%8A%A4-dhcp-ddns/7.png"

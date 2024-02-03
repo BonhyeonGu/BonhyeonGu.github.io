@@ -364,17 +364,38 @@ if (!doNotTrack) {
 <strong>certbot</strong>을 통하여 쉽고 빠른 추가/갱신이 가능합니다.</p>
 <h2 id="certbot">certbot</h2>
 <p>certbot은 Let&rsquo;s Encrypt에서 인증서와 키의 발급을 용이하게 도와주는 프로그램입니다. 아래처럼 설치할 수 있습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get install python3-certbot-apache
-</span></span></code></pre></div><p>공식 사이트에는 python-certbot-apache 라고 나와 있었지만 작동되지 않습니다. 파이썬 버전에 참고해야 하는 것 같습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get install python3-certbot-apache
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>공식 사이트에는 python-certbot-apache 라고 나와 있었지만 작동되지 않습니다. 파이썬 버전에 참고해야 하는 것 같습니다.</p>
 <h3 id="일반-인증서-발급">일반 인증서 발급</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certbot --apache certonly
-</span></span></code></pre></div><p>입력후 도메인을 포함한</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certbot --apache certonly
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>입력후 도메인을 포함한</p>
 <h3 id="와일드카드-인증서-발급">와일드카드 인증서 발급</h3>
 <p>와일드카드 인증서는 하나의 부모 도메인 인증서로 자식 모두를 등록시킬 수 있는 인증서입니다.<br>
 하지만 자동 갱신을 시킬 방법이 없어 이점에 주의해야합니다.</p>
 <p>만약 <code>www.a.com, mail.a.com</code> 등 *a.com을 인증시키는 것이 목표라면 다음과 같습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certbot certonly --manual --preferred-challenges dns -d <span class="s2">&#34;*.a.com&#34;</span> -d <span class="s2">&#34;a.com&#34;</span>
-</span></span></code></pre></div><p>하지만 위의 일반 인증서 발급과 다르게 추가 인증이 필요하다는 메세지를 볼 수 있습니다. 몇가지 제시를 해주는데<br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certbot certonly --manual --preferred-challenges dns -d <span class="s2">&#34;*.a.com&#34;</span> -d <span class="s2">&#34;a.com&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>하지만 위의 일반 인증서 발급과 다르게 추가 인증이 필요하다는 메세지를 볼 수 있습니다. 몇가지 제시를 해주는데<br>
 도메인이 본인의 것이 맞다면 도메인 인증이 가장 편리한 것 같습니다.</p>
 <p>저는 구글 도메인 서비스를 이용 중이기 때문에 아래의 화면에서 설정 가능합니다.</p>
 <p><img src="/p/%EC%95%84%ED%8C%8C%EC%B9%98-ssl-%EC%A0%81%EC%9A%A9-lets-encrypt/002-google.png"
@@ -395,33 +416,109 @@ if (!doNotTrack) {
 단 도메인 정보가 전파되는데 시간이 걸릴 수 있으니 조금 기다렸다가 nslookup등으로 확인 한 후 다음 버튼을 누르시는걸 권장합니다.</p>
 <h3 id="인증서-취소">인증서 취소</h3>
 <p>여러가지 방법이 있지만 인증키를 모두 가지고 있다면 아래 방법이 가장 편리합니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certbot revoke --cert-path cert.pem --key-path privkey.pem
-</span></span></code></pre></div><h2 id="cron-을-통한-자동갱신">cron 을 통한 자동갱신</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certbot revoke --cert-path cert.pem --key-path privkey.pem
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="cron-을-통한-자동갱신">cron 을 통한 자동갱신</h2>
 <p>인증서를 갱신시키는 명령어는 다음과 같습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certbot renew --quiet
-</span></span></code></pre></div><p>하지만 유효기간이 가까워 지기 전마다 해당 명령어를 치는 것은 불편할 것입니다.<br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certbot renew --quiet
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>하지만 유효기간이 가까워 지기 전마다 해당 명령어를 치는 것은 불편할 것입니다.<br>
 따라서 리눅스 잡 스케줄러인 cron을 사용하여 원하는 날짜가 됐을때 자동으로 해당 명령어를 사용하게 합시다.<br>
 아래  명령어로 스케줄러 설정 파일에 들어갈 수 있습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">crontab -e
-</span></span></code></pre></div><p>크론텝은 5개의 숫자와 예약 명령어로 한 줄씩 추가 할 수 있습니다.<br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">crontab -e
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>크론텝은 5개의 숫자와 예약 명령어로 한 줄씩 추가 할 수 있습니다.<br>
 각 숫자는 순서대로 분, 시간, 일, 월, 요일(일요일=0)이며 *로 대체되면 그 부분은 상관없게 됩니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="m">0</span> <span class="m">0</span> <span class="m">2</span> * * /bin/bash -l -c <span class="s1">&#39;certbot renew --quiet&#39;</span>
-</span></span></code></pre></div><p>즉 이렇게 하면 매월 2일마다 갱신작업을 실행합니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service cron restart
-</span></span></code></pre></div><p>후</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service cron status
-</span></span></code></pre></div><p>로 제대로 동작중인지 확인할 수 있습니다.
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="m">0</span> <span class="m">0</span> <span class="m">2</span> * * /bin/bash -l -c <span class="s1">&#39;certbot renew --quiet&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>즉 이렇게 하면 매월 2일마다 갱신작업을 실행합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service cron restart
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>후</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service cron status
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>로 제대로 동작중인지 확인할 수 있습니다.
 만약 문제가 생겼고 해결이 안된다면</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">crontab -r
-</span></span></code></pre></div><p>로 cron을 초기화 시킬수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">crontab -r
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>로 cron을 초기화 시킬수 있습니다.</p>
 <h2 id="아파치-설정">아파치 설정</h2>
 <p>마지막으로 아파치에 적용하면 작업종료입니다.</p>
 <h3 id="인증서-적용">인증서 적용</h3>
 <p>먼저 모듈을 키고 수정할 사이트를 내려줍니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">a2enmod ssl
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">a2enmod ssl
 </span></span><span class="line"><span class="cl">a2dissite www.a.com
-</span></span></code></pre></div><p>이제 사이트 설정 콘피그에 들어가 기본 HTTP포트 80으로 호스팅 되어있는 부분을 삭제하고 SSL포트 443번으로 수정시킨 후 아래 처럼 만들어줍니다. <strong>경로에 주의해야 합니다.</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ApacheConf" data-lang="ApacheConf"><span class="line"><span class="cl"><span class="nt">&lt;VirtualHost</span> <span class="s">*:443</span><span class="nt">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>이제 사이트 설정 콘피그에 들어가 기본 HTTP포트 80으로 호스팅 되어있는 부분을 삭제하고 SSL포트 443번으로 수정시킨 후 아래 처럼 만들어줍니다. <strong>경로에 주의해야 합니다.</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ApacheConf" data-lang="ApacheConf"><span class="line"><span class="cl"><span class="nt">&lt;VirtualHost</span> <span class="s">*:443</span><span class="nt">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">ServerName</span>  www.a.com
 </span></span><span class="line"><span class="cl">    <span class="nb">DocumentRoot</span> <span class="sx">/var/www/www.a.com</span>
 </span></span><span class="line"><span class="cl">
@@ -436,10 +533,20 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">        <span class="nb">Require</span> <span class="k">all</span> granted
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;/Directory&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;/VirtualHost&gt;</span>
-</span></span></code></pre></div><p>저장 후</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">a2ensite www.a.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>저장 후</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">a2ensite www.a.com
 </span></span><span class="line"><span class="cl">service apache2 restart
-</span></span></code></pre></div><h3 id="http-접근시-대처">HTTP 접근시 대처</h3>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="http-접근시-대처">HTTP 접근시 대처</h3>
 <p>만약 서버측에서 HTTPS로 구현 했음에도 불구하고 유저가 HTTP로 접근한다면 접속 불가하게 만드는 것 보다 자동으로 HTTPS로 재접근 되게 만드는 것이 유저 친화적일 것입니다. 이런 기능을 <strong>Rewrite, Redirect</strong>라고 합니다. 모듈명은 Rewrite입니다.</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -459,9 +566,41 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table></div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">a2enmod rewrite
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">a2enmod rewrite
 </span></span><span class="line"><span class="cl">a2dissite www.a.com
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ApacheConf" data-lang="ApacheConf"><span class="line"><span class="cl"><span class="nt">&lt;VirtualHost</span> <span class="s">*:443</span><span class="nt">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ApacheConf" data-lang="ApacheConf"><span class="line"><span class="cl"><span class="nt">&lt;VirtualHost</span> <span class="s">*:443</span><span class="nt">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">ServerName</span>  www.a.com
 </span></span><span class="line"><span class="cl">    <span class="nb">DocumentRoot</span> <span class="sx">/var/www/www.a.com</span>
 </span></span><span class="line"><span class="cl">
@@ -481,7 +620,9 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">        <span class="nb">ServerName</span> www.a.com
 </span></span><span class="line"><span class="cl">        <span class="nb">Redirect</span> / https://www.a.com
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;/VirtualHost&gt;</span>
-</span></span></code></pre></div>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 

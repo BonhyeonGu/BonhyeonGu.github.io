@@ -335,7 +335,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    1 분 정도
+                    2 분 정도
                 </time>
             </div>
         
@@ -356,16 +356,58 @@ if (!doNotTrack) {
 마지막엔 cloud.9bon.org와 9bon.org가 똑같은 장치에 구성되어있음에 불구하고 서로 다른 내용을 보여주는 것이 목표입니다.</p>
 <h2 id="아파치-준비">아파치 준비</h2>
 <p>아파치가 설치되어있지 않으면 패키지 관리자로 쉽게 설치 가능합니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get update <span class="o">&amp;&amp;</span> apt-get install apache2
-</span></span></code></pre></div><p>또한 앞으로의 과정 중 재시작을 하고 싶을땐 다음과 같습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service apache2 restart
-</span></span></code></pre></div><p>당연히 재시작 말고도 start, stop, <strong>reload</strong>, status를 사용할 수 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt-get update <span class="o">&amp;&amp;</span> apt-get install apache2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>또한 앞으로의 과정 중 재시작을 하고 싶을땐 다음과 같습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service apache2 restart
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>당연히 재시작 말고도 start, stop, <strong>reload</strong>, status를 사용할 수 있습니다.</p>
 <h2 id="아파치-설정">아파치 설정</h2>
 <p>데비안 10기준 Apache2에서는 설정파일이 모두 모듈화 되어있으며 추가 설정 또한 부분화하길 권장하고 있습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /etc/apache2/sites-available/
-</span></span></code></pre></div><p>아래처럼 설정파일을 &lt;추가할 사이트 도메인&gt;.conf 으로 생성하면 됩니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano a.com.conf
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apacheConf" data-lang="apacheConf"><span class="line"><span class="cl"><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /etc/apache2/sites-available/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>아래처럼 설정파일을 &lt;추가할 사이트 도메인&gt;.conf 으로 생성하면 됩니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano a.com.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-apacheConf" data-lang="apacheConf"><span class="line"><span class="cl"><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">ServerName</span>  a.com
 </span></span><span class="line"><span class="cl">    <span class="nb">DocumentRoot</span> <span class="sx">/var/www/a.com</span>
 </span></span><span class="line"><span class="cl">
@@ -375,11 +417,34 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">        <span class="nb">Require</span> <span class="k">all</span> granted
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;/Directory&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;/VirtualHost&gt;</span>
-</span></span></code></pre></div><p>요약하면 80번 포트로 연결되는 가상 호스트이며 도메인이 a.com일때 /var/www/a.com의 내용을 보여라는 뜻입니다.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>요약하면 80번 포트로 연결되는 가상 호스트이며 도메인이 a.com일때 /var/www/a.com의 내용을 보여라는 뜻입니다.
 그대로  <a class="link" href="https://www.a.com"  target="_blank" rel="noopener"
     >www.a.com</a>또한 작성하면 됩니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano www.a.com
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ApacheConf" data-lang="ApacheConf"><span class="line"><span class="cl"><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano www.a.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ApacheConf" data-lang="ApacheConf"><span class="line"><span class="cl"><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">ServerName</span>  www.a.com
 </span></span><span class="line"><span class="cl">    <span class="nb">DocumentRoot</span> <span class="sx">/var/www/www.a.com</span>
 </span></span><span class="line"><span class="cl">    
@@ -389,15 +454,39 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">        <span class="nb">Require</span> <span class="k">all</span> granted
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;/Directory&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;/VirtualHost&gt;</span>
-</span></span></code></pre></div><p>작성을 마치면</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">a2ensite a.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>작성을 마치면</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">a2ensite a.com
 </span></span><span class="line"><span class="cl">a2ensite www.a.com
-</span></span></code></pre></div><p>잘못 입력했다면</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">a2dissite &lt;설정 파일을 기반한 주소&gt;
-</span></span></code></pre></div><p>할 수 있습니다.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>잘못 입력했다면</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">a2dissite &lt;설정 파일을 기반한 주소&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>할 수 있습니다.
 마지막으로 reload 하면 완료입니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service apache2 reload
-</span></span></code></pre></div><p>참고로 아파치는 사이트 설정을 바꾸는 것에는 reload를 모듈을 추가 해제할 때는 restart 하기를 추천하고 있습니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service apache2 reload
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>참고로 아파치는 사이트 설정을 바꾸는 것에는 reload를 모듈을 추가 해제할 때는 restart 하기를 추천하고 있습니다.</p>
 
 </section>
 

@@ -441,8 +441,15 @@ if (!doNotTrack) {
 <p>이곳에서 앞에서 설정했던 VMNet을 선택해주겠습니다. 만약 GuestOS가 실제 Host였다면 인터페이스에서 나온 선이 인터넷이<br>
 아닌  내부망의 허브에 물린 셈입니다.</p>
 <p>다시 Debian으로 복귀해 본격적인 설정하기 앞서 ifconfig으로 인터페이스 이름을 확인해 보겠습니다. 당연히 명령어를 사용하실 때는 권한에 유의하셔야 합니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ifconfig
-</span></span></code></pre></div><p><img src="/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04.png"
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ifconfig
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04.png"
 	width="633"
 	height="166"
 	srcset="/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04_hua977036e3b138b5513d7081816a9dd27_8399_480x0_resize_box_3.png 480w, /p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/04_hua977036e3b138b5513d7081816a9dd27_8399_1024x0_resize_box_3.png 1024w"
@@ -458,8 +465,15 @@ if (!doNotTrack) {
 ></p>
 <p>저같은 경우는 <strong>ens33</strong>입니다. 사진처럼 외부 아이피주소가 할당된 인터페이스를 찾으면 됩니다.</p>
 <p>이제 이름을 기억하고 아래처럼 인터페이스 설정파일에 접근하겠습니다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano /etc/network/interfaces
-</span></span></code></pre></div><p>여기서 부터는 오타에 주의해야합니다. 오타가 발생하면 인터페이스 갱신이 불가능 해지며 이것은 연결이 불가능함을 뜻합니다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano /etc/network/interfaces
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>여기서 부터는 오타에 주의해야합니다. 오타가 발생하면 인터페이스 갱신이 불가능 해지며 이것은 연결이 불가능함을 뜻합니다.</p>
 <p>여기서는 각 인터페이스의 address, subnet, netmask, broadcast, gateway 등을 설정할 수 있습니다.</p>
 <p>기존의 DHCP 설정은 주석처리하고 아래와 같이 적어보겠습니다.</p>
 <p><img src="/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/05.png"
@@ -477,9 +491,17 @@ if (!doNotTrack) {
 	
 ></p>
 <p>이후엔 오타를 다시 확인해보고 갱신 명령을 실행시키면 완료됩니다. 설정이 제대로 변경되었는지 확인해봅시다.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service networking reload
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service networking reload
 </span></span><span class="line"><span class="cl">ifconfig
-</span></span></code></pre></div><p><img src="/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06.png"
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06.png"
 	width="689"
 	height="381"
 	srcset="/p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06_hua40824f8825bd75f26e421cbe720e24d_16361_480x0_resize_box_3.png 480w, /p/vmware-%EC%84%9C%EB%B2%84-%EA%B3%B5%EB%B6%80%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/06_hua40824f8825bd75f26e421cbe720e24d_16361_1024x0_resize_box_3.png 1024w"

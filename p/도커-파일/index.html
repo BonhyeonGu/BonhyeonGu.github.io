@@ -331,7 +331,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    2 분 정도
+                    3 분 정도
                 </time>
             </div>
         
@@ -348,7 +348,29 @@ if (!doNotTrack) {
     
     <h2 id="간단한-형식">간단한 형식</h2>
 <h3 id="운영체제">운영체제</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="c">#원본이 될 이미지, https://hub.docker.com/ 참고</span><span class="err">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="c">#원본이 될 이미지, https://hub.docker.com/ 참고</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#버전을 기록하지 않으면 최신 버전을 사용하게 된다.</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> ubuntu:16.04</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
@@ -366,8 +388,36 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#노출될 포트, 주의할 점은 이게 포트포워딩을 해주는 것이 아님</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 5000, 5001</span><span class="err">
-</span></span></span></code></pre></div><h3 id="인터프리터">인터프리터</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> ubuntu</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="인터프리터">인터프리터</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> ubuntu</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">LABEL</span> <span class="nv">email</span><span class="o">=</span><span class="s2">&#34;tayasriel@gmail.com&#34;</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">LABEL</span> <span class="nv">name</span><span class="o">=</span><span class="s2">&#34;BonhyeonGu&#34;</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
@@ -389,12 +439,39 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span>  <span class="p">[</span> <span class="s2">&#34;app.py&#34;</span> <span class="p">]</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">## 즉 이 형태는 컨테이너 start와 함께, 파이썬이 실행되고 컨테이너가 stop되는 형식</span><span class="err">
-</span></span></span></code></pre></div><h2 id="도커-컴포즈-도커-파일의-조합">도커 컴포즈, 도커 파일의 조합</h2>
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="도커-컴포즈-도커-파일의-조합">도커 컴포즈, 도커 파일의 조합</h2>
 <h3 id="안내">안내</h3>
 <p>이런 방법으로 컴공에 새로 입문하시는 분들께 개발환경을 배포할 수 있을 것 같습니다.</p>
 <h3 id="파이썬-인터프리터">파이썬 인터프리터</h3>
 <p>도커파일</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> ubuntu</span><span class="err">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> ubuntu</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">LABEL</span> <span class="nv">email</span><span class="o">=</span><span class="s2">&#34;tayasriel@gmail.com&#34;</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">LABEL</span> <span class="nv">name</span><span class="o">=</span><span class="s2">&#34;BonhyeonGu&#34;</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
@@ -415,19 +492,58 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span>  <span class="p">[</span> <span class="s2">&#34;app.py&#34;</span> <span class="p">]</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">## 즉 이 형태는 컨테이너 start와 함께, 파이썬이 실행되고 컨테이너가 stop되는 형식</span><span class="err">
-</span></span></span></code></pre></div><p>컴포즈</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">version: <span class="s2">&#34;3&#34;</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>컴포즈</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">version: <span class="s2">&#34;3&#34;</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>services:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span> test1:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>  build: .<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>  volumes:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>   - .:/app<span class="err">
-</span></span></span></code></pre></div><p>이후</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">docker-compose up <span class="o">&amp;&amp;</span> docker-compose rm -f<span class="err">
-</span></span></span></code></pre></div><p>로 쉬운 실행/삭제 가능</p>
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>이후</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">docker-compose up <span class="o">&amp;&amp;</span> docker-compose rm -f<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>로 쉬운 실행/삭제 가능</p>
 <h3 id="파이썬-리모트-전용">파이썬 리모트 전용</h3>
 <p>도커파일</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> ubuntu</span><span class="err">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> ubuntu</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">LABEL</span> <span class="nv">email</span><span class="o">=</span><span class="s2">&#34;tayasriel@gmail.com&#34;</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">LABEL</span> <span class="nv">name</span><span class="o">=</span><span class="s2">&#34;BonhyeonGu&#34;</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
@@ -441,8 +557,22 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s">  /root</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> pip install --no-cache-dir --upgrade pip <span class="o">&amp;&amp;</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>    pip install numpy<span class="err">
-</span></span></span></code></pre></div><p>컴포즈</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">version: <span class="s2">&#34;3&#34;</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>컴포즈</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">version: <span class="s2">&#34;3&#34;</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>services:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span> test2:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="c1">#stdin_open: true # docker run -i</span><span class="err">
@@ -450,12 +580,24 @@ if (!doNotTrack) {
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>  build: .<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>  volumes:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>   - .:/root<span class="err">
-</span></span></span></code></pre></div><p>이후</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">docker-compose up -d<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>이후</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">docker-compose up -d<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>code .<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>그리고 리모트, 다쓰면 이후로<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>docker-compose down<span class="err">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
