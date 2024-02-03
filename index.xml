@@ -6,7 +6,23 @@
         <description>Recent content on 9Bon&#39;s_Docs</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko-kr</language>
-        <lastBuildDate>Thu, 20 Oct 2022 04:46:35 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 10 Jan 2023 17:42:59 +0900</lastBuildDate><atom:link href="https://docs.9bon.org/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>윈도우 대소문자 파일 이름 구별</title>
+        <link>https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90-%ED%8C%8C%EC%9D%BC-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/</link>
+        <pubDate>Tue, 10 Jan 2023 17:42:59 +0900</pubDate>
+        
+        <guid>https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90-%ED%8C%8C%EC%9D%BC-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/</guid>
+        <description>&lt;img src="https://docs.9bon.org/p/%EC%9C%88%EB%8F%84%EC%9A%B0-%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90-%ED%8C%8C%EC%9D%BC-%EC%9D%B4%EB%A6%84-%EA%B5%AC%EB%B3%84/thum.png" alt="Featured image of post 윈도우 대소문자 파일 이름 구별" /&gt;&lt;h2 id=&#34;서론&#34;&gt;서론&lt;/h2&gt;
+&lt;p&gt;윈도우는 파일 이름에서 대문자, 소문자를 구별하지 않습니다.&lt;br&gt;
+당연히 프로그래밍 언어, 라이브리를 사용할 때에도 마찬가지입니다.&lt;/p&gt;
+&lt;p&gt;정확히는 NTFS와 같은 윈도우 파일시스템은 대소문자를 구별하지만 OS에서 허용하지 않게 되어있습니다.&lt;br&gt;
+따라서 자신의 프로그램을 위해 아래의 명령어를 고려할 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&#34;cmd&#34;&gt;CMD&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fsutil file setCaseSensitiveInfo &amp;lt;경로&amp;gt; &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fsutil file setCaseSensitiveInfo &amp;lt;경로&amp;gt; disable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>쿠버플로우 설치</title>
         <link>https://docs.9bon.org/p/%EC%BF%A0%EB%B2%84%ED%94%8C%EB%A1%9C%EC%9A%B0-%EC%84%A4%EC%B9%98/</link>
         <pubDate>Thu, 20 Oct 2022 04:46:35 +0900</pubDate>
